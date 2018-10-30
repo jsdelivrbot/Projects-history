@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Taxes capturing Snapshot of Taxes 1`] = `
+<div>
+  <PageHeader
+    bigText="Company Tax Settings"
+    smallText="Manage company tax codes and tax categories"
+  />
+  <Row>
+    <Col
+      lg={true}
+    >
+      <Tabs
+        activeKey="taxCategories"
+        animated={false}
+        hideAdd={false}
+        onTabClick={[Function]}
+        prefixCls="ant-tabs"
+      >
+        <TabPane
+          key="taxCategories"
+          placeholder={null}
+          tab="Tax Categories"
+        >
+          <Connect(TaxCodesTab) />
+        </TabPane>
+        <TabPane
+          key="taxCodes"
+          placeholder={null}
+          tab="Tax Codes"
+        >
+          <Connect(TaxCodesTab) />
+        </TabPane>
+      </Tabs>
+    </Col>
+  </Row>
+</div>
+`;

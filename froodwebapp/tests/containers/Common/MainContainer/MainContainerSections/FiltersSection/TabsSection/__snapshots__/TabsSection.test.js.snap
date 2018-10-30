@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsSection capturing Snapshot of TabsSection 1`] = `
+<Tabs
+  activeKey="1"
+  className="tabs"
+  hideAdd={false}
+  onChange={[Function]}
+  prefixCls="ant-tabs"
+  tabBarExtraContent={
+    <TabsExtraContent
+      activeTabId="1"
+      columns={
+        Array [
+          Object {
+            "displayName": "Inventory",
+            "id": 1,
+            "isDefault": false,
+            "order": "first order",
+          },
+          Object {
+            "displayName": "Price lists",
+            "id": 2,
+            "isDefault": true,
+            "order": "second order",
+          },
+        ]
+      }
+      getAllItemsRequest={[Function]}
+      getWithFilterRequest={[Function]}
+      limit={1}
+      offset={1}
+      updateColumnsRequest={[Function]}
+    />
+  }
+  type="card"
+>
+  <TabPane
+    key="All"
+    placeholder={null}
+    tab="All"
+  />
+  <TabPane
+    placeholder={null}
+    tab={<div />}
+  />
+  <TabPane
+    key="+ Filter"
+    placeholder={null}
+    tab="+ Filter"
+  />
+</Tabs>
+`;

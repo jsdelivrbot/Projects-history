@@ -1,0 +1,31 @@
+.settings__btn {
+  color: #fff;
+  background-color: #808080;
+  display: inline-block;
+  padding: 2px 2px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 3px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 1px;
+}
+.booking__setttings {
+  float: right;
+  padding-right: 15px;
+}
+
+.dock__icon {
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderTabHeader captures snapshot of OrderTabHeader 1`] = `
+<div>
+  <Row
+    className="row"
+    middle="xs"
+  >
+    <Col
+      className="header"
+      lg={true}
+    >
+      label
+      : 
+      header
+    </Col>
+    <Col
+      className="buttons"
+      lg={true}
+    >
+      <Button
+        className="button"
+      >
+        <FontAwesome
+          className="fa-th"
+          name="fa-th"
+        />
+        text
+      </Button>
+      <Button
+        className="button"
+      >
+        <FontAwesome
+          className="fa-th"
+          name="fa-th"
+        />
+        text
+      </Button>
+    </Col>
+  </Row>
+  <h1>
+    Test checking
+  </h1>
+</div>
+`;

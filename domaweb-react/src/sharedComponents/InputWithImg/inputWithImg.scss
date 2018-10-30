@@ -1,0 +1,41 @@
+@import 'src/assets/styles/variables';
+
+.box {
+  //border: 2px solid lightgrey;
+  display: inline-block;
+  //margin: 1em 1em 1em 0em;
+  margin-top: 7px;
+}
+
+.input {
+  display: inline-block;
+  background-color: $sidemenu-background-color;
+  //background: url('../../../assets/images/newSVG/icon_calendar.svg') no-repeat scroll 5px 5px;
+  display: inline-block;
+  //padding-bottom: 10px;
+  padding-left: 30px;
+  //padding-right: -40px;
+  height: 2.5em;
+  width: 100%;
+}
+
+.icon {
+  height: 2.3em;
+  width: 2.3em;
+  //display: inline-block;
+  position: absolute;
+  float: right;
+  //margin-top: 5%;
+  //padding-bottom: 3%;
+  //padding-right: 2%;
+  //margin-left: 1em;
+}
+
+.date_range_container {
+  //border: 2px solid lightgrey;
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+  display: inline-block;
+  //width: 100%;
+}

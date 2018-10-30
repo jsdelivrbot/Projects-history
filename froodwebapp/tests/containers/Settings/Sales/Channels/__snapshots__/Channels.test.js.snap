@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Channels capturing Snapshot of Channels 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+/>
+`;

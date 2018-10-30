@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumerationFormatsPage capturing Snapshot of CustomTab 1`] = `
+<div>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <PageHeader
+      bigText="Custom Text"
+    />
+    <form
+      className="form"
+    >
+      <Row>
+        <Col
+          lg={true}
+        >
+          <strong>
+            Label
+          </strong>
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          lg={true}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="customNotes"
+            placeholder="Any text that will appear in shopping card"
+          />
+        </Col>
+      </Row>
+      <Controls
+        cancelButtonVisible={false}
+        submitButtonVisible={true}
+      />
+    </form>
+  </Spin>
+</div>
+`;

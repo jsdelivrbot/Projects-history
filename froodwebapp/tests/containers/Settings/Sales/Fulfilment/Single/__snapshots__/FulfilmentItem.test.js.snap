@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FulfilmentItem capturing Snapshot of FulfilmentItem 1`] = `
+<Row>
+  <Col
+    lg={true}
+    md={true}
+    xs={true}
+  >
+    <Tabs
+      activeKey="calendar"
+      animated={false}
+      hideAdd={false}
+      onChange={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="calendar"
+        placeholder={null}
+        tab="Calendar"
+      >
+        <Connect(CalendarTab)
+          fulfilmentId="item"
+          readonly={false}
+        />
+      </TabPane>
+      <TabPane
+        key="blackout"
+        placeholder={null}
+        tab="Blackout Days"
+      >
+        <Connect(BlackoutTab)
+          fulfilmentId="item"
+          readonly={false}
+        />
+      </TabPane>
+      <TabPane
+        key="cutoff"
+        placeholder={null}
+        tab="Cutoff"
+      >
+        <Connect(ReduxForm)
+          fulfilmentId="item"
+          readonly={false}
+        />
+      </TabPane>
+      <TabPane
+        key="customText"
+        placeholder={null}
+        tab="Custom Text"
+      >
+        <Connect(ReduxForm)
+          fulfilmentId="item"
+          readonly={false}
+        />
+      </TabPane>
+      <TabPane
+        key="apiInfo"
+        placeholder={null}
+        tab="API Info"
+      >
+        <Connect(ReduxForm)
+          fulfilmentId="item"
+        />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

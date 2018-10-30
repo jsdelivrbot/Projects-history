@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TasksMenu captures snapshot of TasksMenu 1`] = `
+<div
+  className="tasksMenu"
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <Card
+    style={
+      Object {
+        "minWidth": "20rem",
+      }
+    }
+    title="Warnings"
+  >
+    <Tag
+      closable={true}
+      color="orange"
+      id="12"
+      key="12"
+      onClose={[Function]}
+    >
+      ERROR
+    </Tag>
+    <Tag
+      closable={true}
+      color="orange"
+      id="13"
+      key="13"
+      onClose={[Function]}
+    >
+      SUCCESS
+    </Tag>
+  </Card>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order capturing Snapshot of Order 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <form
+    className="form"
+  >
+    <withRouter(OrderInfo)
+      disabled={true}
+    />
+    <Connect(OrderTabs)
+      disabled={true}
+      handleSubmit={[Function]}
+      isNewOrder={false}
+      orderId="1"
+    />
+  </form>
+</Spin>
+`;

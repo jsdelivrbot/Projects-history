@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-unused-vars": 0,
+    "max-len": [1, 120, 2, {"ignoreComments": true}],
+    "prop-types": [2]
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "MouseEvent": true,
+    "confirm": true,
+  }
+}

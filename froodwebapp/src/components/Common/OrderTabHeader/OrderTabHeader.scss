@@ -1,0 +1,44 @@
+.header {
+  font-size: 1.3rem;
+  font-weight: 600;
+  span {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: lightblue
+  }
+  div:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  div:last-child {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+
+.buttons {
+  button:nth-last-child(2) {
+    margin-left: 0.5rem;
+    margin-right: 0.1rem;
+  }
+}
+
+.button {
+  width: 7rem;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  z-index: 5;
+  display: block;
+  color: black;
+  float: right;
+  span {
+    margin-right: 0.5rem;
+  }
+  a {
+    color: black;
+  }
+}
+
+.row {
+  margin-bottom: 1rem;
+}

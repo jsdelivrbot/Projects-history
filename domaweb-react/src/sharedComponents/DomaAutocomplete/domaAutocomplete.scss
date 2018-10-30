@@ -1,0 +1,63 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/global.scss';
+
+.input {
+  background-color: $sidemenu-background-color;
+  color: $primary-text-color;
+  width: 100%;
+  height: 2.5em;
+  padding: 5px;
+}
+
+.results {
+  cursor: pointer;
+  overflow: auto;
+  height: 8vmax;
+}
+
+.noResults {
+  cursor: default;
+}
+
+.results:hover {
+  background-color: white;
+  border-color: $sidemenu-background-color;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.chosenByKey {
+  background-color: white;
+  border-color: $sidemenu-background-color;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.text {
+  font-size: 85%;
+  color: $primary-text-color;
+  font-weight: bold;
+}
+
+.icon {
+  height: 2.5em;
+  width: 2.5em;
+  //display: inline-block;
+  background-color: $sidemenu-background-color;
+  position: absolute;
+  float: right;
+  padding: 3px;
+  right: 15px;
+  //margin-top: 5%;
+  //padding-bottom: 3%;
+  //padding-right: 2%;
+  //margin-left: 1em;
+  //padding-right: 1em; 
+}
+
+.icon:hover {
+  //background-color: $primary-text-color;
+  color: white;
+  cursor: pointer;
+  filter: invert(50%);
+}

@@ -1,0 +1,25 @@
+{
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "mountPoints": [],
+      "name": "frood-node-staging",
+      "environment": [],
+      "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+      "cpu": 0,
+      "memoryReservation": 500
+    }
+  ],
+  "placementConstraints": [],
+  "volumes": [],
+  "family": "frood-node-staging"
+}

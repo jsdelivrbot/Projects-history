@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivityTab capturing Snapshot of AllocationsTab 1`] = `
+<div>
+  <OrderTabHeader
+    header=""
+    headerLabel="Location"
+    primaryButtonText="Edit Allocation"
+    secondaryButtonText="Pick List"
+  >
+    <Row>
+      <Col
+        lg={3}
+      >
+        <Select
+          choiceTransitionName="zoom"
+          onChange={[Function]}
+          prefixCls="ant-select"
+          showSearch={false}
+          transitionName="slide-up"
+          value=""
+        />
+      </Col>
+    </Row>
+  </OrderTabHeader>
+  <Row>
+    <Col
+      lg={true}
+    >
+      <GridTable
+        columns={
+          Array [
+            Object {
+              "dataIndex": "batch",
+              "title": "Batch",
+            },
+            Object {
+              "dataIndex": "expiry",
+              "title": "Expiry",
+            },
+            Object {
+              "dataIndex": "availableQty",
+              "title": "Available Qty",
+            },
+            Object {
+              "dataIndex": "allocatedQty",
+              "min": 1,
+              "title": "Allocated Qty",
+              "type": "number",
+            },
+          ]
+        }
+        dataSource={Array []}
+        isExpandable={false}
+        rowKey="id"
+        updateTableData={[Function]}
+      />
+    </Col>
+  </Row>
+  <Controls
+    onSaveButtonClick={[Function]}
+    saveButtonText="Save"
+    saveButtonVisible={true}
+  />
+</div>
+`;

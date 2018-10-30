@@ -1,0 +1,57 @@
+$main-blue: #108ee9;
+$main-orange: orange;
+$main-green: #7ED321;
+$main-red: #FC3768;
+$main-white: white;
+$main-black: black;
+$main-gray: #f7f7f7;
+
+// borders
+$border-width: 1px;
+$main-border: $border-width solid #CCCCCC;
+$secondary-border: $border-width solid #979797;
+
+$antd-grey: #f7f7f7;
+$frood-grey: #4A4A4A;
+
+// header
+$top-header-color-frood: #22262E;
+$bottom-header-color-frood: $frood-grey;
+
+$top-header-color-sasha: #93C6DB;
+$bottom-header-color-sasha: #73B0C9;
+
+$top-header-color-three: #80b9d4;
+$bottom-header-color-three: #5fa0bf;
+
+$top-header-color: $top-header-color-three;
+$bottom-header-color: $bottom-header-color-three;
+
+// main
+$main-container-background-color: #F0F2F5;
+
+// footer
+$footer-color: #80b9d4;
+
+// breadcrumb
+$breadcrumb-color-frood: #D8D8D8;
+$breadcrumb-color-sasha: #E6F6FE;
+$breadcrumb-color-three: #e0f4fe;
+
+$breadcrumb-color: $breadcrumb-color-sasha;
+$breadcrumb-text-color: $main-black;
+
+// controls
+$save-button-color: $main-green;
+$cancel-button-color: $main-orange;
+$update-button-color: rgb(218, 0, 255);
+
+// bulk menu
+$bulk-menu-header-color: #F48E3D;
+$bulk-menu-body-color: $main-white;
+$bulk-menu-body-header-color: #9B9B9B;
+
+// sticky table
+$row-hover-color: #ecf6fd;
+
+

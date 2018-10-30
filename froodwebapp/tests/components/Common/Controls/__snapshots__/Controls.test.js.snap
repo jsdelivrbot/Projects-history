@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls captures snapshot of Controls with buttons 1`] = `
+<div
+  className="buttons"
+>
+  <Button
+    className="cancelButton"
+    onClick={[Function]}
+  >
+    Cancel
+  </Button>
+  <Button
+    className="updateButton"
+    onClick={[Function]}
+  >
+    text
+  </Button>
+  <Button
+    className="saveButton"
+    onClick={[Function]}
+  >
+    text
+  </Button>
+  <Button
+    className="saveButton"
+    type="submit"
+  >
+    text
+  </Button>
+</div>
+`;
+
+exports[`Controls captures snapshot of Controls without buttons 1`] = `
+<div
+  className="buttons"
+/>
+`;

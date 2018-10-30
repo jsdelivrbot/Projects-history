@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderTab capturing Snapshot of OrderTab 1`] = `
+<Row>
+  <Col
+    xs={true}
+  >
+    <Field
+      addNewRowVisible={true}
+      columns={
+        Array [
+          Object {
+            "dataIndex": "sku",
+            "disabled": true,
+            "title": "SKU",
+            "type": "skuAutoComplete",
+            "vendorId": 1,
+          },
+          Object {
+            "dataIndex": "name",
+            "title": "ITEM NAME",
+          },
+          Object {
+            "dataIndex": "supplierSku",
+            "title": "SUPPLIER SKU",
+          },
+          Object {
+            "dataIndex": "uomName",
+            "title": "UOM",
+          },
+          Object {
+            "dataIndex": "availableQty",
+            "title": "AVAILABLE QTY",
+          },
+          Object {
+            "dataIndex": "price",
+            "render": [Function],
+            "title": "PRICE",
+          },
+          Object {
+            "dataIndex": "qty",
+            "disabled": true,
+            "title": "ORDER QTY",
+            "type": "number",
+          },
+          Object {
+            "dataIndex": "discount",
+            "disabled": true,
+            "formatter": [Function],
+            "parser": [Function],
+            "title": "DISCOUNT",
+            "type": "number",
+          },
+          Object {
+            "dataIndex": "tax",
+            "render": [Function],
+            "title": "TAX",
+          },
+          Object {
+            "dataIndex": "total",
+            "render": [Function],
+            "title": "TOTAL",
+          },
+        ]
+      }
+      component={[Function]}
+      deleteColumnVisibleRightSide={false}
+      disabled={true}
+      name="details"
+    />
+    <Connect(TotalAndNotes)
+      currency="$"
+      disabled={true}
+    />
+    <Controls
+      cancelButtonVisible={false}
+      onCancelButtonClick={[Function]}
+      onSaveButtonClick={[Function]}
+      saveButtonText="Save"
+      saveButtonVisible={false}
+      submitButtonText="Submit"
+      submitButtonVisible={false}
+    />
+  </Col>
+</Row>
+`;

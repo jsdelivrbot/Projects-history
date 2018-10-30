@@ -1,0 +1,41 @@
+
+.summary_wrapper{
+    border-top: 1px dotted #E6E6E6;
+    padding: 15px;
+}
+
+.symbol{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.symbol_heading_firstLevel{
+  font-weight: bold;
+}
+.symbol_heading_secondLevel{
+  font-weight: bold;
+}
+
+.symbol_text{
+  color:#898686;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.symbol_section{
+
+  clear: both;
+  float: left;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.symbol_summary_section{
+  background-color: red;
+}
+
+.symbol_summary_section_repeat{
+display: i
+}

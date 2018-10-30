@@ -1,0 +1,23 @@
+.columnsModal {
+  top: 10.5rem;
+  width: 60vw !important;
+}
+
+.transfer {
+  div[class="ant-transfer-list"] {
+    width: 40%;
+    height: 50vh;
+    span[class="ant-transfer-list-header-title"] {
+      position: relative;
+      margin-left: 0.2rem;
+      right: 0;
+    }
+  }
+  div[class="ant-transfer-operation"] {
+    width: 17%;
+    button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

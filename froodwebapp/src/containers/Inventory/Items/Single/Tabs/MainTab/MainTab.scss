@@ -1,0 +1,15 @@
+@import '~styles/common.scss';
+
+.productVariantsTitle {
+  font-size: 18px;
+}
+
+.addProductVariantsTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.optionValues {
+  text-align: left !important;
+}

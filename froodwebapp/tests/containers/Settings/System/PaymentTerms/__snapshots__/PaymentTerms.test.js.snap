@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentTerms capturing Snapshot of PaymentTerms 1`] = `
+<div>
+  <PageHeader
+    bigText="Company Payment Terms"
+    smallText="Manage payment terms for customers and suppliers"
+  />
+  <Connect(PaymentTermsTable) />
+</div>
+`;

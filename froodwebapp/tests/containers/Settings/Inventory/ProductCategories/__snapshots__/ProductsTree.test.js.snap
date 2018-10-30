@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductsTree capturing Snapshot of ProductsTree 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Name",
+          "name": "name",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "name": "",
+      }
+    }
+    loading={false}
+    title="New Category"
+    visible={false}
+  />
+  <Row>
+    <Col
+      xs={3}
+    >
+      <Search
+        onChange={[Function]}
+        placeholder="Search"
+        prefixCls="ant-input-search"
+      />
+    </Col>
+  </Row>
+  <Row>
+    <Col>
+      <Tree
+        autoExpandParent={true}
+        checkable={false}
+        expandedKeys={Array []}
+        onExpand={[Function]}
+        openAnimation={
+          Object {
+            "appear": [Function],
+            "enter": [Function],
+            "leave": [Function],
+          }
+        }
+        prefixCls="ant-tree"
+        showIcon={false}
+        showLine={true}
+      >
+        <TreeNode
+          className="treeNode"
+          key="products"
+          title={
+            <Dropdown
+              mouseEnterDelay={0.15}
+              mouseLeaveDelay={0.1}
+              overlay={
+                <Menu
+                  className=""
+                  onClick={[Function]}
+                  prefixCls="ant-menu"
+                  theme="light"
+                >
+                  <MenuItem
+                    activeKey={
+                      Object {
+                        "action": "addChild",
+                        "id": 0,
+                      }
+                    }
+                  >
+                    Add Child
+                  </MenuItem>
+                  <MenuItem
+                    activeKey={
+                      Object {
+                        "action": "delete",
+                        "id": 0,
+                      }
+                    }
+                  >
+                    Delete
+                  </MenuItem>
+                </Menu>
+              }
+              placement="bottomLeft"
+              prefixCls="ant-dropdown"
+            >
+              <Button
+                clicked={false}
+                ghost={false}
+                loading={false}
+                prefixCls="ant-btn"
+              >
+                All Products 
+                <Icon
+                  type="down"
+                />
+              </Button>
+            </Dropdown>
+          }
+        />
+      </Tree>
+    </Col>
+  </Row>
+</div>
+`;

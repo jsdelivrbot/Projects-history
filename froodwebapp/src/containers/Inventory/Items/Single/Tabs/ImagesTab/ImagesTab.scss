@@ -1,0 +1,75 @@
+@import '~styles/colors.scss';
+
+.imageCol {
+  border-radius: 5px;
+  border: $main-border;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.uploadCol {
+  @extend .imageCol;
+  padding: 0rem;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.image {
+  height: 12rem;
+  line-height: 12rem;
+  text-align: center;
+}
+
+.imageBox {
+  @extend .image;
+  i {
+    opacity: 0;
+  }
+  &:hover {
+    transition: .5s ease;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0 , 0, 0.5);
+    i {
+      padding: 10px;
+      color: $main-white;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+}
+
+.uploadBox {
+  height: 100%;
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-gray;
+
+  .uploadIcon {
+    font-size: 40px;
+  }
+
+  .uploadText {
+    font-size: 15px;
+  }
+  input {
+    display: none;
+  }
+}
+
+.imageModalWrapper {
+  img {
+    width: 100%;
+  }
+
+  span[class="ant-modal-close-x"] {
+    font-size: 26px;
+  }
+}
+
+.imageHidden {
+  display: none;
+}

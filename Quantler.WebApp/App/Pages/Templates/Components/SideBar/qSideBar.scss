@@ -1,0 +1,71 @@
+@import "../../../../Components/Styles/QBootStrapVariables";
+
+.qsidebar-puller {
+  width: 10px;
+  height: 100%;
+  background: #f5f7fa;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: e-resize;
+  line-height: 6px;
+  display: table;
+  text-align: center;
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #bbb;
+  }
+}
+
+.qsidebar-puller-left {
+  right: auto;
+  left: 0;
+}
+
+.qtop-puller {
+  width: 100%;
+  height: 10px;
+  background: #f5f7fa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: n-resize;
+  z-index: 5;
+  text-align: center;
+  color: #bbb;
+  line-height: 2px;
+}
+
+.QSideBar {
+  > .title {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 15px 0;
+    color: #31323e;
+    position: relative;
+    text-align: center;
+  }
+
+  .option-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-top: 2%;
+
+    div {
+      float: left;
+      height: 100%;
+      margin-right: 10px;
+      cursor: pointer;
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

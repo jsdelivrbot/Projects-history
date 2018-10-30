@@ -1,0 +1,13 @@
+@import '~styles/colors.scss';
+
+.activeSlotButton, .activeSlotButton:hover, .activeSlotButton:focus {
+  color: $main-white;
+  background-color: $main-orange;
+  border-color: $main-orange;
+}
+
+.slotButton, .slotButton:hover, .slotButton:focus {
+  color: $main-white;
+  background-color: $main-blue;
+  border-color: $main-blue;
+}

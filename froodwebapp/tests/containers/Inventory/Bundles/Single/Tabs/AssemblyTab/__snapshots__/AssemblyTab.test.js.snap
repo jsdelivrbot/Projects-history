@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AssemblyTab capturing Snapshot of AssemblyTab 1`] = `
+<div>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Connect(ReduxForm)
+      bundleId="1"
+    />
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "sku",
+            "title": "SKU",
+          },
+          Object {
+            "dataIndex": "skuName",
+            "title": "Name",
+          },
+          Object {
+            "dataIndex": "categoryName",
+            "title": "Category",
+          },
+          Object {
+            "dataIndex": "uomName",
+            "title": "UOM",
+          },
+          Object {
+            "dataIndex": "batch",
+            "title": "Batch",
+          },
+          Object {
+            "dataIndex": "expiry",
+            "title": "Expiry",
+          },
+          Object {
+            "dataIndex": "qty",
+            "title": "Quantity",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

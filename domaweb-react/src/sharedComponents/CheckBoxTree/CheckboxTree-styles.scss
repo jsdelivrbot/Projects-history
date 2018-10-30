@@ -1,0 +1,94 @@
+:global{
+  .checkbox-tree{
+    .react-checkbox-tree{
+      max-height: 200px;
+      overflow: scroll;
+    }
+    .rct-icon-leaf::before {
+      content: none;
+    }
+
+    .rct-icon-parent-open::before {
+      content: none;
+    }
+
+    .rct-icon-parent-close::before {
+      content: none;
+    }
+
+    .rct-node-icon{
+      display: none;
+    }
+
+    .rct-icon-uncheck::before {
+      content: "\f096";
+    }
+
+    .rct-icon-check::before {
+      content: "\f14a";
+      color: #81C74A;
+    }
+
+    .rct-icon-half-check::before {
+      opacity: .5;
+      content: "\f14a";
+    }
+
+
+    .rct-icon-expand-open::before {
+      content: "\f146";
+    }
+
+    .rct-icon-expand-close::before {
+      content: "\f0fe";
+    }
+
+    ol{
+      li{
+          position: relative;
+          &:before{
+              position: absolute;
+              left: -13px;
+              content: '';
+              display: block;
+              border-left: 1px dotted grey;
+              height: 16px;
+              border-bottom: 1px dotted grey;
+              width: 17px;
+              top: -4px;
+          }
+
+          &:after{
+              position: absolute;
+              left: -13px;
+              bottom: -1px;
+              content: '';
+              display: block;
+              border-left: 1px dotted grey;
+              height: 100%;
+          }
+          &:last-child {
+            &:after{ display: none }
+          }
+      }
+    }
+
+    .react-checkbox-tree > ol > li:first-child {
+      &:before{ display: none }
+    }
+    
+    .react-checkbox-tree {
+      label{
+        padding-top: 4px;
+      }
+    }
+  }
+  .rct-node-leaf{
+    label{
+      font-weight: normal;
+    }
+    .rct-collapse{
+      display: none;
+    }
+  }
+}

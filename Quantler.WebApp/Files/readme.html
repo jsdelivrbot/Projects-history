@@ -1,0 +1,1481 @@
+<h1 id="quantler">Quantler</h1>
+
+
+
+<h2 id="overview">Overview</h2>
+
+<p>Quantler is an online algorithimc trading system development environment. Quantler makes use of the Quantler model, also explained in this document. By both leveraging the C# language and the Quantler model, developers and non-developers are given a lean stack for the realization of their trading ideas to its execution. Our goal is to provide the infrastructure, data, setup tasks and guidance in realizing your trading ideas.</p>
+
+<p><em>(Note: Our current release is in Beta stage. If you spot any unexpected behaviours please <a href="mailto:support@quantler.com">Contact Support</a>)</em></p>
+
+
+
+<h3 id="support">Support</h3>
+
+<p>In case you have questions <a href="mailto:support@quantler.com">Contact Support</a>.</p>
+
+
+
+<h3 id="intellectual-property">Intellectual Property</h3>
+
+<p>You, the user, own all your intellectual property and code. Your code is private by default, unless you explicitly share it with the community or on other parts of our website. We respect your valuable property, and wish to make it easier. In the event that we ever need access to your code, such as troubleshooting, we will explicitly request your permission first. </p>
+
+
+
+<h2 id="getting-started">Getting started</h2>
+
+
+
+<h3 id="tips">Tips</h3>
+
+<ul>
+<li>Do not start from scratch, use an existing template and modify it to learn how it works.</li>
+<li>Explore the basic sources for ideas and sample code.</li>
+<li>Use every item in the Quantler model, the parts presented are based on best practices.</li>
+<li>Use multiple samples when testing your trading algorithm.</li>
+</ul>
+
+
+
+<h3 id="interface">Interface</h3>
+
+<p>Please use the following video for more information regarding Quantler’s interface: <br>
+<a href="https://www.youtube.com/watch?v=ZfAnJkR7DZg"><img src="https://img.youtube.com/vi/ZfAnJkR7DZg/0.jpg" alt="Quantler Introduction" title=""></a></p>
+
+
+
+<h3 id="backtest-notices">Backtest Notices</h3>
+
+<p>When backtesting new trading algorithms, please consider the following:</p>
+
+<ul>
+<li>The backtester is by design tick based, which means: if no ticks are received from the <a href="#quantler-api-documentation-datastreams">DataStream</a>, no events will be fired.</li>
+<li>When selecting a timeframe, the backtester will automatically select the lowest level of data needed. Please see <a href="#quantler-getting-started-data-sources">Data Sources</a> for more info.</li>
+<li>Using the Quantler model is not obligatory, you can in fact write a complete algorithm in one template. However, you are advised not to.</li>
+<li>Quantler will only act based on the default timeframe, other timeframes (higher or lower), will not trigger an event in other templates. See the possible <a href="#quantler-api-documentation-events">events</a>.</li>
+<li>When sending an order in the opposite direction of your current position, Quantler will not reverse the position and will not hedge the current position either. You can however, flip your current position in one order. An example would be: I am long 100 units, I will send a sell/short order for 200 units, my new position will be -100 units or 100 units short.</li>
+<li><strong>Always take into account that past performance does not guarantee future results!</strong></li>
+</ul>
+
+
+
+<h3 id="data-sources">Data Sources</h3>
+
+<p>The lowest level of data available are level 1 ticks (Quotes based). A tick is each change in the market price. Since market prices can change 100 times per second, tick data needs the most resources to simulate your trading but is more accurate to real world conditions. Currently we are only offering FX (Forex/Currency) data on major pairs, going back to 2007. All data is based on UTC timestamps.</p>
+
+<p>There are many other financial data sources we’d like to incorporate, such as equities and futures. What kind of data sources would you like us to have? <a href="mailto:feedback@quantler.com">Let us know</a>.</p>
+
+<p>A bar is a summary of the trading activity for a security for a one-second period, and gives you the opening price, closing price, high price and low price during that second. Our datasource is point-in-time, which is important for backtest accuracy, your algorithm receives accurate historical data without any bias towards the present.</p>
+
+<p>Quantler has a database of pre-aggregated data (bars) on different levels. We currently have the following timed bars available:</p>
+
+<ul>
+<li>Second bars: 1 second</li>
+<li>Minute bars: 1 minute, 5 minutes</li>
+<li>Hourly bars: 1 hour</li>
+<li>Daily bars: 1 day</li>
+</ul>
+
+<p>To speed up the backtest process, the backtester will automatically choose a default pre-aggregration level for you. This is based on the chosen timeframe in the templates requested <a href="#quantler-api-documentation-datastreams">datastream</a>, set during the initialization process. If there are multiple <a href="#quantler-api-documentation-datastreams">datastreams</a> available with mutliple timeframes, the lowest level is always taken for choosing the pre-aggregated data. This allows you to add multiple <a href="#quantler-api-documentation-datastreams">datastreams</a> and forcing a certain pre-aggregration level in your algorithms.</p>
+
+<p>Examples <br>
+- Selecting a timeframe of 30 minutes will result in a datasource based on the 5 minutes level. <br>
+- Selecting a timeframe of 1 hour will result in a datasource based on the 1 hour level. <br>
+- Selecting a timeframe of 1 hour 2 minutes and 12 seconds will result in a datasource based on the 1 second level.</p>
+
+
+
+<h3 id="libraries">Libraries</h3>
+
+<p>The following third-party libraries can be used for development of your trading algorithms:</p>
+
+<p><strong><a href="http://accord-framework.net/">Accord</a> </strong> <br>
+The Accord.NET Framework is a .NET machine learning framework combined with audio and image processing libraries completely written in C#. It is a complete framework for building production-grade computer vision, computer audition, signal processing and statistics applications. A comprehensive set of sample applications provide a fast start to get up and running quickly, and an extensive documentation and wiki helps fill in the details.</p>
+
+<p><strong><a href="http://www.aforgenet.com/">AForge.NET</a></strong> <br>
+AForge.NET is a C# framework designed for developers and researchers in the fields of Computer Vision and Artificial Intelligence - image processing, neural networks, genetic algorithms, machine learning, robotics, etc.</p>
+
+<p><strong><a href="http://www.alglib.net/">ALGLIB</a></strong> <br>
+ALGLIB is a cross-platform numerical analysis and data processing library. It supports several programming languages (C++, C#, Pascal, VBA) and several operating systems (Windows, Linux, Solaris). ALGLIB features include:</p>
+
+<ul>
+<li>Data analysis (classification/regression, including neural networks)</li>
+<li>Optimization and nonlinear solvers</li>
+<li>Interpolation and linear/nonlinear least-squares fitting</li>
+<li>Linear algebra (direct algorithms, EVD/SVD), direct and iterative linear solvers, Fast Fourier Transform and many other algorithms (numerical integration, ODEs, statistics, special functions)</li>
+</ul>
+
+<p><strong><a href="http://numerics.mathdotnet.com/">Math.NET Numerics</a></strong> <br>
+Math.NET Numerics aims to provide methods and algorithms for numerical computations in science, engineering and every day use. Covered topics include special functions, linear algebra, probability models, random numbers, interpolation, integration, regression, optimization problems and more.</p>
+
+<p><strong><a href="http://ta-lib.org/">TA-LIB</a></strong> <br>
+TA-Lib is an open-source software library of technical analysis indicators. The library provides about 125 functions like ADX, RSI, MACD, Stochastics, Bollinger Bands, candlestick pattern recognition.</p>
+
+
+
+<h3 id="live-trading">Live Trading</h3>
+
+<p>Quantler is compatible with any broker that is using Metatrader 4 as its backend. To enable live trading, please go to the Accounts section via the left menu. Here you can either choose for a free version in which the selection of brokers is limited or a paid version where all compatible brokers can be selected.</p>
+
+<p>You can always manually intervene on your trading. For example, closing a position manually will automatically sync this with your trading algorithm. This way you can use any of the native MT4 applications for when you are on the road:</p>
+
+<p>Apple iPhone: <a href="https://itunes.apple.com/nl/app/metatrader-4/id496212596?mt=8">Download</a> <br>
+Android Apps: <a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4">Download</a></p>
+
+
+
+<h4 id="charts">Charts</h4>
+
+<p>While performing live trading, templates can define charts on any data that is needed. These charts will be presented on the live trading management dashboard and a smaller selection on the general dashboard. </p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs avrasm">UpdateChart(<span class="hljs-string">"EMAFAST"</span>, ChartType<span class="hljs-preprocessor">.Line</span>, emafast<span class="hljs-preprocessor">.Result</span><span class="hljs-preprocessor">.CurrentValue</span>)<span class="hljs-comment">;</span></code></pre>
+
+<p>In the example above we create a chart label for using the following properties:</p>
+
+<ul>
+<li><code>"EMAFAST"</code>: Name of the chart</li>
+<li><code>ChartType.Line</code>: Chart type to use for this data (can be Line, Bar or Step)</li>
+<li><code>emafast.Result.CurrentValue</code>: Value to be added to the chart</li>
+</ul>
+
+
+
+<h4 id="logging">Logging</h4>
+
+<p>During live trading, you can log up to 10 kilobytes of logging data per day. This is done via the following trading agent method:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs mathematica">    Agent.<span class="hljs-keyword">Log</span>(LogSeverity.<span class="hljs-keyword">Debug</span>, <span class="hljs-string">"Hello {0}"</span>, <span class="hljs-string">"World!"</span>);</code></pre>
+
+<p>In the example above we have pushed the following log event “Hello World!”:</p>
+
+<ul>
+<li><code>LogSeverity</code>: Severity level of the logged message (Debug, Info, Error)</li>
+<li><code>Hello {0}</code>: We set the text of the error message with a parameter number 0</li>
+<li><code>World!</code>: We replace the value {0} with any object we have set here, which is currently the word “World!”</li>
+</ul>
+
+<p>Logging messages will be stored and can be retrieved via the live trading management interface.</p>
+
+
+
+<h2 id="the-quantler-model">The Quantler model</h2>
+
+<p>The Quantler model is designed to create, test and evaluate new trading ideas faster, more flexible and more easily. Developers as well as non-developers can use the model to create or generate new trading algorithms by combining existing and new templates. Each template contains domain specific knowledge and represent your trading ideas. Programming is optional when reusing existing templates. The Quantler model is based on best practices for creating trading algorithms and is further explained in this section.</p>
+
+
+
+<h3 id="structure">Structure</h3>
+
+<p>The Quantler model consists of 5 parts that are the step stones for creating a trading algorithm. Each part has its own responsibility in the trading process. In IT this concept is called <a href="http://www.wikiwand.com/en/Separation_of_concerns">separation of concerns</a>, for your trading algorithm it results in a modular way of developing and realizing new trading algorithms.</p>
+
+<p><img src="https://app.quantler.com/Art/Images/documentation/Quantler%20Model.png" alt="Quantler Model" title=""></p>
+
+
+
+<h3 id="template">Template</h3>
+
+<p>A template is a subsystem of your trading algorithm. Trading algorithms in Quantler consists of multiple templates which strengthen each other during strategy execution. A template contains code, parameters and documentation. Each template has it its own responsibility within an algorithm.</p>
+
+<p>Each template contains the following properties directly accessible:</p>
+
+<ul>
+<li><code>Agent :Agent</code>: Returns the <a href="#agent">agent</a> object this template belongs to</li>
+<li><code>Bars :BarIndexer</code>: Returns an object which you use to easily search for bars on different timeframes and different symbols</li>
+<li><code>Portfolio :Portfolio</code>: Returns the <a href="#quantler-api-documentation-portfolio">portfolio</a> this agent is using</li>
+<li><code>CurrentBar[string symbol] :Bar</code>: Returns the current <a href="#bar">bar</a> based on the supplied symbol name (latest closed bar)</li>
+<li><code>CurrentTick[string symbol] :Tick</code>: Returns the current <a href="#tick">tick</a> based on the supplied symbol name (latest tick received)</li>
+<li><code>Name :string</code>: Returns the name of the current template</li>
+<li><code>Id :int</code>: Template unique id</li>
+<li><code>Indicators</code>: Factory for creating indicators</li>
+</ul>
+
+<p>Functions:</p>
+
+<ul>
+<li>Data Related <br>
+<ul><li><code>AddStream(SecurityType type, string name)</code>: Add another <a href="#quantler-api-documentation-datastreams">datastream</a> programmatically based on the security type (currently Forex only, SecurityType.Forex), the name of the security without giving an interval of data (no bars are created).</li>
+<li><code>AddStream(SecurityType type, string name, int interval)</code>: Add another <a href="#quantler-api-documentation-datastreams">datastream</a> programmatically based on the security type (currently Forex only, SecurityType.Forex), the name of the security and the interval in a timespan format (for which bars are created).</li>
+<li><code>AddStream(SecurityType type, string name, BarInterval interval)</code>: Add another <a href="#quantler-api-documentation-datastreams">datastream</a> programmatically based on the security type (currently Forex only, SecurityType.Forex), the name of the security and the interval in a BarInterval format (for which bars are created).</li>
+<li><code>AddStream(SecurityType type, string Name, TimeSpan Interval)</code>: Add another <a href="#quantler-api-documentation-datastreams">datastream</a> programmatically based on the security type (currently Forex only, SecurityType.Forex), the name of the security and the interval in a timespan format (for which bars are created).</li></ul></li>
+<li>Dashboard charts <br>
+<ul><li><code>UpdateChart(string name, ChartType type, decimal value)</code>: Update a <a href="#charts">dashboard chart</a> using a decimal value with a given name</li>
+<li><code>UpdateChart(string name, ChartType type, double value)</code>: Update a <a href="#charts">dashboard chart</a> using a double value with a given name</li>
+<li><code>UpdateChart(string name, ChartType type, int value)</code>: Update a <a href="#charts">dashboard chart</a> using an integer value with a given name</li>
+<li><code>UpdateChart(string name, ChartType type, float value)</code>: Update a <a href="#charts">dashboard chart</a> using a float value with a given name</li></ul></li>
+<li>Creating pending orders <br>
+<ul><li><code>CreateOrder(string symbol, Direction direction, double quantity, double limitPrice, string comment = "") :PendingOrder</code>: Create a pending order object, based on settings provided, ready to be send.</li>
+<li><code>LimitOrder(string symbol, Direction direction, double quantity, double limitPrice, string comment = "") :PendingOrder</code>: Create a pending limit order object, ready to be send.</li>
+<li><code>MarketOrder(string symbol, Direction direction, double quantity, string comment = "") :PendingOrder</code>: Create a pending market order object, ready to be send.</li>
+<li><code>StopLimitOrder(string symbol, Direction direction, double quantity, string comment = "") :PendingOrder</code>: Create a pending stop limit order object, ready to be send.</li>
+<li><code>StopOrder(string symbol, Direction direction, double quantity, double stopPrice, string comment = "") :PendingOrder</code>: Create a pending stop order object, ready to be send.</li>
+<li><code>SubmitOrder(PendingOrder pendingorder) :StatusType</code>: Submit a pending order to the broker (for custom order sending)</li></ul></li>
+</ul>
+
+
+
+<h4 id="agent">Agent</h4>
+
+<p>The agent is a template that combines and routes all decisions made by the other 4 <a href="#quantler-the-quantler-model-template">templates</a>. For instance, if an entry template determines that is time to enter the markets, the agent is then responsible for executing the order and consult with your <a href="#quantler-api-documentation-portfolio">portfolio</a>.</p>
+
+<p>The agent contains the following properties:</p>
+
+<ul>
+<li><code>AgentId :int</code>: , also used for tracking orders (which positions/orders belong to which agent)</li>
+<li><code>Bars :BarIndexer</code>: Returns an object which you use to easily search for bars on different timeframes and different symbols</li>
+<li><code>CurrentBar[string symbol] :Bar</code>: Returns the current <a href="#bar">bar</a> for a given symbol</li>
+<li><code>CurrentTick[string symbol] :Tick</code>: Returns the current <a href="#tick">tick</a> for a given symbol</li>
+<li><code>Stream :DataStream</code>: Returns the default <a href="#quantler-api-documentation-datastreams">datastream</a> used by this agent</li>
+<li><code>Timeframe :TimeSpan</code>: Returns the default timeframe used by this agent each OnCalculate events are executed based on this default timeframe</li>
+<li><code>Symbol :string</code>: Name of the default symbol used by this agent</li>
+<li><code>Name :string</code>: Name of this trading agent</li>
+<li><code>StartedDTUTC :DateTime</code>: Date and time on which this trading agent was started</li>
+<li><code>Results :Result</code>: Trading agent performance <a href="#results">results</a>, updated on each filled trade</li>
+<li><code>PendingOrders :PendingOrder[]</code>: All pending orders that belong to this trading agent</li>
+<li><code>Positions :IPositionTracker</code>: Positions that belong to this agent (makes trading multiple agents on the same symbol possible)</li>
+<li><code>Security :ISecurity</code>: Associated default security for this trading agent</li>
+<li><code>IsBacktesting :bool</code>: True if the trading agent is currently in a backtest state</li>
+<li><code>IsRunning :bool</code>: True if the trading agent is running (either a backtest or trading state)</li>
+<li><code>Portfolio :Portfolio</code>: Returns the <a href="#quantler-api-documentation-portfolio">portfolio</a> where this agent is part of</li>
+<li><code>Templates :List&lt;Template&gt;</code>: Returns the list of <a href="#quantler-the-quantler-model-template">templates</a> that this agent is using, including any paramaters defined and set</li>
+</ul>
+
+<p>An agent can have different states, where a state is the result of the calculations performed by the templates. If, for instance, all entry templates send an <code>EnterLong()</code> signal, the current state for this agent will be set at <code>EntryLong</code>. The following states are applicable, depending on the actions performed by the templates:</p>
+
+
+
+<h5 id="agentstate">AgentState</h5>
+
+<ul>
+<li><code>EntryLong</code>: The agent will initiate a buy order</li>
+<li><code>EntryShort</code>: The agent will initiate a sell order</li>
+<li><code>ExitLong</code>: The agent will create an exit order, based on the current long position (if currently Long)</li>
+<li><code>ExitShort</code>: The agent will create an exit order, based on the current short position (if currently Short)</li>
+<li><code>Flatten</code>: The agent will create an exit order, based whatever the current position is (either long or short)</li>
+<li><code>NoEntry</code>: All other states, defined by other entry templates, are ignored (we are not allowed to go long)</li>
+</ul>
+
+
+
+<h4 id="entry">Entry</h4>
+
+<p>The entry <a href="#quantler-the-quantler-model-template">template</a> determines based on what logic an entry should be made. Entry templates send this information to the <a href="#agent">agent</a> that will in turn execute the order and consult with the Risk Management template, the Money Management template and your <a href="#quantler-api-documentation-portfolio">portfolio</a>.</p>
+
+<p>The following method is suggested to be implemented:</p>
+
+<ul>
+<li><code>public override void Initialize()</code> - Executed once before starting the backtest or algorithm.</li>
+</ul>
+
+<p>The following method is obligatory to be implemented:</p>
+
+<ul>
+<li><code>public override void OnCalculate()</code> - Executed on each change event for the default timeframe of the <a href="#agent">agent</a>. Entry and exit decisions should be implemented here.</li>
+</ul>
+
+<p>Orders are passed to the agent through the following methods:</p>
+
+<ul>
+<li><code>EnterLong()</code>   - Will send a message to the agent to enter the markets long (Buy). Using the agents default symbol.</li>
+<li><code>EnterShort()</code>  - Will send a message to the agent to enter the markets short (Sell). Using the agents default symbol.</li>
+<li><code>NoEntry()</code>     - Will send a message to the agent to not enter the markets. Using the agents default symbol.</li>
+<li><code>Flatten()</code>     - Will send a message to the agent to flatten currently held positions. Using the agents default symbol.</li>
+<li><code>EnterLong(string Symbol)</code>   - Will send a message to the agent to enter the markets long (Buy). Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+<li><code>EnterShort(string Symbol)</code>  - Will send a message to the agent to enter the markets short (Sell). Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+<li><code>NoEntry(string Symbol)</code>     - Will send a message to the agent to not enter the markets. Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+<li><code>Flatten(string Symbol)</code>     - Will send a message to the agent to flatten currently held positions. Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+</ul>
+
+<p>Since you can have up to 3 entry templates in place for deciding your entry, the agent will evaluate all of the signals received. The agent will only enter the markets if <strong>1</strong>. All signals received are either <code>EnterLong()</code> or <code>EnterShort()</code> and <strong>2</strong>. there is no <code>NoEntry()</code> signal available. A request to flatten the position is always executed.</p>
+
+<p>Order flow for an entry order (RM = Risk Management, MM = Money Management):</p>
+
+
+
+<div class="sequence-diagram"><svg height="467" version="1.1" width="699.171875" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px; top: -0.03125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><marker id="raphael-marker-endblock55-obj43" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj46" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj49" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj52" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj55" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj58" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj61" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj64" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj67" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker></defs><rect x="10" y="20" width="55" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="20" y="30" width="35" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="37.5" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Entry</tspan></text><rect x="10" y="410" width="55" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="20" y="420" width="35" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="37.5" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Entry</tspan></text><path fill="none" stroke="#000000" d="M37.5,57L37.5,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="173.5" y="20" width="58" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="183.5" y="30" width="38" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="202.5" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Agent</tspan></text><rect x="173.5" y="410" width="58" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="183.5" y="420" width="38" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="202.5" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Agent</tspan></text><path fill="none" stroke="#000000" d="M202.5,57L202.5,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="562.171875" y="20" width="43" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="572.171875" y="30" width="23" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="583.671875" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RM</tspan></text><rect x="562.171875" y="410" width="43" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="572.171875" y="420" width="23" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="583.671875" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RM</tspan></text><path fill="none" stroke="#000000" d="M583.671875,57L583.671875,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="625.171875" y="20" width="44" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="635.171875" y="30" width="24" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="647.171875" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">MM</tspan></text><rect x="625.171875" y="410" width="44" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="635.171875" y="420" width="24" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="647.171875" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">MM</tspan></text><path fill="none" stroke="#000000" d="M647.171875,57L647.171875,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="81.5" y="73.5" width="77" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="120" y="82" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">EnterLong()</tspan></text><path fill="none" stroke="#000000" d="M37.5,94C37.5,94,169.8913076519966,94,197.4943781438924,94" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj43)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="332.359375" y="110.5" width="121.4375" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="393.0859375" y="119" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">IsTradingAllowed()</tspan></text><path fill="none" stroke="#000000" d="M202.5,131C202.5,131,533.8601432321593,131,578.6778969798684,131" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj46)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="378.359375" y="147.5" width="29.4375" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="393.0859375" y="156" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">True</tspan></text><path fill="none" stroke="#000000" d="M583.671875,168C583.671875,168,252.31173176784068,168,207.49397802013164,168" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj49)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="212.484375" y="184.5" width="361.171875" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="393.0859375" y="193" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RiskManagement(Order currentorder, AgentState state)</tspan></text><path fill="none" stroke="#000000" d="M202.5,205C202.5,205,533.8601432321593,205,578.6778969798684,205" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj52)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="311.578125" y="221.5" width="163" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="393.0859375" y="230" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Modified/Additional Order</tspan></text><path fill="none" stroke="#000000" d="M583.671875,242C583.671875,242,252.31173176784068,242,207.49397802013164,242" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj55)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="50" y="258.5" width="140" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="120" y="267" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">OnOrder(Stop Order)</tspan></text><path fill="none" stroke="#000000" d="M202.5,279C202.5,279,70.10869234800339,279,42.50562185610761,279" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj58)" stroke-dasharray="6,2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="283.734375" y="295.5" width="282.171875" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="424.8359375" y="304" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">PositionSize(Order order, AgentState state)</tspan></text><path fill="none" stroke="#000000" d="M202.5,316C202.5,316,593.3248901367188,316,642.1780014038086,316" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj61)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="376.828125" y="332.5" width="96" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="424.8359375" y="341" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Modified Order</tspan></text><path fill="none" stroke="#000000" d="M647.171875,353C647.171875,353,256.34698486328125,353,207.4938735961914,353" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj64)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="47.5" y="369.5" width="145" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="120" y="378" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">OnOrder(Entry Order)</tspan></text><path fill="none" stroke="#000000" d="M202.5,390C202.5,390,70.10869234800339,390,42.50562185610761,390" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj67)" stroke-dasharray="6,2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path></svg></div>
+
+
+
+<h4 id="risk-management">Risk Management</h4>
+
+<p>Risk Management templates are used for managing risk by modifying or cancelling the trading strategies orders. Extra orders can be created to manage risks of current orders, such as a stop order.</p>
+
+<p>The following methods are suggested to be implemented:</p>
+
+<ul>
+<li><code>public override bool IsTradingAllowed()</code>     - Executed on each order attempt, returning false will deny any order execution.</li>
+<li><code>public PendingOrder RiskManagement(PendingOrder pendingOrder, AgentState state)</code>  - Receives the current order being made, allows for adapting the order and can also send back a new order (stop order). The current agents state is expressed via the state object (AgentState).</li>
+</ul>
+
+<p>Each agent can contain a maximum of 1 risk management template.</p>
+
+
+
+<h4 id="money-management">Money Management</h4>
+
+<p>Money management templates are used to override the quantity of an entry order. By seperating money management from entry templates, you can test the impact of various position sizing strategies on a trading system’s performance. <em>(Note: Money management templates are not used by Quantler’s <a href="#quantler-the-quantler-model-auto-discovery-service">Auto Discovery Service</a>)</em></p>
+
+<p>The following method is suggested to be implemented:</p>
+
+<ul>
+<li><code>public void PositionSize(PendingOrder order, AgentState state)</code>     - Executed on each trade attempt, the order size can be modified. The current agent state is send as well to determine if a position size needs to be calculated.</li>
+</ul>
+
+<p>Each agent can contain a maximum of 1 money management template.</p>
+
+
+
+<h4 id="exit">Exit</h4>
+
+<p>The exit template determines based on what logic an exit should be made. Exit templates send this information to the agent that will in turn execute the order and consult with the Risk Management template, the Money Management template and your portfolio.</p>
+
+<p>The following method is suggested to be implemented:</p>
+
+<ul>
+<li><code>public override void Initialize()</code> - Executed once before starting the backtest or algorithm.</li>
+</ul>
+
+<p>The following method is obligatory to be implemented:</p>
+
+<ul>
+<li><code>public override void OnCalculate()</code> - Executed on each change event for the default timeframe of the agent. Entry and exit decisions should be implemented here.</li>
+</ul>
+
+<p>Orders are passed to the agent through the following methods:</p>
+
+<ul>
+<li><code>ExitLong()</code>    - Will send a message to the agent to exit the markets if there is a position long. Using the default agent symbol.</li>
+<li><code>ExitShort()</code>   - Will send a message to the agent to exit the markets if there is a position short. Using the default agent symbol.</li>
+<li><code>Flatten()</code>     - Will send a message to the agent to flatten currently held positions regardless of direction. Using the default agent symbol.</li>
+<li><code>ExitLong(string Symbol)</code>    - Will send a message to the agent to exit the markets if there is a position long. Using the default agent symbol. Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+<li><code>ExitShort(string Symbol)</code>   - Will send a message to the agent to exit the markets if there is a position short. Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+<li><code>Flatten(string Symbol)</code>     - Will send a message to the agent to flatten currently held positions regardless of direction. Using the symbol provided, a <a href="#quantler-api-documentation-datastreams">datastream</a> should be active for the symbol.</li>
+</ul>
+
+<p>Each agent can have a maximum of 3 exit templates. The agent will process any of the signals given, it will <strong>not</strong> consult with other exit templates. Default, all exit decisions result in an order to flatten the current position. Money management templates can change the exit order size.</p>
+
+<p><em>(Note: Both Risk Management and Money Management templates are consulted when performing an exit order. This can be used for scaling out of a position and when managing multiple symbols)</em></p>
+
+<p>Order flow for an exit order (RM = Risk Management, MM = Money Management):</p>
+
+
+
+<div class="sequence-diagram"><svg height="467" version="1.1" width="689.171875" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px; top: -0.28125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><marker id="raphael-marker-endblock55-obj111" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj114" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj117" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj120" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj123" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj126" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj129" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj132" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock55-obj135" markerHeight="5" markerWidth="5" orient="auto" refX="2.5" refY="2.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#raphael-marker-block" transform="rotate(180 2.5 2.5) scale(1,1)" stroke-width="1.0000" fill="#000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker></defs><rect x="10" y="20" width="45" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="20" y="30" width="25" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="32.5" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Exit</tspan></text><rect x="10" y="410" width="45" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="20" y="420" width="25" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="32.5" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Exit</tspan></text><path fill="none" stroke="#000000" d="M32.5,57L32.5,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="163.5" y="20" width="58" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="173.5" y="30" width="38" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="192.5" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Agent</tspan></text><rect x="163.5" y="410" width="58" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="173.5" y="420" width="38" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="192.5" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Agent</tspan></text><path fill="none" stroke="#000000" d="M192.5,57L192.5,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="552.171875" y="20" width="43" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="562.171875" y="30" width="23" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="573.671875" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RM</tspan></text><rect x="552.171875" y="410" width="43" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="562.171875" y="420" width="23" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="573.671875" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RM</tspan></text><path fill="none" stroke="#000000" d="M573.671875,57L573.671875,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="615.171875" y="20" width="44" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="625.171875" y="30" width="24" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="637.171875" y="38.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">MM</tspan></text><rect x="615.171875" y="410" width="44" height="37" rx="0" ry="0" fill="none" stroke="#000000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="625.171875" y="420" width="24" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="637.171875" y="428.5" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">MM</tspan></text><path fill="none" stroke="#000000" d="M637.171875,57L637.171875,410" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="79" y="73.5" width="67" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="112.5" y="82" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">ExitLong()</tspan></text><path fill="none" stroke="#000000" d="M32.5,94C32.5,94,160.39005279541016,94,187.491753436625,94" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj111)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="322.359375" y="110.5" width="121.4375" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="383.0859375" y="119" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">IsTradingAllowed()</tspan></text><path fill="none" stroke="#000000" d="M192.5,131C192.5,131,523.8601432321593,131,568.6778969798684,131" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj114)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="368.359375" y="147.5" width="29.4375" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="383.0859375" y="156" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">True</tspan></text><path fill="none" stroke="#000000" d="M573.671875,168C573.671875,168,242.31173176784068,168,197.49397802013164,168" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj117)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="202.484375" y="184.5" width="361.171875" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="383.0859375" y="193" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">RiskManagement(Order currentorder, AgentState state)</tspan></text><path fill="none" stroke="#000000" d="M192.5,205C192.5,205,523.8601432321593,205,568.6778969798684,205" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj120)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="301.578125" y="221.5" width="163" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="383.0859375" y="230" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Modified/Additional Order</tspan></text><path fill="none" stroke="#000000" d="M573.671875,242C573.671875,242,242.31173176784068,242,197.49397802013164,242" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj123)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="42.5" y="258.5" width="140" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="112.5" y="267" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">OnOrder(Stop Order)</tspan></text><path fill="none" stroke="#000000" d="M192.5,279C192.5,279,64.60994720458984,279,37.508246563374996,279" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj126)" stroke-dasharray="6,2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="273.734375" y="295.5" width="282.171875" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="414.8359375" y="304" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">PositionSize(Order order, AgentState state)</tspan></text><path fill="none" stroke="#000000" d="M192.5,316C192.5,316,583.3248901367188,316,632.1780014038086,316" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj129)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="366.828125" y="332.5" width="96" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="414.8359375" y="341" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">Modified Order</tspan></text><path fill="none" stroke="#000000" d="M637.171875,353C637.171875,353,246.34698486328125,353,197.4938735961914,353" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj132)" stroke-dasharray="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="45" y="369.5" width="135" height="17" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><text x="112.5" y="378" text-anchor="middle" font-family="Andale Mono, monospace" font-size="16px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: &quot;Andale Mono&quot;, monospace; font-size: 16px;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="5.5">OnOrder(Exit Order)</tspan></text><path fill="none" stroke="#000000" d="M192.5,390C192.5,390,64.60994720458984,390,37.508246563374996,390" stroke-width="2" marker-end="url(#raphael-marker-endblock55-obj135)" stroke-dasharray="6,2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path></svg></div>
+
+
+
+<h3 id="parameters">Parameters</h3>
+
+<p>A template can consist of none or multiple parameters. The creation of these parameters is done programmatically. The assigning and changing of the values of these algorithms can be done through either user input or machine input (such as the <a href="#quantler-the-quantler-model-auto-discovery-service">Auto Discovery Service</a>).</p>
+
+<p>An example of setting a parameter:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">    <span class="hljs-comment">// A comment above the parameter will be used as documentation in the interface, adding no comment will result in no documentation.</span>
+    [Parameter(<span class="hljs-number">20</span>, <span class="hljs-number">40</span>, <span class="hljs-number">10</span>, <span class="hljs-string">"SlowEMA"</span>)]
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> slowperiod { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+    [Parameter(<span class="hljs-number">5</span>, <span class="hljs-number">15</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"FastEMA"</span>)]
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> fastperiod { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }</code></pre>
+
+<p>In the example above we have set two different parameters for this template. An explanation on each of the parameters:</p>
+
+<ul>
+<li><code>Comment</code>: Adding a comment above a parameter is not only useful within the code, the comment will also be used as documentation in the user interface. Adding no comment will result in no documentation, therefore this value is optional.</li>
+<li><code>[Parameter(20, 40, 10, "SlowEMA")]</code>: In this example we are telling Quantler that the value underneath this statement a variable (propertie) that can be altered. A parameter consist of the following fixed values (min, max, increment, name). Putting these values in the wrong order, will make this parameter useless. <br>
+<ul><li><code>Min :int</code>: The minimum value for this parameter, in this case <code>20</code></li>
+<li><code>Max :int</code>: The maximum value for this parameter, in this case <code>40</code></li>
+<li><code>Increment :int</code>: The value at which this parameter should increase, (steps). In this case <code>10</code></li>
+<li><code>Name :string</code>: The name of this parameter for documentation and further references. In this case <code>SlowEMA</code></li></ul></li>
+<li><code>public int slowperiod { get; set; }</code>: The variable used for this parameter should always be a propertie with a public getter and a public setter</li>
+</ul>
+
+
+
+<h3 id="auto-discovery-service">Auto Discovery Service</h3>
+
+<p>Due to the fact that algorithms are created using templates, Quantler can take your templates and create new trading algorithms automatically. Only the templates you own are used in the discovery process. The current process of achieving this is roughly explained below:</p>
+
+<ol>
+<li>Looks at your templates and checks which templates have a positive influence on each other. (using a genetic search algorithm)</li>
+<li>Generates a new trading algorithm based on these templates, will not touch any parameters.</li>
+<li>Takes one of the predefined samples, only looks for IN samples.</li>
+<li>Backtests the resulting algorithm.</li>
+<li>Stores the results and sends this results periodically via email.</li>
+</ol>
+
+<p>The resulting trading algorithms can be checked and tested on different samples for further analyses. You will receive discovery updates via email, however the auto discovery service will not work in the following circumstances:</p>
+
+<ul>
+<li>The email the user uses is invalid. This includes the following situations: <br>
+<ul><li>The email format is incorrect</li>
+<li>The email is registered at a disposable service</li>
+<li>No user email is provided or known</li></ul></li>
+<li>The user needs to be logged in at least once a month, if this is not the case, the auto disovery service will be automatically turned off</li>
+<li>The user has decided to turn off the auto discovery service, via the account settings</li>
+</ul>
+
+
+
+<h3 id="samples">Samples</h3>
+
+<p>Quantler allows you to create new samples used for backtesting and the <a href="#quantler-the-quantler-model-auto-discovery-service">Auto Discovery Service</a>. On the Samples section you can navigate to find details about existing samples and add new samples.</p>
+
+
+
+<h4 id="why-samples">Why samples?</h4>
+
+<p>The reason the creation of samples was implemented separately from the trading algorithm is because of the following reasons:</p>
+
+<ul>
+<li>It allows you to test new trading algorithms faster, as you do not have to edit any code when switching data.</li>
+<li>Those who cannot program can use templates on different samples.</li>
+<li>Forces you to think about segregating time periods in different samples (best practice).</li>
+<li>Allows the <a href="#quantler-the-quantler-model-auto-discovery-service">Auto Discovery Service</a> to search for new trading algorithms on predefined datasets.</li>
+</ul>
+
+
+
+<h4 id="adding-a-new-sample">Adding a new sample</h4>
+
+<p>A new sample can be made via the web-interface by clicking the “samples” menu item for any of the symbols made available for backtesting.</p>
+
+<p>Currently active symbols: <br>
+- AUD/JPY <br>
+- AUD/USD <br>
+- EUR/JPY <br>
+- EUR/USD <br>
+- GBP/JPY <br>
+- GBP/USD <br>
+- NZD/USD <br>
+- USD/CAD <br>
+- USD/CHF <br>
+- USD/JPY <br>
+- EUR/CHF</p>
+
+
+
+<h2 id="api-documentation">API Documentation</h2>
+
+<p>The following section explains methods, events and objects use able when creating your templates.</p>
+
+
+
+<h3 id="events">Events</h3>
+
+<p>The following events can be used in any of the templates that you are developing.</p>
+
+<p>Example of accessing an event in a template:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs coffeescript">    public <span class="hljs-reserved">void</span> OnBar(Bar bar)
+    {
+        <span class="hljs-regexp">//</span>Get the close <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span> current bar <span class="hljs-keyword">if</span> it <span class="hljs-keyword">is</span> the <span class="hljs-reserved">default</span> symbol
+        <span class="hljs-keyword">if</span>(bar.Symbol == Agent.Symbol)
+            <span class="hljs-reserved">var</span> close = bar.Close;
+    }</code></pre>
+
+<p>All available events to subscribe to:</p>
+
+<ul>
+<li><code>OnBar(Bar bar)</code>    - Each <a href="#bar">bar</a> completion event within the agent. Based on the subscribed <a href="#quantler-api-documentation-datastreams">DataStream</a>. Agent.CurrentBar[string Symbol] allows you to return other bars as well</li>
+<li><code>OnTick(Tick tick)</code> - Each <a href="#tick">tick</a> event within the agent. Based on the subscribed <a href="#quantler-api-documentation-datastreams">DataStream</a>. Agent.CurrentTick[string Symbol] allows you to return other ticks as well</li>
+<li><code>OnFill(Trade trade, PendingOrder order)</code> - Each filled order update event, the trade (executed order) and the order (pending order)</li>
+<li><code>OnOrder(PendingOrder order)</code> - Each new pending order event, after templates have processed the order (Money Management and Risk Management templates)</li>
+<li><code>OnOrderUpdate(PendingOrder order)</code> - Each time the status or values are updated on a pending order</li>
+</ul>
+
+
+
+<h3 id="data-object-properties">Data object properties</h3>
+
+<p>The following data objects are exposed.</p>
+
+
+
+<h4 id="bar">Bar</h4>
+
+<p>A representation of aggregated data in a point in time. Containing the following properties:</p>
+
+<ul>
+<li><code>Bardate :int</code>: Date of the bar, expressed as year month day - 20151231</li>
+<li><code>BarDateTime :DateTime</code>: Bar date and time</li>
+<li><code>BarInterval :BarInterval</code>: Type of bar interval amount</li>
+<li><code>Bartime :int</code>: Time of the bar, expressed as hour minutes seconds milliseconds - 161259100</li>
+<li><code>Open :decimal</code>: Open price of the bar</li>
+<li><code>High :decimal</code>: High price of the bar</li>
+<li><code>Low :decimal</code>: Low price of the bar</li>
+<li><code>Close :decimal</code>: Close price of the bar</li>
+<li><code>Interval :int</code>: Interval used for creating this bar in integer format in seconds - 3600 = 1 hour</li>
+<li><code>Id :long</code>: Unique bar id</li>
+<li><code>IsNew :bool</code>: True if this is a new bar or a closed bar</li>
+<li><code>IsValid :bool</code>: Checks if this is a valid bar</li>
+<li><code>Symbol :string</code>: Returns the symbol name for this bar</li>
+<li><code>Volume :long</code>: Returns the volume traded during the bar’s timespan, in FX is always fixed on a large amount</li>
+<li><code>Time :int</code>: Time the bar was created in the <a href="#quantler-api-documentation-datastreams">datastream</a></li>
+<li><code>BarDateTime :DateTime</code>: Current bar date and time in a DateTime object</li>
+</ul>
+
+
+
+<h4 id="barlist">BarList</h4>
+
+<p>A historical list of multiple bars. Containing the following properties:</p>
+
+<ul>
+<li><code>Count :int</code>: count of all bars</li>
+<li><code>isValid :bool</code>: True if bar has symbol and some data</li>
+<li><code>symbol :string</code>: The symbol this barlist contains data of</li>
+<li><code>this[int index] :Bar</code>: get a <a href="#bar">bar</a> from list using it’s index. index = 0 is oldest bar. index = Last is newest bar. index = -1 is one bar back. index = -5 is 5 bars back</li>
+</ul>
+
+
+
+<h4 id="direction">Direction</h4>
+
+<p>The following directions can be used for the Direction Enumerator:</p>
+
+<ul>
+<li><code>Direction.Long</code>: Known as the buy direction</li>
+<li><code>Direction.Short</code>: Known as the sell direction</li>
+<li><code>Direction.Flatten</code>: Only applicable when sending a new order, this will set the order size equal to the flatsize of the current position of the orders symbol</li>
+</ul>
+
+
+
+<h4 id="tick">Tick</h4>
+
+<p>The smallest change in the markt. Containing the following properties:</p>
+
+<ul>
+<li><code>Ask :decimal</code>: Current tick ask price</li>
+<li><code>AskExchange :string</code>: Offer exchange</li>
+<li><code>AskSize :int</code>: Current tick ask size</li>
+<li><code>Bid :decimal</code>: Current tick bid price</li>
+<li><code>BidExchange :string</code>: Bid exchange</li>
+<li><code>BidSize :int</code>: Current tick bid size</li>
+<li><code>Date :int</code>: Date in integer, expressed as year month day - 20151231</li>
+<li><code>DateTime :long</code>: Date and time represented as long, eg 8:05.150pm on 4th of July: 200907042005150. this is not guaranteed to be set.</li>
+<li><code>Depth :int</code>: Depth of last bid/ask quote</li>
+<li><code>Exchange :string</code>: Trade exchange</li>
+<li><code>IsValid :bool</code>: True if this tick contains valid information (no inconsistencies)</li>
+<li><code>Symbol :string</code>: Symbol in string format</li>
+<li><code>TickDateTime :DateTime</code>: Converted tik date and time into DateTime format</li>
+<li><code>Time :int</code>: Tick time in HHmmssfff format (4:59:12.000pm = 165912000)</li>
+</ul>
+
+
+
+<h4 id="pendingorder">PendingOrder</h4>
+
+<p>A pendingorder object is a container object for an order that has not been executed yet at the broker. This allows for editing or canceling the order before it is being executed. This object contains the following properties:</p>
+
+<ul>
+<li><code>Account :IAccount</code>: Account object on which this order will be executed</li>
+<li><code>AgentId :int</code>: Order ownerid</li>
+<li><code>IsCancelled :bool</code>: Value is true if the order is cancelled by the algorithm or by the broker</li>
+<li><code>OrderId :long</code>: Order ID for the underlying order, as provided by the broker</li>
+<li><code>OrderStatus :StatusType</code>: Current order status, if this value changes an order update event will be sent to templates that have subscribed for order update events.</li>
+<li><code>Order :Order</code>: Order object that this pending order references to</li>
+</ul>
+
+
+
+<h4 id="order">Order</h4>
+
+<p>An order to buy or sell a certain amount of a symbol (currency or share). Containing the following properties:</p>
+
+<ul>
+<li><code>AccountName :string</code>: Unique name for the account on which this order will be executed against</li>
+<li><code>AgentId :int</code>: Owner/originator of this order</li>
+<li><code>BrokerSymbol :string</code>: Symbol name as defined at the broker (can be different from internal naming)</li>
+<li><code>Comment :string</code>: Order comment</li>
+<li><code>Created :DateTime</code>: Get the order created date and time object</li>
+<li><code>Commission :decimal</code>: Commissions paid for this order</li>
+<li><code>Direction :Direction</code>: Direction of the order either Buy or Sell</li>
+<li><code>Exchange :string</code>: Name of the exchange on which this order will be executed on</li>
+<li><code>Id :long</code>: Unique order id</li>
+<li><code>IsFilled :bool</code>: Is true when this order is successfully filled</li>
+<li><code>IsValid :bool</code>: Whether order is valid or not</li>
+<li><code>LimitPrice :decimal</code>: The limit price set for this order</li>
+<li><code>LotSize :int</code>: Current lotsize for this order</li>
+<li><code>Quantity :int</code>: Order size in quantity according to lotsize, (1 = 1 microlot = 1000 in size)</li>
+<li><code>Security :ISecurity</code>: Security object associated for this order, the order will be executed on this security</li>
+<li><code>Size :int</code>: Order size in integer value (1 microlot == 1000 in size).</li>
+<li><code>StopPrice :decimal</code>: Stop price set for this order</li>
+<li><code>Symbol :string</code>: Symbol name within Quantler, may differ from name on brokers end</li>
+<li><code>Type :OrderType</code>: Current order type, based on the properties set</li>
+<li><code>UnsignedSize :int</code>: Unsigned size of order</li>
+<li><code>ValidInstruct :OrderInstructionType</code>: Order instruction (GTC, DAY, MOC, OPG, IOC, HIDDEN) - Currently only GTC is implemented</li>
+</ul>
+
+
+
+<h4 id="trade">Trade</h4>
+
+<p>A filled order in the market, partially or fully filled. Containing the following properties:</p>
+
+<ul>
+<li><code>Account :IAccount</code>: Full object on which this order was executed on</li>
+<li><code>AccountName :string</code>: Name of the account this trade was executed on</li>
+<li><code>AgentId :int</code>: AgentID for the agent on which this trade was executed on</li>
+<li><code>BrokerSymbol :string</code>: Broker symbol</li>
+<li><code>Commission :decimal</code>: Commissions known from execution of this order</li>
+<li><code>Currency :CurrencyType</code>: Base currency of the account on which this order will be calculated on  (PnL calculations)</li>
+<li><code>Direction :Direction</code>: Direction of this trade, either Long or Short</li>
+<li><code>Exchange :string</code>: Exchange/destination where trade occured</li>
+<li><code>Executed :DateTime</code>: Executed date and time</li>
+<li><code>Id :long</code>: Unique id of the trade made</li>
+<li><code>IsFilled :bool</code>: Whether or not this trade has been filled</li>
+<li><code>IsValid :bool</code>: Whether trade is valid</li>
+<li><code>Security :ISecurity</code>: Security object on which this order was executed on</li>
+<li><code>Swap :decimal</code>: Swap paid for this trade</li>
+<li><code>Symbol :string</code>: Symbol name traded</li>
+<li><code>UnsignedSize :int</code>: Unsigned size of trade</li>
+<li><code>Xdate :int</code>: Executed date in integer expression “YYYYMMDD” - 20151231</li>
+<li><code>Xtime :int</code>: Executed time in integer, HHmmssfff format (4:59:12.000pm = 165912000)</li>
+<li><code>Xprice :decimal</code>: Executed price</li>
+<li><code>Xsize :int</code>: Executed size</li>
+<li><code>Xquantity :decimal</code>: Executed quantity</li>
+</ul>
+
+
+
+<h3 id="isecurity">ISecurity</h3>
+
+<p>A symbol/asset you can trade on (currently only FX is supported). Containing the following properties:</p>
+
+<ul>
+<li><code>Ask :decimal</code>: Get the latest ask price</li>
+<li><code>Bid :decimal</code>: Get the latest bid price</li>
+<li><code>BrokerName :string</code>: Name of this security at the broker</li>
+<li><code>DestEx :string</code>: Exchange associated with security</li>
+<li><code>Details :string</code>: Details associated with security</li>
+<li><code>Digits :int</code>: Current security amount of digits</li>
+<li><code>IsFloatingSpread :bool</code>: Floating or fixed spreads</li>
+<li><code>IsValid :bool</code>: Whether security is valid</li>
+<li><code>LastTickEvent :DateTime</code>: Last time this security received data</li>
+<li><code>LotSize :int</code>: Returns the size of a full lot</li>
+<li><code>Name :string</code>: Symbol name</li>
+<li><code>OrderMinQuantity :decimal</code>: Returns the minimum quantity for an order (0.01 for microlots and 0.10 for mini lots)</li>
+<li><code>OrderMinSize :int</code>: Returns the minimum size for an order</li>
+<li><code>OrderStepQuantity :decimal</code>: Returns the step quantity (0.01 for microlots and 0.10 for mini lots)</li>
+<li><code>OrderStepSize :int</code>: Returns the step size (1.000 for microlots and 10.000 for mini lots)</li>
+<li><code>PipSize :decimal</code>: Returns the size of the price for one pip</li>
+<li><code>PipValue :decimal</code>: Current Pip Value using the current account currency (USD)</li>
+<li><code>Spread :int</code>: Current spread in pips</li>
+<li><code>TickSize :decimal</code>: The minimum price movement for this security.</li>
+<li><code>Type :SecurityType</code>: Security type, currently only Forex supported</li>
+</ul>
+
+
+
+<h3 id="portfolio">Portfolio</h3>
+
+<p>The portfolio can always be accessed from within a template. It contains aggregated information, such as your <a href="#quantler-api-documentation-account">Account</a>, <a href="#quantler-api-documentation-datastreams">DataStreams</a>, <a href="#quantler-api-documentation-position">Positions</a>, <a href="#agent">Associated Agents</a>, <a href="#quantler-api-documentation-indicators">Indicators</a> and <a href="#quantler-api-documentation-results">current performance</a>.</p>
+
+<p>Within Quantler a portfolio is not a basket of assets you trade, instead it is a basket of agents you have active. The agents within the portfolio are trading the assets. Currently only 1 agent in your portfolio is allowed, in the future you would be able to add as many agents as you wish.</p>
+
+<p>Several examples on how you can access the portfolio from a template.</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnCalculate</span>()
+    {
+        <span class="hljs-comment">//Get the agents portfolio</span>
+        <span class="hljs-keyword">var</span> portfolio = Portfolio;
+
+        <span class="hljs-comment">//Same reference</span>
+        portfolio = Agent.Portfolio;
+
+        <span class="hljs-comment">//Get Account</span>
+        <span class="hljs-keyword">var</span> account = portfolio.Account;
+    }</code></pre>
+
+<p>The returning Portfolio object will provide you with the following properties:</p>
+
+<ul>
+<li><code>Account :IAccount</code>: Returns the current attached account object containing current account information.</li>
+<li><code>Agents :Agent[]</code>: List of associated agents used within this portfolio</li>
+<li><code>Id :int</code>: Unique identifier for this portfolio of agents</li>
+<li><code>IsValid :bool</code>: Check if this portfolio object is valid for use, or not</li>
+<li><code>PendingOrders :PendingOrder[]</code>: List of all currently pending orders from all trading agents, present at the broker</li>
+<li><code>Positions :IPositionTracker</code>: Current opened positions and its status for this portfolio</li>
+<li><code>Results :Result</code>: Updated results of this trading session, for this portfolio</li>
+<li><code>Securities :ISecurityTracker</code>:  All subscribed securities</li>
+<li><code>Streams :Dictionary&lt;string, DataStream&gt;</code>: Currently associated datastreams (live or backtest based)</li>
+</ul>
+
+
+
+<h3 id="position">Position</h3>
+
+<p>Current positions can be accessed from the agent via the portfolio object <code>Portfolio.Positions[string Symbol]</code>. An example for accessing this information is shown below:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs coffeescript">    public override <span class="hljs-reserved">void</span> OnCalculate()
+    {
+        <span class="hljs-regexp">//</span>Get the current postion <span class="hljs-literal">on</span> the <span class="hljs-reserved">default</span> symbol <span class="hljs-keyword">for</span> <span class="hljs-keyword">this</span> agent <span class="hljs-keyword">and</span> <span class="hljs-keyword">return</span> the average price <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span> position
+        decimal avgPrice = Portfolio.Positions[Agent.Symbol].AvgPrice;
+
+        <span class="hljs-regexp">//</span>Get the current position <span class="hljs-keyword">of</span> another symbol <span class="hljs-keyword">and</span> get the average price
+        avgPrice = Portfolio.Positions[<span class="hljs-string">"AUDJPY"</span>].AvgPrice;
+    }</code></pre>
+
+<p>The returning position object will provide you with the following properties:</p>
+
+<ul>
+<li><code>Account :IAccount</code>: Account object at which this position is held at</li>
+<li><code>AvgPrice :decimal</code>: The average price of the current position</li>
+<li><code>Direction :Direction</code>: Current position direction information</li>
+<li><code>FlatQuantity :decimal</code>: Quantity needed for flattening this position (either negative or positive)</li>
+<li><code>FlatSize :int</code>: The size needed to flatten this position <br>
+-<code>GrossPnL :decimal</code>: Current position Gross PnL</li>
+<li><code>IsFlat :bool</code>:  True if the current position is flat</li>
+<li><code>IsLong :bool</code>: True if the current position is long (size &gt; 0)</li>
+<li><code>IsShort :bool</code>: True if the current position is short (size &lt; 0)</li>
+<li><code>IsValid :bool</code>: Checks if the postion is valid and can be used for processing</li>
+<li><code>LastModified :DateTime</code>: Last time and date this position has been modified</li>
+<li><code>NetPnL :decimal</code>: Net PnL (GrossPnL - Commissions - Swaps)</li>
+<li><code>Quantity :int</code>: Position size expressed in lotsize quantity</li>
+<li><code>Security :ISecurity</code>: Security object associated with this position</li>
+<li><code>Size :int</code>: Size of the current position (negative is short, positive is long)</li>
+<li><code>TotalCommission :decimal</code>: Total amount of commissions paid for this position</li>
+<li><code>TotalSwap :decimal</code>: Total amount of swap paid for this position</li>
+<li><code>Trades: Trade[]</code>: Trades that make up the current position</li>
+<li><code>UnsignedSize :int</code>: The absolute size of the current position (either 0 or &gt; 0)</li>
+</ul>
+
+
+
+<h3 id="iaccount">IAccount</h3>
+
+<p>The account object is a reference to the account at which the trading strategie is executed at. The account information is updated on each <a href="#tick">tick</a>.</p>
+
+<p>Accessing the account can be done from any template you create, as an example below:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnCalculate</span>()
+    {
+        <span class="hljs-comment">//Get Account</span>
+        <span class="hljs-keyword">var</span> account = Portfolio.Account;
+
+        <span class="hljs-comment">//Flatten all positions if we have a 3% loss on the account balance</span>
+        <span class="hljs-keyword">if</span> (account.Equity &lt; (account.Balance * <span class="hljs-number">.97</span>M))
+            Flatten();
+    }</code></pre>
+
+<p>The account object contains the following information:</p>
+
+<ul>
+<li><code>Balance :decimal</code>: Current balance of the account. Currently, this value cannot be changed, all accounts start with an initial account balance of 10,000.00 when running a backtest</li>
+<li><code>Client :string</code>: Client name shown on the brokers account</li>
+<li><code>Company :string</code>: Company name of the broker this account is linked to</li>
+<li><code>Currency :CurrencyType</code>: The account base currency, currently set at USD. This cannot be changed.</li>
+<li><code>Equity :decimal</code>:  Currently available equity for this account</li>
+<li><code>FloatingPnL :decimal</code>:  Currently available equity for this account</li>
+<li><code>FreeMargin :decimal</code>: Currently available margin for this account</li>
+<li><code>Id :string</code>: Current account id</li>
+<li><code>IsLiveTrading :bool</code>: True if this account is used for live trading (real money account)</li>
+<li><code>IsTradingAllowed :bool</code>: True if this account is allowed to initiate trades</li>
+<li><code>Latency :int</code>: Latency from this server measured in Milliseconds</li>
+<li><code>Leverage :int</code>: Leverage used 100 == 1:00</li>
+<li><code>Margin :decimal</code>: Current margin</li>
+<li><code>MarginLevel :decimal</code>: Ratio between free margin and account equity</li>
+<li><code>Positions :IPositionTracker</code>: Currently held positions on this account</li>
+<li><code>Securities :ISecurityTracker</code>: Securities associated and thus tradeable on this account.</li>
+<li><code>Server :string</code>: Name of the server</li>
+<li><code>StopOutLevel :decimal</code>: Returns the stop out level for this account</li>
+</ul>
+
+
+
+<h3 id="datastreams">DataStreams</h3>
+
+<p>A datastream is an object that contains data for 1 symbol. Based on data received, the datastream will create <a href="#bar">bars</a> based on each of the intervals supplied to it. The <a href="#quantler-api-documentation-portfolio">portfolio</a> can contain multiple datastreams where each datastream can be assigned to multiple <a href="#agent">agents</a>. Each agent in turn receives updates either on a <a href="#tick">tick</a> basis and/or each bar for each interval created on the datastream. This depends on the subscribed <a href="#quantler-api-documentation-events">events</a> of the agents templates.</p>
+
+<p>Intervals can be added programmatically to a datastream, but only during initialization of the trading algorithm. You thus cannot add or remove intervals and or datastreams during execution. A datastream and its timeframe is unique troughout your portfolio, this means that adding a datastream twice is allowed and will not create a duplicate. An example of programmatically adding a datastream is shown below:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Initialize</span>()
+    {
+        <span class="hljs-comment">//Get the current stream assigned to this agent</span>
+        <span class="hljs-keyword">var</span> currentstream = Agent.Stream;
+
+        <span class="hljs-comment">//Adding another timeframe to the datastream which is twice as high as the current timeframe</span>
+        currentstream.AddInterval(currentstream.DefaultInterval.TotalSeconds * <span class="hljs-number">2</span>);
+
+        <span class="hljs-comment">//Also adding the daily interval</span>
+        currentstream.AddInterval(TimeSpan.FromDays(<span class="hljs-number">1</span>));
+
+        <span class="hljs-comment">//Adding another DataStream alongside the existing datastream with a barsize of 15 minutes</span>
+        AddStream(SecurityType.Forex, <span class="hljs-string">"AUDJPY"</span>, TimeSpan.FromMinutes(<span class="hljs-number">15</span>));
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnCalculate</span>()
+    {
+        <span class="hljs-comment">//Get the AUDJPY datastream with a barsize of 15 minutes</span>
+        <span class="hljs-keyword">var</span> additionalstream = Portfolio.Streams[<span class="hljs-string">"AUDJPY"</span>][TimeSpan.FromMinutes(<span class="hljs-number">15</span>)];
+
+        <span class="hljs-comment">//Check if we have enough bars to execute the following code</span>
+        <span class="hljs-keyword">if</span> (additionalstream.Count &gt; <span class="hljs-number">3</span>)
+        {
+            <span class="hljs-comment">//Shortcut for the currentbar</span>
+            <span class="hljs-keyword">var</span> lastclosed = Agent.CurrentBar[<span class="hljs-string">"AUDJPY"</span>];
+            <span class="hljs-keyword">var</span> currenttick = Agent.CurrentTick[<span class="hljs-string">"AUDJPY"</span>];
+
+            <span class="hljs-comment">//Portfolio.Streams[Symbol][TimeFrame][index]</span>
+            <span class="hljs-keyword">var</span> openedbar = Portfolio.Streams[<span class="hljs-string">"AUDJPY"</span>][TimeSpan.FromMinutes(<span class="hljs-number">15</span>)].RecentBar;
+            <span class="hljs-keyword">var</span> lastclosed2 = Portfolio.Streams[<span class="hljs-string">"AUDJPY"</span>][TimeSpan.FromMinutes(<span class="hljs-number">15</span>)][-<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">var</span> previousbar = Portfolio.Streams[<span class="hljs-string">"AUDJPY"</span>][TimeSpan.FromMinutes(<span class="hljs-number">15</span>)][-<span class="hljs-number">2</span>];
+        }
+    }</code></pre>
+
+<p>In the example above we added another DataStream alongside the current DataStream existing in this <a href="#agent">agent</a>. Please take note of the following distinction:</p>
+
+<ul>
+<li><code>Agent.Stream :DataStream</code> = The default datastream for this agent</li>
+<li><code>Portfolio.Streams :DataStream[]</code> = All datastreams for this portfolio</li>
+</ul>
+
+<p>During the <code>OnCalculate</code> function we can request the actual bars created, the following requests were made:</p>
+
+<ul>
+<li><code>Agent.CurrentBar["AUDJPY"] :Bar</code>: Will request the last closed bar for this symbol, calculated on the most recent timeframe, see <a href="#bar">Bar</a> properties to check the timeframe of the bar</li>
+<li><code>Agent.CurrentTick["AUDJPY"] :Tick</code>: Will request the last tick received for this symbol</li>
+<li><code>Portfolio.Streams["AUDJPY"][TimeSpan.FromMinutes(15)].RecentBar :Bar</code> = the currentbar, for the AUDJPY for the given specific timeframe, this is the currently open <a href="#bar">bar</a> and not a closed <a href="#bar">bar</a>, yet</li>
+<li><code>Portfolio.Streams["AUDJPY"][TimeSpan.FromMinutes(15)][-1] :Bar</code>= the previous closed <a href="#bar">bar</a>,  for the AUDJPY for the given specific timeframe</li>
+<li><code>Portfolio.Streams["AUDJPY"][TimeSpan.FromMinutes(15)][-2] :Bar</code>= 2nd previous closed <a href="#bar">bar</a>,  for the AUDJPY for the given specific timeframe</li>
+</ul>
+
+<p>The datastream contains the following properties:</p>
+
+<ul>
+<li><code>ID :int</code>: Unique identifier for this datastream</li>
+<li><code>Intervals :int[]</code>: Currently defined intervals in seconds 3600 = 1 hour</li>
+<li><code>DefaultInterval :int</code>: The default interval for this datastream</li>
+<li><code>this[int interval]</code>: Returns a <a href="#barlist">Barlist</a> for this datastream</li>
+<li><code>Security :Security</code>: Returns the <a href="#quantler-api-documentation-isecurity">Security</a> associated to this datastream</li>
+</ul>
+
+<p>Functions:</p>
+
+<ul>
+<li><code>AddInterval(int interval)</code>: Add another interval to this datastream with an interval in seconds 3600 = 1 hour</li>
+<li><code>AddInterval(int[] intervals</code>: Add multiple intervals at the same time</li>
+<li><code>AddInterval(TimeSpan interval)</code>: Add an interval based on a TimeSpan object, example = TimeSpan.FromMinutes(15)</li>
+</ul>
+
+
+
+<h3 id="orders">Orders</h3>
+
+<p>At Quantler we support many different order types. Currently, all of the order types we offer are compatible with the brokers we are connected to.</p>
+
+<p>Below you can find examples of creating pending order objects.</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs avrasm">public void OrderExamples()
+{
+    //Creating various orders
+
+    // New market order
+    var newMOrder = MarketOrder(<span class="hljs-string">"EURUSD"</span>, Direction<span class="hljs-preprocessor">.Long</span>, <span class="hljs-number">0.01</span>, <span class="hljs-string">"Going Long"</span>)<span class="hljs-comment">;</span>
+
+    // Short limit order, placed under the <span class="hljs-number">80</span>% below the current bid price
+    var newLOrder = LimitOrder(Agent<span class="hljs-preprocessor">.Symbol</span>, Direction<span class="hljs-preprocessor">.Short</span>, <span class="hljs-number">120</span>, CurrentTick[Agent<span class="hljs-preprocessor">.Symbol</span>] * <span class="hljs-number">.80</span>)<span class="hljs-comment">;</span>
+
+    // New stop order, placed based on the low price, <span class="hljs-number">10</span> bars back, using the agents default timeframe
+    var newSOrder = StopOrder(Agent<span class="hljs-preprocessor">.Symbol</span>, Direction<span class="hljs-preprocessor">.Long</span>, <span class="hljs-number">100</span>, Bars[Agent<span class="hljs-preprocessor">.Symbol</span>, Agent<span class="hljs-preprocessor">.Stream</span><span class="hljs-preprocessor">.DefaultInterval</span>, -<span class="hljs-number">10</span>]<span class="hljs-preprocessor">.Low</span>)<span class="hljs-comment">;</span>
+
+    // Market order processing (submit right away, before executing the next line of code) -- does not use the MM <span class="hljs-keyword">and</span> RM templates
+    var status = SubmitOrder(newMOrder)<span class="hljs-comment">;</span>
+
+    // Notify the result of this order
+    if (status == StatusType<span class="hljs-preprocessor">.ORDER</span>_FILLED || status == StatusType<span class="hljs-preprocessor">.ORDER</span>_PARTIALFILL)
+       Agent<span class="hljs-preprocessor">.Log</span>(LogSeverity<span class="hljs-preprocessor">.Info</span>, <span class="hljs-string">"Order {0} was filled ok!"</span>, newMOrder<span class="hljs-preprocessor">.OrderId</span>)<span class="hljs-comment">;</span>
+
+    // Update order (processed right away)
+    newLOrder<span class="hljs-preprocessor">.Update</span>(<span class="hljs-built_in">x</span> =&gt; <span class="hljs-built_in">x</span><span class="hljs-preprocessor">.LimitPrice</span> = CurrentBar[Agent<span class="hljs-preprocessor">.Symbol</span>]<span class="hljs-preprocessor">.Low</span> - <span class="hljs-number">0.005</span>)<span class="hljs-comment">;</span>
+}</code></pre>
+
+
+
+<h3 id="indicators">Indicators</h3>
+
+<p>Indicators can be used either from pre-installed indicators, or by creating new indicators via the indicator <a href="#quantler-the-quantler-model-template">template</a> type. All defined indicators in an agent are stored in the <a href="#quantler-api-documentation-portfolio">portfolio</a>. This ensures that an indicator stays unique and duplicate calculations will not occure throughout the portfolio.</p>
+
+<p>Quantler makes extensive use of <a href="http://ta-lib.org/">TA-Lib</a> in order to calculate indicator values. Pre-Installed indicators can be accessed from any template by using the <code>Indicators</code> object, see example below.</p>
+
+
+
+<h4 id="example-usage">Example Usage</h4>
+
+<p>An example of assigning an already implemented indicator is shown below:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">    <span class="hljs-comment">//Variable for setting the Simple Moving Average</span>
+    SimpleMovingAverage sma = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-comment">//Runs only once, initializing the agent</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Initialize</span>()
+    {
+        <span class="hljs-comment">//initialize</span>
+        sma = Indicators.SimpleMovingAverage(<span class="hljs-number">20</span>, Agent.Stream, TimeSpan.FromMinutes(<span class="hljs-number">15</span>), comp =&gt; (comp.High + comp.Low) / <span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-comment">//Runs on every change of the default timeframe for the default symbol</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnCalculate</span>()
+    {
+        <span class="hljs-keyword">if</span> (sma.IsReady)
+            <span class="hljs-keyword">bool</span> bullish = sma.Result.IsRising;
+    }</code></pre>
+
+<p>The above example will create a new <a href="#simple-moving-average">SimpleMovingAverage</a> indicator with the following settings:</p>
+
+<ul>
+<li><code>20</code>: the period at which the indicator should be calculated at, in this case the past 20 values should be included in the calculation of the average</li>
+<li><code>Agent.Stream</code> : Use the default <a href="#quantler-api-documentation-datastreams">datastream</a> assigned to the <a href="#agent">agent</a></li>
+<li><code>TimeSpan.FromMinutes(15)</code>: Calculated the value based on the the following barsize (15 minute bars)</li>
+<li><code>comp =&gt; (comp.High + comp.Low) / 2)</code>: When calculating this indicator, use the following calculation to manipulate the <a href="#bar">bar</a> data. Here we will calculate the SMA based on the high price plus the low price divided by 2 for each <a href="#bar">bar</a> we receive.</li>
+</ul>
+
+<p>Each indicator contains the following properties:</p>
+
+<ul>
+<li><code>IsReady :bool</code>: Is true when the indicator contains calculated values and is thus ready for use</li>
+<li><code>Result :DataSerie</code>: The result of the calculations performed on the indicator. Some indicators use different naming, see the indicator sepcific docs if this is the case.</li>
+</ul>
+
+
+
+<h4 id="dataserie">DataSerie</h4>
+
+<p>The DataSerie is a result object from an indicator that contains all result values calculated by it.</p>
+
+
+
+<h5 id="properties">Properties</h5>
+
+<ul>
+<li><code>Count :int</code>: Amount of currently available result values</li>
+<li><code>this[int index] :decimal</code>: Returns a result value for the index provided where 0 is the current result and 10 is 10 calculations back. Negative numbers are allowed as the absolute index is taken (-10 == 10).</li>
+<li><code>CurrentValue :decimal</code>: The current and most recent result calculated by the indicator</li>
+<li><code>MaxHistory :int</code>: In order to optimize speed performance, you can specify the maximum amount of historical results to store in the result object</li>
+<li><code>IsFalling :bool</code>: Returns true if the current value of the serie is lower than its previous value</li>
+<li><code>IsRising :bool</code>: Returns true if the current value of the serie is higher than its previous value</li>
+</ul>
+
+
+
+<h5 id="functions">Functions</h5>
+
+<ul>
+<li><code>CrossedAbove(DataSerie B, int lookback = 3) :bool</code>: Looks if the result of the current object crossed above the result of the another object with a default lookback of 3 values.</li>
+<li><code>CrossedUnder(DataSerie B, int lookback = 3) :bool</code>: Looks if the result of the current object crossed under the result of another object with a default lookback of 3 values.</li>
+<li><code>CrossedAbove(decimal[] SeriesB, int lookback = 3) :bool</code>: Looks if the result of the current object crossed above the result of the another array with values with a default lookback of 3 values.</li>
+<li><code>CrossedUnder(decimal[] SeriesB, int lookback = 3) :bool</code>: Looks if the result of the current object crossed under the result of the another array with values with a default lookback of 3 values.</li>
+<li><code>Min(int lookback) :decimal</code>: Returns the minimum value for a given lookback period</li>
+<li><code>Max(int lookback) :decimal</code>: Returns the maximum value for a given lookback period</li>
+<li><code>Avg(int lookback) :decimal</code>: Returns the average value for a given lookback period</li>
+<li><code>Sum(int lookback) :decimal</code>: Returns the sum of all values for a given lookback period</li>
+</ul>
+
+<p><em>(Note: <code>lookback</code> can be a positive as well as a negative number, -3 yields the same result as 3)</em></p>
+
+
+
+<h4 id="movingaveragetype">MovingAverageType</h4>
+
+<p>The following MovingAverageTypes are available for use:</p>
+
+<ul>
+<li><code>Simple</code></li>
+<li><code>Exponential</code></li>
+<li><code>Weighted</code></li>
+<li><code>DoubleExponential</code></li>
+<li><code>TripleExponential</code></li>
+<li><code>Triangular</code></li>
+<li><code>KaufmanAdaptive</code></li>
+<li><code>MESAAdaptive</code></li>
+<li><code>TillionT3</code></li>
+</ul>
+
+
+
+<h4 id="aroon">Aroon</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">Aroon(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">Aroon(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">Aroon(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; computeLow, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; computeHigh)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs mathematica">DataSerie <span class="hljs-keyword">Up</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs mathematica">DataSerie <span class="hljs-keyword">Down</span></code></pre>
+
+
+
+<h4 id="aroon-oscillator">Aroon Oscillator</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AroonOscillator(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AroonOscillator(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AroonOscillator(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; computeLow, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; computeHigh)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="average-directional-index">Average Directional Index</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AverageDirectionalIndex(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AverageDirectionalIndex(<span class="hljs-keyword">int</span> period, DataStream stream, TimeSpan BarSize)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="average-true-range">Average True Range</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AverageTrueRange(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">AverageTrueRange(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="balance-of-power">Balance Of Power</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs scss"><span class="hljs-function">BalanceOfPower(DataStream stream)</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs scss"><span class="hljs-function">BalanceOfPower(DataStream stream, TimeSpan BarSize)</span></code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="bollinger-bands">Bollinger Bands</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">BollingerBands(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> sdUp, <span class="hljs-keyword">double</span> sdDown, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">BollingerBands(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> sdUp, <span class="hljs-keyword">double</span> sdDown, DataStream stream, TimeSpan BarSize)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">BollingerBands(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> sdUp, <span class="hljs-keyword">double</span> sdDown, DataStream stream, TimeSpan BarSize, MovingAverageType MAType)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">BollingerBands(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> sdUp, <span class="hljs-keyword">double</span> sdDown, DataStream stream, TimeSpan BarSize, MovingAverageType MAType, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; Compute)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs ">DataSerie Upper</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs scss">DataSerie <span class="hljs-value">Middle</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs ">DataSerie Lower</code></pre>
+
+
+
+<h4 id="chande-momentum-oscillator">Chande Momentum Oscillator</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ChandeMomentumOscillator(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ChandeMomentumOscillator(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="commodity-channel-index">Commodity Channel Index</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">CommodityChannelIndex(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">CommodityChannelIndex(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="exponential-moving-average">Exponential Moving Average</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ExponentialMovingAverage(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ExponentialMovingAverage(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream,  Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="momentum">Momentum</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">Momentum(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">Momentum(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="moving-average">Moving Average</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">MovingAverage(<span class="hljs-keyword">int</span> period, MovingAverageType MAType, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">MovingAverage(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, MovingAverageType MAType, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="moving-average-convergence-divergence">Moving Average Convergence Divergence</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">MovingAverageConDiv(<span class="hljs-keyword">int</span> FastPeriod, <span class="hljs-keyword">int</span> SlowPeriod, <span class="hljs-keyword">int</span> SignalPeriod, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">MovingAverageConDiv(<span class="hljs-keyword">int</span> FastPeriod, <span class="hljs-keyword">int</span> SlowPeriod, <span class="hljs-keyword">int</span> SignalPeriod, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs mathematica">DataSerie <span class="hljs-keyword">Histogram</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs mathematica">DataSerie <span class="hljs-keyword">Line</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs vhdl">DataSerie <span class="hljs-keyword">Signal</span></code></pre>
+
+
+
+<h4 id="parabolic-sar">Parabolic SAR</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ParabolicSAR(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> Accelerator, <span class="hljs-keyword">double</span> Maximum, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">ParabolicSAR(<span class="hljs-keyword">int</span> period, <span class="hljs-keyword">double</span> Accelerator, <span class="hljs-keyword">double</span> Maximum, DataStream stream, TimeSpan BarSize)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="rate-of-change">Rate Of Change</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">RateOfChange(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">RateOfChange(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="relative-strength-index">Relative Strength Index</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">RelativeStrengthIndex(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">RelativeStrengthIndex(<span class="hljs-keyword">int</span> period, DataStream stream, TimeSpan BarSize, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="simple-moving-average">Simple Moving Average</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">SimpleMovingAverage(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">SimpleMovingAverage(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream,  Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="true-range">True Range</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs scss"><span class="hljs-function">TrueRange(DataStream stream)</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs scss"><span class="hljs-function">TrueRange(DataStream stream, TimeSpan BarSize)</span></code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="weighted-moving-average">Weighted Moving Average</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">WeightedMovingAverage(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">WeightedMovingAverage(<span class="hljs-keyword">int</span> period, TimeSpan BarSize, DataStream stream, Func&lt;Bar, <span class="hljs-keyword">decimal</span>&gt; comp = <span class="hljs-keyword">null</span>)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h4 id="williamsr">WilliamsR</h4>
+
+<p>Constructors:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">WilliamsR(<span class="hljs-keyword">int</span> period, DataStream stream)</code></pre>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs">WilliamsR(<span class="hljs-keyword">int</span> period, DataStream stream, TimeSpan BarSize)</code></pre>
+
+<p>Result:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs oxygene">DataSerie <span class="hljs-keyword">Result</span></code></pre>
+
+
+
+<h3 id="results">Results</h3>
+
+<p>Automatically updates the following performance statistics of the portfolio on each position change (filled order). The following properties are available, via the following calls:</p>
+
+
+
+<pre class="prettyprint"><code class="language-c# hljs cs"><span class="hljs-comment">//Agent based results</span>
+Agent.Results;
+
+<span class="hljs-comment">//Portfolio based results</span>
+Portfolio.Results;</code></pre>
+
+<ul>
+<li><code>AvgLoser</code>: Average amount lost for each losing trade</li>
+<li><code>AvgPerTrade</code>: Average amount of PnL for each trade</li>
+<li><code>AvgWin</code>: Average amount gained for each winning trade</li>
+<li><code>Balance</code>: Current balance on the account</li>
+<li><code>BuyLosers</code>: Amount of trades closed negatively for buy trades</li>
+<li><code>BuyPL</code>: Total PnL for buy trades</li>
+<li><code>BuyWins</code>: Amount of trades closed positively for buy trades</li>
+<li><code>Commissions</code>: Total amount of commissions paid</li>
+<li><code>ComPerUnit</code>: Commisions per unit traded</li>
+<li><code>ConsecLose</code>: Amount of consecutive loses for the longest streak</li>
+<li><code>ConsecWin</code>: Amount of consecutive wins for a winning streak</li>
+<li><code>DaysTraded</code>: Total amount of days having a trade</li>
+<li><code>Flats</code>: Amount of trades that resulted flat</li>
+<li><code>GrossPerDay</code>: Gross amount earned per day</li>
+<li><code>GrossPL</code>: Total gross amount earned</li>
+<li><code>InitialCapital</code>: Initial capital for this results object</li>
+<li><code>Losers</code>: Number of trades closed in a loss</li>
+<li><code>MaxDDPortfolio</code>: Maximum amount of drawdown based on the initial capital</li>
+<li><code>MaxLoss</code>: Biggest losing trade made</li>
+<li><code>MaxOpenLoss</code>: Maximum open loss</li>
+<li><code>MaxOpenWin</code>: Maximum open win</li>
+<li><code>MaxPL</code>: Maximum PnL acheived</li>
+<li><code>MaxWin</code>: Biggest winning trade made</li>
+<li><code>MinPL</code>: Minimum PnL acheived</li>
+<li><code>MoneyInUse</code>: Total money in use (money used for trading)</li>
+<li><code>NetPL</code>: Netto profit and loss (including commissions)</li>
+<li><code>ProfitFactor</code>: Current profit factor based on current results</li>
+<li><code>ROI</code>: Total return of investment in percentage (0.10 == 10%)</li>
+<li><code>SellLosers</code>: Number of short trades that turned into a loss</li>
+<li><code>SellPL</code>: Total PnL for short trades</li>
+<li><code>SellWins</code>: Number of short trades that turned into a gain</li>
+<li><code>SharpeRatio</code>: Current sharpe ratio</li>
+<li><code>SortinoRatio</code>: Current sortino ratio</li>
+<li><code>SymbolCount</code>: Amount of different symbols traded</li>
+<li><code>Trades</code>: Number of trades made</li>
+<li><code>Winners</code>: Number of trades that resulted in a gain of capital</li>
+</ul>

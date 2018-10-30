@@ -1,0 +1,65 @@
+@import "../Styles/QBootStrapVariables";
+
+.templates .box-lrmenu .templateitem {
+  margin-bottom: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: none;
+  border-bottom: 1px solid #f2f2f2;
+  transition: all 0.5s;
+}
+
+.panel-body {
+  padding: 10px;
+  background: rgba(245, 247, 250, 0.5);
+}
+
+.collapsr {
+  .active {
+    color: #e84e1b;
+  }
+
+  .collapse {
+    background-color: rgba(245, 247, 250, 0.5) !important;
+    visibility: visible;
+    display: block;
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1.05, 0, 1);
+
+    * {
+      background: #FAFBFD !important;
+    }
+  }
+  .in {
+    max-height: 2000px;
+  }
+
+  .panel-group {
+    margin-bottom: 0;
+  }
+
+  .panel-heading {
+    padding: 5px 0 5px 16px;
+  }
+
+  .panel-heading:not(.top-panel-heading) a *:hover {
+    color: $brand-danger;
+  }
+
+  .top-panel-heading {
+    padding: 9px 12px 9px 12px;
+  }
+
+  .heading-open > .panel-heading:first-of-type {
+    background-color: #e84e1b;
+    * {
+      color: #fff;
+    }
+  }
+
+  .panel-title-child a {
+    font-size: 13px;
+    font-weight: 300;
+  }
+}

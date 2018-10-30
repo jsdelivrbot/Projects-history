@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getColumnRender captures snapshot of getColumnRender 1`] = `
+<getColumnRender
+  column="default"
+  expandable={true}
+  firstColumn="first column"
+  handleAddTag={[Function]}
+  handleDeleteRow={[Function]}
+  handleDeleteTag={[Function]}
+  handleEditCell={[Function]}
+  handleModalButtonClick={[Function]}
+  type="type"
+/>
+`;

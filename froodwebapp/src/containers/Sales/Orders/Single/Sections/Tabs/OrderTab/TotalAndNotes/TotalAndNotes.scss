@@ -1,0 +1,25 @@
+@import '~styles/colors.scss';
+
+.stats {
+  div[class*="row"] {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+  div[class*="row"]:last-child {
+    background-color: #CCCCCC;
+    margin-bottom: 0;
+  }
+  strong[id*='totals'] {
+    float: right;
+    margin-right: 1rem;
+  }
+}
+
+.plus {
+  color: $main-green;
+}
+
+.minus {
+  color: $main-red;
+}

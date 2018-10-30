@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApiInfoTab capturing Snapshot of ApiInfoTab 1`] = `
+<div>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <form
+      className="form"
+    >
+      <Row>
+        <Col
+          lg={4}
+          lgOffset={4}
+          md={4}
+          mdOffset={4}
+          xs={12}
+        >
+          <Card
+            className="card"
+          >
+            <Row
+              center="xs"
+              middle="xs"
+            >
+              <Col
+                lg={4}
+                md={4}
+                xs={4}
+              >
+                <label>
+                  API Key
+                </label>
+              </Col>
+              <Col
+                lg={8}
+                md={8}
+                xs={8}
+              >
+                <Field
+                  component={[Function]}
+                  name="apiKey"
+                />
+              </Col>
+            </Row>
+            <Row
+              center="xs"
+              middle="xs"
+            >
+              <Col
+                lg={4}
+                md={4}
+                xs={4}
+              >
+                <label>
+                  Customer Id
+                </label>
+              </Col>
+              <Col
+                lg={8}
+                md={8}
+                xs={8}
+              >
+                <Field
+                  component={[Function]}
+                  name="customerId"
+                />
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+        <Col
+          lg={4}
+          lgOffset={4}
+          md={4}
+          mdOffset={4}
+          xs={12}
+        >
+          <Controls
+            cancelButtonVisible={false}
+            submitButtonVisible={true}
+          />
+        </Col>
+      </Row>
+    </form>
+  </Spin>
+</div>
+`;

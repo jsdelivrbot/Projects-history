@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button captures snapshot of Button 1`] = `
+<button
+  className="button"
+  id={1}
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  type="button"
+>
+  <h1>
+    Test checking
+  </h1>
+</button>
+`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormRadioGroup captures snapshot of FormRadioGroup 1`] = `
+<div
+  className="ant-radio-group radio-btn"
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  style={undefined}
+>
+  <label
+    className="ant-radio-wrapper"
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    style={undefined}
+  >
+    <span
+      className="ant-radio"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-input"
+        disabled={false}
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={undefined}
+        onFocus={[Function]}
+        readOnly={undefined}
+        tabIndex={undefined}
+        type="radio"
+      />
+      <span
+        className="ant-radio-inner"
+      />
+    </span>
+  </label>
+  <label
+    className="ant-radio-wrapper"
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    style={undefined}
+  >
+    <span
+      className="ant-radio"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-input"
+        disabled={false}
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={undefined}
+        onFocus={[Function]}
+        readOnly={undefined}
+        tabIndex={undefined}
+        type="radio"
+      />
+      <span
+        className="ant-radio-inner"
+      />
+    </span>
+  </label>
+</div>
+`;

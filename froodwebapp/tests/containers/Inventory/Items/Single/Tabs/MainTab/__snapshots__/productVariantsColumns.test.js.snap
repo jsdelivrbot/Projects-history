@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`productVariantsColumns capturing Snapshot of productOptionsColumns 1`] = `
+<productOptionsColumns
+  productKeyColumnDisabled={true}
+/>
+`;
+
+exports[`productVariantsColumns capturing Snapshot of productVariantsEditColumns 1`] = `
+<productVariantsEditColumns
+  productKeyColumnDisabled={true}
+/>
+`;
+
+exports[`productVariantsColumns capturing Snapshot of productVariantsNewColumns 1`] = `
+<productVariantsNewColumns
+  productKeyColumnDisabled={true}
+/>
+`;

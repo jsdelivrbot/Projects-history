@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderCommonData capturing Snapshot of OrderCommonData 1`] = `
+<Col
+  lg={5}
+  md={6}
+  xs={true}
+>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      lg={4}
+      md={4}
+      sm={6}
+      xs={true}
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "status",
+            "borderRadius": "1rem",
+            "color": "white",
+            "padding": "0.4rem 2rem",
+            "textAlign": "center",
+          }
+        }
+      >
+        status
+      </div>
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Purchase Order Date
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        name="date"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Required By
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        name="deliveryDate"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Shipping Method
+      </strong>
+    </Col>
+    <Col
+      lg={6}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        menuItems={Array []}
+        name="deliveryMethod.id"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Payment Term
+      </strong>
+    </Col>
+    <Col
+      lg={6}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        menuItems={Array []}
+        name="paymentTerms.id"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Contact User
+      </strong>
+    </Col>
+    <Col
+      lg={6}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        menuItems={Array []}
+        name="contactUser.id"
+      />
+    </Col>
+  </Row>
+</Col>
+`;

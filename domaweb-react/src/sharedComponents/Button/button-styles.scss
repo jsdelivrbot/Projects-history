@@ -1,0 +1,47 @@
+@import '../../assets/styles/variables.scss';
+
+.controls__bttn {
+    min-width: 120px;
+    height: 50px;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition-duration: 0.2s;
+    /* Safari */
+    transition-duration: 0.2s;
+}
+
+.controls_bttn_load{
+  background: url('../../assets/images/tasks/Spinner.gif') no-repeat right center;
+  background-size: 50px 50px;
+  -webkit-transition-duration: 0s;
+  /* Safari */
+  transition-duration: 0s;
+}
+.controls__bttn__start {
+    background-color: $task-start-bttn-color;
+}
+
+.controls__bttn__finish {
+    background-color: $task-finish-bttn-color;
+}
+
+.controls__bttn__start:hover {
+    background-color: #0f6889;
+}
+
+.controls__bttn__finish:hover {
+    background-color: #476804;
+}
+
+.controls__bttn__hide {
+     display: none;
+}
+
+.loader_status{
+  position: absolute;
+  right: 10px;
+  top: 30%;
+}

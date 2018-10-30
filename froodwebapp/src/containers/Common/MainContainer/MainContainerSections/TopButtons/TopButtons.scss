@@ -1,0 +1,42 @@
+.topButtons {
+  position: fixed;
+  right: 0;
+  top: 8.25rem;
+  z-index: 5;
+  height: 2rem;
+  width: 50vw;
+  padding-right: 3rem;
+  button:nth-last-child(2) {
+    margin-left: 0.5rem;
+  }
+}
+
+.topButton {
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  z-index: 5;
+  display: block;
+  color: black;
+  float: right;
+  width: 8rem;
+  transform: translateZ(0);
+  span {
+    margin-right: 0.5rem;
+  }
+  a {
+    color: black;
+  }
+}
+
+.keyIndicators {
+  @extend .topButton;
+  left: 50%;
+  padding: 0;
+  float: none;
+  display: inline-block;
+  width: 10rem;
+  transform: translate(-50%);
+  * {
+    margin: 0 0.5rem;
+  }
+}

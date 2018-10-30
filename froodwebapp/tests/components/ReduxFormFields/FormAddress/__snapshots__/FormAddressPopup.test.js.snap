@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormAddressPopup captures snapshot of FormAddressPopup 1`] = `
+<div>
+  <div
+    className="addressHeader"
+  >
+    title
+    <Icon
+      className="editIcon"
+      onClick={[Function]}
+      type="edit"
+    />
+  </div>
+  <Popover
+    content={
+      <FormAddressList
+        allAddresses={Array []}
+        handleAddressRedirect={[Function]}
+        input={
+          Object {
+            "value": "value",
+          }
+        }
+      />
+    }
+    mouseEnterDelay={0.1}
+    mouseLeaveDelay={0.1}
+    onVisibleChange={[Function]}
+    overlayStyle={Object {}}
+    placement="bottom"
+    prefixCls="ant-popover"
+    title={
+      <Button
+        className="newAddressButton"
+        clicked={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+      >
+        + Add New Address
+      </Button>
+    }
+    transitionName="zoom-big"
+    trigger="click"
+    visible={false}
+  />
+</div>
+`;

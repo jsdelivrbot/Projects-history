@@ -1,0 +1,41 @@
+@import '~styles/colors.scss';
+@import '~styles/common.scss';
+@import '~styles/settings.scss';
+.form{
+  margin-bottom: 2rem;
+}
+.row{
+  margin-bottom: 1rem;
+}
+.formWrapper{
+  width: 100%;
+}
+.FirstInput{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.input{
+  margin-bottom: 1rem;
+}
+.search {
+  width: 20rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.submitButton{
+  width: 5rem;
+  background: transparent;
+  border: 1px solid $main-green;
+  color: $main-green;
+}
+.statusTag{
+  position: absolute;
+  right: 0;
+  border-radius: 10rem;
+  color: #000;
+}
+
+.card{
+  @extend .card;
+  border-radius: 5px;
+}

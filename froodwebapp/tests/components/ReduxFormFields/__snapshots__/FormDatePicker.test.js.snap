@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormDatePicker captures snapshot of FormDatePicker 1`] = `
+<span
+  className="ant-calendar-picker"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    onBlur={undefined}
+    onClick={undefined}
+    onFocus={undefined}
+    onKeyDown={[Function]}
+    onMouseDown={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    onTouchStart={undefined}
+  >
+    <input
+      className="ant-calendar-picker-input ant-input ant-input-disabled"
+      disabled={true}
+      placeholder="请选择日期"
+      readOnly={true}
+      value="04-June-2015"
+    />
+    <span
+      className="ant-calendar-picker-icon"
+    />
+  </div>
+</span>
+`;

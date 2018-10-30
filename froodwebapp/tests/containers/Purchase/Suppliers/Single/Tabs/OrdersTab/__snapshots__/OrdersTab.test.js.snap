@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrdersTab capturing Snapshot of OrdersTab 1`] = `
+<div>
+  <Row
+    className="row"
+    end="xs"
+  >
+    <Col
+      lg={4}
+      md={6}
+      xs={true}
+    >
+      <Input
+        disabled={false}
+        onChange={[Function]}
+        placeholder="Search by Order number"
+        prefix={
+          <Icon
+            type="search"
+          />
+        }
+        prefixCls="ant-input"
+        type="text"
+        value=""
+      />
+    </Col>
+    <Col
+      lg={8}
+    >
+      <ActionButton>
+        New PO
+      </ActionButton>
+    </Col>
+  </Row>
+  <Row
+    className="row"
+  >
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="default"
+        spinning={false}
+        wrapperClassName=""
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "orderDate",
+                "title": "Order Date",
+              },
+              Object {
+                "dataIndex": "expRecvDate",
+                "title": "Exp Recv Date",
+              },
+              Object {
+                "dataIndex": "status",
+                "title": "Status",
+              },
+              Object {
+                "dataIndex": "totalValue",
+                "title": "Total Value",
+              },
+              Object {
+                "dataIndex": "currency",
+                "title": "Currency",
+              },
+              Object {
+                "dataIndex": "createdBy",
+                "title": "Created By",
+              },
+              Object {
+                "dataIndex": "lastUpdated",
+                "title": "Last Updated",
+              },
+            ]
+          }
+          dataSource={Array []}
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          prefixCls="ant-table"
+          rowKey="id"
+          rowSelection={null}
+          showHeader={true}
+          size="middle"
+          useFixedHeader={false}
+        />
+      </Spin>
+    </Col>
+  </Row>
+</div>
+`;

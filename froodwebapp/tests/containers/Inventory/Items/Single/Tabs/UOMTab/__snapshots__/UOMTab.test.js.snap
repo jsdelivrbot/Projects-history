@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UOMTab capturing Snapshot of UOMTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "SKU/Variant",
+          "menuItems": Array [
+            Object {
+              "key": undefined,
+              "value": undefined,
+            },
+          ],
+          "name": "skuId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Rate",
+          "name": "fromQty",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Unit",
+          "menuItems": Array [],
+          "name": "fromId",
+          "type": "select",
+        },
+        Object {
+          "header": "EQUALS",
+          "name": "equals",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Rate",
+          "name": "toQty",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Unit",
+          "menuItems": Array [],
+          "name": "toId",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "fromId": "",
+        "fromQty": "",
+        "skuId": "",
+        "toId": "",
+        "toQty": "",
+      }
+    }
+    loading={false}
+    title="New UOM Conversion"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      end="lg"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <Col
+        lg={4}
+        md={true}
+        xs={true}
+      >
+        <Search
+          placeholder="Type to search SKU/Variant"
+          prefixCls="ant-input-search"
+        />
+      </Col>
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <ActionButton
+          onClick={[Function]}
+          style={
+            Object {
+              "float": "right",
+            }
+          }
+        >
+          New Link
+        </ActionButton>
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "sku",
+            "title": "SKU",
+          },
+          Object {
+            "dataIndex": "typeDescription",
+            "title": "UOM TYPE",
+          },
+          Object {
+            "dataIndex": "fromQty",
+            "title": "QUANTITY",
+          },
+          Object {
+            "dataIndex": "fromName",
+            "title": "UOM",
+          },
+          Object {
+            "dataIndex": "eq",
+            "render": [Function],
+            "title": "EQUALS",
+          },
+          Object {
+            "dataIndex": "toQty",
+            "title": "QUANTITY",
+          },
+          Object {
+            "dataIndex": "toName",
+            "title": "UOM",
+          },
+          Object {
+            "render": [Function],
+            "title": "ACTION",
+          },
+        ]
+      }
+      dataSource={
+        Array [
+          Object {
+            "fromId": "2",
+            "fromQty": 10,
+            "id": "1",
+            "toId": "7",
+            "toQty": 25,
+            "type": "some type",
+          },
+        ]
+      }
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

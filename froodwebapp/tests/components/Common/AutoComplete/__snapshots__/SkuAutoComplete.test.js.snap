@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkuAutoComplete captures snapshot of SkuAutoComplete 1`] = `
+<AutoComplete
+  alignRight={false}
+  disabled={false}
+  getItemValue={[Function]}
+  inputPlaceholder="Start typing SKU or name..."
+  inputStyle={Object {}}
+  items={Array []}
+  loadingAutoComplete={false}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onSelect={[Function]}
+  renderItem={[Function]}
+  value="value"
+/>
+`;

@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RolesTab capturing Snapshot of RolesTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New Role"
+    fields={
+      Array [
+        Object {
+          "header": "Role",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "header": "Clone From",
+          "menuItems": Array [],
+          "name": "cloneId",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "cloneId": "",
+        "name": "",
+      }
+    }
+    loading={false}
+    title="New Role"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search roles"
+        />
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "Role",
+            "width": "33%",
+          },
+          Object {
+            "dataIndex": "isActive",
+            "render": [Function],
+            "title": "Status",
+            "width": "33%",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+            "width": "34%",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

@@ -1,0 +1,125 @@
+$break-small: 768px;
+
+// Header Menu
+.container {
+  width: 6rem;
+  color: white;
+  z-index: 10;
+
+  &:hover {
+    background-color: white;
+    color: black !important;
+  }
+
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+
+  @media screen and (min-width: $break-small) {
+    display: initial;
+  }
+
+  div:focus {
+    outline: none;
+  }
+}
+
+.visibleMenu {
+  height: 5.5rem;
+}
+
+.button {
+  height: 100%;
+  position: relative;
+  color: inherit;
+  width: 6rem;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu {
+  width: 12rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  color: black;
+  background-color: white;
+  text-align: start;
+}
+
+// Visible Menu
+.menuIcon {
+  font-size: 2rem;
+  color: inherit;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  top: 0.3rem;
+  right: 1.2rem;
+}
+
+.arrowIcon {
+  color: inherit;
+}
+
+// Single Menu Item
+
+.singleItemContainer {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  &:hover {
+    background-color: lighten(lightgray,  3) !important;
+  }
+}
+
+.iconContainer {
+  text-align: center;
+  position: absolute;
+  width: 1rem;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0.6rem;
+}
+
+// Item With Nested Items
+
+.caretIcon {
+  font-size: 1rem;
+}
+
+.nestedMenuContainer {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  &:hover {
+    background-color: lighten(lightgray,  3) !important;
+  }
+}
+
+.nestedMenuItemsContainer {
+  position: absolute;
+  right: -12rem;
+  top: 0;
+  box-shadow: 0px 3px 6px rgba(0,0,0,.2);
+}
+
+.nestedMenuItem {
+  position: relative;
+  background-color: white;
+  padding: 0.4rem 0.8rem;
+  width: 12rem;
+
+  &:hover {
+    background-color: lighten(lightgray,  3) !important;
+  }
+}
+
+
+
+
+
+

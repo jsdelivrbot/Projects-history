@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source : /
+    destination: /home/ubuntu/apps/froodwebapp
+    runas: ubuntu
+hooks:
+   BeforeInstall:
+    - location: scripts/cleanresources.sh
+      timeout: 300
+  AfterInstall:
+    - location: scripts/afterinstall.sh
+      timeout: 300
+  ApplicationStart: 
+    - location: scripts/startserver.sh
+      timeout: 30

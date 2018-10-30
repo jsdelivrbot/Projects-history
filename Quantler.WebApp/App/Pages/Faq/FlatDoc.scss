@@ -1,0 +1,33 @@
+.page-faq {
+  > h3 {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .flatdoc-content {
+    a:hover {
+      color: #e84e1b !important;
+    }
+    a {
+      color: #e84e1b !important;
+    }
+  }
+
+  .flatdoc-menu {
+    display: block;
+    position: fixed;
+    padding-top: 122px;
+    top: 0;
+    z-index: 1;
+    width: 200px;
+    overflow-y: scroll;
+  }
+
+  .flatdoc-content {
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin-left: 180px;
+  }
+}

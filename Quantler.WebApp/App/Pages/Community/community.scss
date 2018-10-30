@@ -1,0 +1,52 @@
+pre {
+  padding: 0 !important;
+  border-radius: 2px !important;
+  border-color: #e6e6e6 !important;
+  background-color: transparent !important;
+}
+
+.community {
+  .singlepost {
+    $borderBox: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+
+    -webkit-box-shadow: $borderBox;
+    -moz-box-shadow: $borderBox;
+    box-shadow: $borderBox;
+    margin-bottom: 20px;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 300;
+  }
+
+  .post {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    padding: 5px 2px 5px 2px;
+    margin-bottom: 8px;
+
+    .lastreply {
+      padding-top: 15px;
+
+      * {
+        line-height: 20px;
+      }
+    }
+  }
+  .postcontent {
+    pre {
+      margin: 10px 10px 10.5px;
+    }
+  }
+
+  .newpost .texteditor {
+    width: auto;
+  }
+
+  .newpost .submit {
+    margin-right: 0;
+  }
+
+  .newpost .user-sm {
+    margin-right: 0;
+  }
+}

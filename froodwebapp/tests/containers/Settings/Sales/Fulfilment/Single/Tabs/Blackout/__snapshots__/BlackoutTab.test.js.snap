@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlackoutTab capturing Snapshot of BlackoutTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "From",
+          "name": "startDate",
+          "type": "datePicker",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "To",
+          "name": "endDate",
+          "type": "datePicker",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Name",
+          "name": "name",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "endDate": "2016-01-01T00:00:00.000Z",
+        "name": "",
+        "startDate": "2016-01-01T00:00:00.000Z",
+      }
+    }
+    loading={false}
+    okText="Add"
+    title="New Holiday"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <Table
+        bordered={false}
+        className="table"
+        columns={
+          Array [
+            Object {
+              "dataIndex": "startDate",
+              "render": [Function],
+              "title": "From",
+            },
+            Object {
+              "dataIndex": "endDate",
+              "render": [Function],
+              "title": "To",
+            },
+            Object {
+              "dataIndex": "name",
+              "render": [Function],
+              "title": "Name",
+            },
+            Object {
+              "dataIndex": "total",
+              "render": [Function],
+              "title": "Actions",
+            },
+          ]
+        }
+        dataSource={Array []}
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="id"
+        rowSelection={null}
+        showHeader={true}
+        size="small"
+        useFixedHeader={false}
+      />
+      <NewTableRow
+        addNewRowText="Add New Holiday"
+        addOtherRowText="Add Another Holiday"
+        hasData={false}
+        onClick={[Function]}
+      />
+    </Row>
+  </Spin>
+</div>
+`;

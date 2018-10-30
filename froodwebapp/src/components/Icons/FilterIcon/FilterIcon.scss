@@ -1,0 +1,9 @@
+@import '~styles/icons.scss';
+@import '~styles/colors.scss';
+
+.filterIcon {
+  @extend .icon;
+  font-size: 17px;
+  color: $main-black;
+  padding: 0 0.5rem;
+}

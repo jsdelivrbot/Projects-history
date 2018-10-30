@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableSection capturing Snapshot of TableSection 1`] = `
+<div
+  id="salesTable"
+>
+  <DragDropContext(DynamicTable)
+    data={
+      Array [
+        Object {
+          "id": 1,
+        },
+        Object {
+          "id": 2,
+        },
+      ]
+    }
+    handleDownloadItem={[Function]}
+    handleRowClick={[Function]}
+    handleSelectRows={[Function]}
+    handleSort={[Function]}
+    handleUpdateColumnsOrder={[Function]}
+    headers={
+      Array [
+        Object {
+          "dataAlias": undefined,
+          "dataType": undefined,
+          "id": undefined,
+          "isEditable": undefined,
+          "isSortable": undefined,
+          "key": undefined,
+          "name": undefined,
+          "order": undefined,
+        },
+      ]
+    }
+    loadingTableData={false}
+    selectedRows={Array []}
+  />
+  <Row
+    end="xs"
+  >
+    <Col
+      lg={true}
+      md={true}
+      sm={true}
+      xs={true}
+    >
+      <_a
+        className="pagination"
+        current={1}
+        defaultCurrent={1}
+        onChange={[Function]}
+        onShowSizeChange={[Function]}
+        pageSize={5}
+        prefixCls="ant-pagination"
+        selectPrefixCls="ant-select"
+        showSizeChanger={true}
+        showTotal={[Function]}
+        total={10}
+      />
+    </Col>
+  </Row>
+</div>
+`;

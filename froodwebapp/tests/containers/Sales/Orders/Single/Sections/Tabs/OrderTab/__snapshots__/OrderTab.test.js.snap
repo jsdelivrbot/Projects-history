@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderTab capturing Snapshot of OrderTab 1`] = `
+<div>
+  <Row>
+    <Col
+      lg={3}
+      md={5}
+      sm={true}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        name="isRecurring"
+        radioButtonValues={
+          Array [
+            Object {
+              "text": "Single",
+              "value": false,
+            },
+            Object {
+              "text": "Recurring",
+              "value": true,
+            },
+          ]
+        }
+        type="checkbox"
+      />
+    </Col>
+  </Row>
+  <Row>
+    <Col
+      lg={true}
+      md={true}
+      sm={true}
+      xs={true}
+    >
+      <Field
+        addNewRowVisible={true}
+        columns={
+          Array [
+            Object {
+              "dataIndex": "sku",
+              "disabled": false,
+              "title": "SKU",
+              "type": "skuAutoComplete",
+            },
+            Object {
+              "dataIndex": "name",
+              "title": "ITEM NAME",
+            },
+            Object {
+              "dataIndex": "uomName",
+              "title": "UOM",
+            },
+            Object {
+              "dataIndex": "availableQty",
+              "title": "AVAILABLE QTY",
+            },
+            Object {
+              "dataIndex": "price",
+              "render": [Function],
+              "title": "PRICE",
+            },
+            Object {
+              "dataIndex": "qty",
+              "disabled": false,
+              "title": "ORDER QTY",
+              "type": "number",
+            },
+            Object {
+              "dataIndex": "discount",
+              "disabled": false,
+              "formatter": [Function],
+              "parser": [Function],
+              "title": "DISCOUNT",
+              "type": "number",
+            },
+            Object {
+              "dataIndex": "tax",
+              "render": [Function],
+              "title": "TAX",
+            },
+            Object {
+              "dataIndex": "total",
+              "render": [Function],
+              "title": "TOTAL",
+            },
+          ]
+        }
+        component={[Function]}
+        deleteColumnVisibleRightSide={true}
+        name="skuDetails"
+      />
+    </Col>
+  </Row>
+  <Row>
+    <Col
+      lg={true}
+      md={true}
+      sm={true}
+      xs={true}
+    >
+      <Connect(TotalAndNotes)
+        currency="$"
+        disabled={false}
+        onFieldChange={[Function]}
+      />
+    </Col>
+  </Row>
+  <Controls
+    cancelButtonVisible={false}
+    saveButtonVisible={false}
+    updateButtonVisible={false}
+  />
+</div>
+`;

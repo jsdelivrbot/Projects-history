@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PackTabSection capturing Snapshot of PackTabSection 1`] = `
+<div>
+  <OrderTabHeader
+    headerLabel="Packing Station"
+    primaryButtonText="Assign"
+    secondaryButtonText="Print Slip"
+  />
+  <Row>
+    <Col
+      lg={true}
+    >
+      <GridTable
+        columns={
+          Array [
+            Object {
+              "dataIndex": "code",
+              "title": "Package #",
+            },
+            Object {
+              "dataIndex": "name",
+              "title": "Item Name",
+            },
+            Object {
+              "dataIndex": "uomName",
+              "title": "UOM",
+            },
+            Object {
+              "dataIndex": "orderQty",
+              "title": "Order Qty",
+            },
+            Object {
+              "dataIndex": "batch",
+              "title": "Batch",
+            },
+            Object {
+              "dataIndex": "expiryDate",
+              "title": "Expiry",
+            },
+            Object {
+              "dataIndex": "packQty",
+              "title": "Pack Qty",
+            },
+            Object {
+              "dataIndex": "isPacked",
+              "title": "Pack Status",
+              "type": "checkbox",
+            },
+          ]
+        }
+        dataSource={Array []}
+        isExpandable={true}
+        rowKey="code"
+        updateTableData={[Function]}
+      />
+    </Col>
+  </Row>
+  <Controls
+    onSaveButtonClick={[Function]}
+    saveButtonText="Save"
+  />
+</div>
+`;

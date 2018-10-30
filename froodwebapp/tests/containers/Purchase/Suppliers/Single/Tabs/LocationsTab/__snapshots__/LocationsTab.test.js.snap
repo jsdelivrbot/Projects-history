@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationsTab capturing Snapshot of LocationsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New location"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Location Name",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Location Prefix",
+          "name": "prefix",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Postal Code",
+          "name": "postalCode",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "State",
+          "menuItems": Array [],
+          "name": "stateId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "City",
+          "menuItems": Array [],
+          "name": "cityId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Suburb",
+          "name": "suburb",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 1",
+          "name": "address1",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 2",
+          "name": "address2",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Location Type",
+          "menuItems": Array [],
+          "name": "type",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "address1": "",
+        "address2": "",
+        "cityId": "",
+        "name": "",
+        "postalCode": "",
+        "prefix": "",
+        "stateId": "",
+        "suburb": "",
+        "type": "",
+      }
+    }
+    loading={false}
+    title="New location"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "Name",
+          },
+          Object {
+            "dataIndex": "address1",
+            "title": "Address",
+            "width": "30%",
+          },
+          Object {
+            "dataIndex": "cityName",
+            "title": "City",
+          },
+          Object {
+            "dataIndex": "stateName",
+            "title": "State",
+          },
+          Object {
+            "dataIndex": "postalCode",
+            "title": "Postal Code",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

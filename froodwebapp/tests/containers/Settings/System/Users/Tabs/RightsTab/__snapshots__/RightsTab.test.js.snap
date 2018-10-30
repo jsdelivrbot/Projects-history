@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RightsTab capturing Snapshot of RightsTab 1`] = `
+<div>
+  <Row>
+    <Col
+      lg={4}
+      md={6}
+      xs={true}
+    >
+      <Select
+        choiceTransitionName="zoom"
+        className="select"
+        onChange={[Function]}
+        prefixCls="ant-select"
+        showSearch={false}
+        transitionName="slide-up"
+      />
+    </Col>
+    <Col
+      lg={4}
+      lgOffset={4}
+      md={6}
+      xs={true}
+    >
+      <FroodSearchInput
+        onChange={[Function]}
+        placeholder="Type to search rights"
+      />
+    </Col>
+  </Row>
+  <Row>
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <GridTable
+        className="table"
+        columns={
+          Array [
+            Object {
+              "dataIndex": "isActive",
+              "title": "Select",
+              "type": "checkbox",
+              "width": "50%",
+            },
+            Object {
+              "dataIndex": "name",
+              "title": "Rigths Attaches to Role",
+              "width": "50%",
+            },
+          ]
+        }
+        isExpandable={false}
+        loadingData={false}
+        rowKey="id"
+        updateTableData={[Function]}
+      />
+    </Col>
+  </Row>
+  <Controls
+    onSaveButtonClick={[Function]}
+    saveButtonText="Save"
+    saveButtonVisible={true}
+  />
+</div>
+`;

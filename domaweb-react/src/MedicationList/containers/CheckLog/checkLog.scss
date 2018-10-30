@@ -1,0 +1,10 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/global.scss';
+
+.row {
+  cursor: pointer,
+}
+
+.row:hover {
+  background-color: $sidemenu-background-color;
+}

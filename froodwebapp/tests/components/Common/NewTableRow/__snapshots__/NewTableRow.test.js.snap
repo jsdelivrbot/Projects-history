@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTableRow captures snapshot of NewTableRow 1`] = `
+<div
+  className="newTableRow"
+  onClick={[Function]}
+>
+  <i
+    className="anticon anticon-plus"
+  />
+  text
+</div>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item capturing Snapshot of Item 1`] = `
+<div>
+  <Connect(ItemsTabs)
+    isNewSkuItem={false}
+    itemId="Some id"
+  />
+</div>
+`;

@@ -1,0 +1,9 @@
+@import '~styles/colors.scss';
+@import '~styles/common.scss';
+
+.button {
+  // color: white;
+  border: 1px solid $main-orange;
+  width: 5rem;
+  color: $main-orange;
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCategories capturing Snapshot of ProductCategories 1`] = `
+<div>
+  <PageHeader
+    bigText="Product categories"
+    smallText="Manage categories hierarchy"
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Connect(ReduxForm) />
+  </Spin>
+</div>
+`;

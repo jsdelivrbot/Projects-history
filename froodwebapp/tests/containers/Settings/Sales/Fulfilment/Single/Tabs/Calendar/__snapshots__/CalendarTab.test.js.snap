@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarTab capturing Snapshot of CalendarTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Delivery Limit",
+          "name": "isDeliveryLimited",
+          "type": "checkbox",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Number Of Deliveries",
+          "name": "deliveries",
+          "type": "number",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "deliveries": 0,
+        "from": "",
+        "id": 1,
+        "to": "",
+      }
+    }
+    loading={false}
+    title="Edit Slot"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <div
+      className="rowsContainer"
+    >
+      <Row
+        center="xs"
+      >
+        <Col
+          key="0"
+          xs={1}
+        >
+          <strong>
+            MON
+          </strong>
+        </Col>
+        <Col
+          key="1"
+          xs={1}
+        >
+          <strong>
+            TUE
+          </strong>
+        </Col>
+        <Col
+          key="2"
+          xs={1}
+        >
+          <strong>
+            WED
+          </strong>
+        </Col>
+        <Col
+          key="3"
+          xs={1}
+        >
+          <strong>
+            THU
+          </strong>
+        </Col>
+        <Col
+          key="4"
+          xs={1}
+        >
+          <strong>
+            FRI
+          </strong>
+        </Col>
+        <Col
+          key="5"
+          xs={1}
+        >
+          <strong>
+            SAT
+          </strong>
+        </Col>
+        <Col
+          key="6"
+          xs={1}
+        >
+          <strong>
+            SUN
+          </strong>
+        </Col>
+        <Col
+          key="7"
+          xs={1}
+        >
+          <strong>
+            HOLIDAYS
+          </strong>
+        </Col>
+      </Row>
+      <Row
+        center="xs"
+      />
+      <Row
+        center="xs"
+      />
+    </div>
+    <Row>
+      0
+    </Row>
+  </Spin>
+</div>
+`;

@@ -1,0 +1,32 @@
+@import '~styles/colors.scss';
+
+$main-icon-size: 1.2rem;
+$main-font-size: 14px;
+$company-font-size: $main-font-size + 2px;
+
+.addressHeader {
+  color: $main-red;
+  font-size: $main-font-size;
+}
+
+.editIcon {
+  position: relative;
+  top: .1rem;
+  font-size: $main-icon-size;
+  margin-bottom: .5rem;
+  margin-left: .5rem;
+  color: $main-black;
+  cursor: pointer;
+}
+
+.newAddressButton {
+  width: 100%;
+  padding: 0;
+  margin-right: 10%;
+  font-size: $main-font-size;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: $main-blue;
+  cursor: pointer;
+}

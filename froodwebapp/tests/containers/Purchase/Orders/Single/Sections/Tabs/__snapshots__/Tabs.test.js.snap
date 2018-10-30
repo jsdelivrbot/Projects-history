@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POTabs capturing Snapshot of POTabs 1`] = `
+<Row
+  className="tabs"
+>
+  <Col
+    xs={true}
+  >
+    <Tabs
+      animated={false}
+      defaultActiveKey="order"
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="order"
+        placeholder={null}
+        tab="Order"
+      >
+        <Connect(OrderTab)
+          isNewOrder={false}
+          onUpdate={[Function]}
+          status="status"
+        />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

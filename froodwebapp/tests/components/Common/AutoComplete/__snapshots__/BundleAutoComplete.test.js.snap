@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BundleAutoComplete captures snapshot of BundleAutoComplete 1`] = `
+<AutoComplete
+  alignRight={false}
+  disabled={false}
+  getItemValue={[Function]}
+  inputPlaceholder="Bundle"
+  items={Array []}
+  loadingAutoComplete={false}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onSelect={[Function]}
+  renderItem={[Function]}
+  value="value"
+/>
+`;

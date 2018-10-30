@@ -1,0 +1,11 @@
+{
+  "app.components.Sidenavitem.user": "Käyttäjänimi",
+  "app.components.Sidenavitem.tasks": "Tehtävät",
+  "app.components.Sidenavitem.bookings": "Varaukset",
+  "app.components.Sidenavitem.customers": "Asiakkaat",
+  "app.components.Sidenavitem.wallet": "Lompakko",
+  "app.components.Sidenavitem.calendar": "Kalenteri",
+  "app.components.Sidenavitem.messages": "Viestit",
+  "app.components.Sidenavitem.settings": "Asetukset",
+  "app.components.Sidenavitem.logout": "Kirjaudu ulos"
+}

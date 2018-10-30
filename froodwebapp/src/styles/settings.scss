@@ -1,0 +1,42 @@
+@import '~styles/colors.scss';
+$border-width: 1px;
+
+.tabs {
+  margin-top: 1rem;
+  div {
+    margin-bottom: 0 !important;
+  }
+}
+
+.channelItem {
+  height: 10rem;
+  width: 9rem;
+  border: 0.5px solid #979797;
+  box-sizing: border-box;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  div:nth-child(1) {
+    height: 20%;
+  }
+  div:nth-child(2) {
+    height: 60%;
+  }
+  div:nth-child(3) {
+    height: 20%;
+    text-align: center;
+  }
+  button {
+    border: $border-width solid $save-button-color;
+    color: $save-button-color !important;
+  }
+}
+
+.channelDescription {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #A0A0A0;
+}

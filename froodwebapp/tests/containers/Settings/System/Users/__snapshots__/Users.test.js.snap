@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users capturing Snapshot of Users 1`] = `
+<div>
+  <PageHeader
+    bigText="Manage Users, Roles & Rights"
+    smallText="Add your users, roles and rights and manage their details & permissions"
+  />
+  <Row>
+    <Col
+      lg={true}
+    >
+      <Tabs
+        activeKey="users"
+        animated={false}
+        hideAdd={false}
+        onTabClick={[Function]}
+        prefixCls="ant-tabs"
+      >
+        <TabPane
+          key="users"
+          placeholder={null}
+          tab="Users"
+        >
+          <Connect(UsersTab) />
+        </TabPane>
+        <TabPane
+          key="roles"
+          placeholder={null}
+          tab="Roles"
+        >
+          <Connect(RolesTab)
+            handleTabClick={[Function]}
+          />
+        </TabPane>
+        <TabPane
+          key="rights"
+          placeholder={null}
+          tab="Rights"
+        >
+          <Connect(RightsTab)
+            activeRoleId={0}
+          />
+        </TabPane>
+      </Tabs>
+    </Col>
+  </Row>
+</div>
+`;

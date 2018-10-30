@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+    <script src="lib/aws-cognito-sdk.min.js"></script>
+    <script src="lib/amazon-cognito-identity.min.js"></script>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <script src="auth/auth.js"></script>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="auth">
+    <div class="row">
+        <h4>ENTER APP KEY</h4>
+        <form action="" class="col s12">
+            <div class="row">
+                <div class="input-field col s12"><input type="text" id="key" class="validate">
+                    <label for="key">Key123</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" name="sign_in">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div id="sb-button" class="sb-button">Edit off</div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

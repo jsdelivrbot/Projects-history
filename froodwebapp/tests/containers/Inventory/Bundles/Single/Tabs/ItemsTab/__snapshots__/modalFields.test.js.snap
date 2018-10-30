@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`modalFields capturing Snapshot of modalFields 1`] = `
+<modalFields
+  handleDeactivate={[Function]}
+  handleEdit={[Function]}
+/>
+`;

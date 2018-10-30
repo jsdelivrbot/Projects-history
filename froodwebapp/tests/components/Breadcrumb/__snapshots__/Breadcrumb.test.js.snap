@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb captures snapshot of Breadcrumb 1`] = `
+<Breadcrumb
+  className="breadcrumb"
+  prefixCls="ant-breadcrumb"
+  separator="/"
+>
+  <BreadcrumbItem
+    className="brItem"
+    key="categories"
+    prefixCls="ant-breadcrumb"
+    separator="/"
+  >
+    Categories
+  </BreadcrumbItem>
+  <BreadcrumbItem
+    className="brItem"
+    key="inventory"
+    prefixCls="ant-breadcrumb"
+    separator="/"
+  >
+    <Link
+      replace={false}
+      to="/categories/inventory"
+    >
+      Inventory
+    </Link>
+  </BreadcrumbItem>
+</Breadcrumb>
+`;
+
+exports[`Breadcrumb captures snapshot of Breadcrumb without Link 1`] = `
+<Breadcrumb
+  className="breadcrumb"
+  prefixCls="ant-breadcrumb"
+  separator="/"
+>
+  <BreadcrumbItem
+    className="brItem"
+    key="inventory"
+    prefixCls="ant-breadcrumb"
+    separator="/"
+  >
+    Inventory
+  </BreadcrumbItem>
+</Breadcrumb>
+`;

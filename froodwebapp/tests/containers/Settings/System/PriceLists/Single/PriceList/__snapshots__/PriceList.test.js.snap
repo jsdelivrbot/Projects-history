@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceList capturing Snapshot of PriceList 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "SKU/Variant",
+          "name": "sku",
+          "type": "skuAutoComplete",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "UOM",
+          "name": "uomName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Currency",
+          "name": "currencyName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Price (Include Tax or Exclude Tax)",
+          "name": "price",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "currencyName": "",
+        "id": "new",
+        "price": "",
+        "sku": Object {
+          "id": null,
+          "name": "",
+        },
+        "uomName": "",
+      }
+    }
+    loading={false}
+    title="Add SKU in Price List"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={true}
+      >
+        <Connect(ReduxForm)
+          isNewPriceList={false}
+        />
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        xs={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "sku",
+                "title": "SKU",
+              },
+              Object {
+                "dataIndex": "uomName",
+                "title": "UOM",
+              },
+              Object {
+                "dataIndex": "categoryName",
+                "title": "CATEGORY",
+              },
+              Object {
+                "dataIndex": "currencyName",
+                "title": "Currency",
+              },
+              Object {
+                "dataIndex": "price",
+                "title": "Price",
+              },
+              Object {
+                "dataIndex": "tax",
+                "title": "Tax",
+              },
+              Object {
+                "dataIndex": "listPrice",
+                "title": "List Price",
+              },
+              Object {
+                "dataIndex": "actions",
+                "render": [Function],
+                "title": "Actions",
+              },
+            ]
+          }
+          dataSource={Array []}
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          pagination={false}
+          prefixCls="ant-table"
+          rowKey="id"
+          rowSelection={null}
+          showHeader={true}
+          size="small"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

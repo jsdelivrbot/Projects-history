@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FroodTag captures snapshot of FroodTag 1`] = `
+<Tag
+  closable={false}
+  key=" some value"
+  onClose={[Function]}
+  prefixCls="ant-tag"
+>
+   some value
+</Tag>
+`;

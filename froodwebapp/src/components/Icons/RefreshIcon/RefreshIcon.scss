@@ -1,0 +1,7 @@
+@import '~styles/icons.scss';
+@import '~styles/colors.scss';
+
+.refreshIcon {
+  @extend .icon;
+  color: $main-black;
+}

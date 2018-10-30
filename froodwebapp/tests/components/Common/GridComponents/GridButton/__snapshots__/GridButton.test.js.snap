@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridButton captures snapshot of GridButton 1`] = `
+<div>
+  <button
+    className="ant-btn button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      some text
+    </span>
+  </button>
+</div>
+`;

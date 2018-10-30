@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormRadio captures snapshot of FormRadio 1`] = `
+<label
+  className="ant-radio-wrapper ant-radio-wrapper-checked"
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  style={undefined}
+>
+  <span
+    className="ant-radio ant-radio-checked"
+    style={Object {}}
+  >
+    <input
+      checked={true}
+      className="ant-radio-input"
+      disabled={undefined}
+      name={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={undefined}
+      onFocus={[Function]}
+      readOnly={undefined}
+      tabIndex={undefined}
+      type="radio"
+    />
+    <span
+      className="ant-radio-inner"
+    />
+  </span>
+</label>
+`;

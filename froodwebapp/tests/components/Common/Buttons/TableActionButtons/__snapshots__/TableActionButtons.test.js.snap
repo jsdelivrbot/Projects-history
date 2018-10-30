@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableActionButtons captures snapshot of TableActionButtons with buttons 1`] = `
+<div>
+  <Button
+    className="editBtn"
+    onClick={[Function]}
+  >
+    Edit
+  </Button>
+  <Button
+    className="activateBtn"
+    onClick={[Function]}
+  >
+    Activate
+  </Button>
+  <Button
+    className="deleteBtn"
+    onClick={[Function]}
+  >
+    Delete
+  </Button>
+  <Button
+    className="confirmButton"
+    onClick={[Function]}
+  >
+    Confirm
+  </Button>
+  <Button
+    className="confirmedButton"
+  >
+    Confirmed
+  </Button>
+</div>
+`;
+
+exports[`TableActionButtons captures snapshot of TableActionButtons without buttons 1`] = `<div />`;

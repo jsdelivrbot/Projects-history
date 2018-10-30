@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Adjustments capturing Snapshot of Adjustments 1`] = `
+<Connect(MainContainer)
+  actionColumnVisible={false}
+  autocompletePlaceholder="Search by adjustment name"
+  getStatisticsColumns={[Function]}
+  newButtonLink="/inventory/adjustments/new"
+  newButtonText="New Adjustment"
+  newButtonVisible={true}
+  renderAutocompleteItem={[Function]}
+/>
+`;

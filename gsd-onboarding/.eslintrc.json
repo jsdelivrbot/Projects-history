@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+    "rules": {
+    "react/display-name": [0]
+  }
+}

@@ -1,0 +1,66 @@
+@import '../assets/styles/variables.scss';
+
+#task_main {
+}
+
+/*Utlity Classes**/
+
+.taskDiv{
+
+}
+
+.min_height{
+  min-height: 220px;
+}
+.taskDetailDiv{
+  border-left: 1px dotted #f2f2f2;
+  display: block;
+}
+
+/**Responsive styles*/
+
+@media screen and (min-width: 1920px) {
+    .task_time__box {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1434px) and (min-width: 1280px) {
+    .icon_list__box {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 618px) {
+    .icon_list__box {
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .task__detail__customer_status {
+        margin-top: 10px;
+        ul {
+            padding-left: 0;
+        }
+    }
+    .task_header__customer_pic__img {
+        width: 125px;
+        height: 180px;
+    }
+    .task__detail__customer_status {
+        font-size: 14px;
+    }
+    .task_time__box {
+        width: 50%;
+    }
+    .icon_list__box {
+        width: 23%;
+    }
+}
+
+@media print {
+    .TaskWrapper_PrintHidden {
+        display: none;
+    }
+}

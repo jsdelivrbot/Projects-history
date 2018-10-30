@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fulfilment capturing Snapshot of Fulfilment 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <Row />
+</Spin>
+`;

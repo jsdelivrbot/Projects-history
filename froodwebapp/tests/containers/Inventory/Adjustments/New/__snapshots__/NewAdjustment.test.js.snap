@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewAdjustment capturing Snapshot of NewAdjustment 1`] = `
+<div>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <form
+      className="form"
+    >
+      <Row
+        center="xs"
+      >
+        <Col
+          lg={6}
+          xs={12}
+        >
+          <Row
+            middle="xs"
+          >
+            <Col
+              xs={4}
+            >
+              <label>
+                SKU/Variant
+              </label>
+            </Col>
+            <Col
+              xs={8}
+            >
+              <Field
+                component={[Function]}
+                name="sku"
+              />
+            </Col>
+          </Row>
+          <Row
+            middle="xs"
+          >
+            <Col
+              xs={4}
+            >
+              <label>
+                Warehouse
+              </label>
+            </Col>
+            <Col
+              xs={8}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                menuItems={Array []}
+                name="warehouse"
+                type="select"
+              />
+            </Col>
+          </Row>
+          <Row
+            middle="xs"
+          >
+            <Col
+              xs={4}
+            >
+              <label>
+                Bin
+              </label>
+            </Col>
+            <Col
+              xs={8}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                menuItems={Array []}
+                name="bin"
+                type="select"
+              />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          xs={true}
+        >
+          <GridTable
+            columns={
+              Array [
+                Object {
+                  "dataIndex": "batch",
+                  "title": "BATCH",
+                },
+                Object {
+                  "dataIndex": "expiry",
+                  "title": "EXPIRY",
+                },
+                Object {
+                  "dataIndex": "stockInHand",
+                  "title": "Stock in hand",
+                },
+                Object {
+                  "dataIndex": "adjustment",
+                  "max": 0,
+                  "title": "Adjustment",
+                  "type": "number",
+                },
+                Object {
+                  "dataIndex": "newAdjustQty",
+                  "title": "New adjusted qty",
+                },
+                Object {
+                  "dataIndex": "reasonId",
+                  "menuItems": Array [],
+                  "title": "Adjustment Reason",
+                  "type": "select",
+                },
+              ]
+            }
+            dataSource={Array []}
+            pagination={false}
+            rowKey="lotId"
+            updateTableData={[Function]}
+          />
+        </Col>
+      </Row>
+      <Controls
+        cancelButtonVisible={false}
+        submitButtonVisible={true}
+      />
+    </form>
+  </Spin>
+</div>
+`;

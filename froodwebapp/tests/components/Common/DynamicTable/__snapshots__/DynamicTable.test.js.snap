@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DynamicTable captures snapshot of DynamicTable with state.tableRows.length=0 1`] = `
+<div
+  className="dynamicTable"
+  id="dynamicTable"
+>
+  <div>
+    <BulkMenu
+      selectedRowsNumber={2}
+    />
+    <Spin
+      prefixCls="ant-spin"
+      size="default"
+      spinning={false}
+      tip="Loading..."
+      wrapperClassName=""
+    >
+      <StickyTable>
+        <Row
+          key="headers"
+        >
+          <Cell>
+            <Checkbox
+              indeterminate={false}
+              onClick={[Function]}
+              prefixCls="ant-checkbox"
+            />
+          </Cell>
+          <DropTarget(DragSource(DraggableHeader))
+            handleSort={[Function]}
+            headerDataType="number"
+            headerId={2}
+            headerText="second header"
+            index={0}
+            isSortable={true}
+            key="2"
+            moveHeader={[Function]}
+            saveHeaderOrder={[Function]}
+          />
+        </Row>
+        <Row
+          id="first row"
+          key="0"
+          onClick={[Function]}
+        >
+          <Cell>
+            <Checkbox
+              checked={true}
+              indeterminate={false}
+              onClick={[Function]}
+              prefixCls="ant-checkbox"
+            />
+          </Cell>
+          <Cell
+            key="0-0"
+            style={
+              Object {
+                "textAlign": "left",
+              }
+            }
+          />
+        </Row>
+        <Row
+          id="second row"
+          key="1"
+          onClick={[Function]}
+        >
+          <Cell>
+            <Checkbox
+              checked={true}
+              indeterminate={false}
+              onClick={[Function]}
+              prefixCls="ant-checkbox"
+            />
+          </Cell>
+          <Cell
+            key="1-0"
+            style={
+              Object {
+                "textAlign": "left",
+              }
+            }
+          />
+        </Row>
+      </StickyTable>
+    </Spin>
+  </div>
+</div>
+`;
+
+exports[`DynamicTable captures snapshot of DynamicTable with state.tableRows.length=1 and loadingTableData=false 1`] = `
+<div
+  className="dynamicTable"
+  id="dynamicTable"
+>
+  <Alert
+    className="dynamicTableAlert"
+    message="No Data"
+    type="info"
+  />
+</div>
+`;

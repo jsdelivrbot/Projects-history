@@ -1,0 +1,27 @@
+[ignore]
+.*/dist
+.*\/node_modules\/draft-js\/lib\/.*.js.flow.*
+.*\/node_modules\/redux-form\/lib\/.*.js.flow.*
+.*\/node_modules\/react-tap-event-plugin\/.*.js.flow.*
+[include]
+
+[libs]
+<PROJECT_ROOT>/flow-typed/
+
+[options]
+module.name_mapper='containers' -> '<PROJECT_ROOT>/src/containers'
+module.name_mapper='components' -> '<PROJECT_ROOT>/src/components'
+module.name_mapper='sections' -> '<PROJECT_ROOT>/src/components/MainContainerSections'
+module.name_mapper='redux-base' -> '<PROJECT_ROOT>/src/redux-base'
+module.name_mapper='utils' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='routes' -> '<PROJECT_ROOT>/src/routes'
+module.name_mapper='config' -> '<PROJECT_ROOT>/src/config'
+module.name_mapper='styles' -> '<PROJECT_ROOT>/src/styles'
+module.name_mapper='static' -> '<PROJECT_ROOT>/static'
+
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.jsx
+module.file_ext=.css
+module.file_ext=.scss
+[lints]

@@ -1,0 +1,151 @@
+{
+  "name": "frood-web-app",
+  "version": "0.1.0",
+  "description": "Frood Web Application. Build With ReactJS",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node index.js",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.config.js",
+    "prod": "npm run build:webpack && cross-env NODE_ENV=production node server/prodServer.js",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix",
+    "start": "node server/prodServer.js",
+    "test": "cross-env NODE_ENV=development jest",
+    "test:watch": "npm run test --watch",
+    "flow": "flow",
+    "flow-stop": "flow stop"
+  },
+  "engines": {
+    "node": "8.9.0",
+    "npm": "5.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://user@bitbucket.org/noosyn/froodwebapp.git"
+  },
+  "private": true,
+  "author": "Vadym Orlov",
+  "browserslist": {
+    "production": [
+      "last 2 version",
+      "ie 9"
+    ],
+    "development": [
+      "last 1 version"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "unmockedModulePathPatterns": [
+      "react",
+      "enzyme",
+      "jest-enzyme"
+    ],
+    "setupFiles": [
+      "./tests/test-setup.js"
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/components"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/file-mock.js"
+    },
+    "collectCoverage": true,
+    "coverageFormats": [
+      "json",
+      "html"
+    ]
+  },
+  "dependencies": {
+    "antd": "2.13.0",
+    "autoprefixer": "7.1.6",
+    "axios": "0.17.0",
+    "classnames": "2.2.5",
+    "element-resize-event": "2.0.9",
+    "express": "4.16.2",
+    "flexboxgrid": "6.3.1",
+    "history": "4.7.2",
+    "icons": "^0.1.1",
+    "immutability-helper": "2.3.1",
+    "js-cookie": "2.2.0",
+    "lodash": "4.17.4",
+    "moment": "2.19.1",
+    "object-diff": "0.0.4",
+    "prop-types": "15.5.10",
+    "proxy-middleware": "0.15.0",
+    "react": "15.6.1",
+    "react-autocomplete": "1.7.2",
+    "react-dnd": "2.5.1",
+    "react-dnd-html5-backend": "2.5.1",
+    "react-dom": "15.6.1",
+    "react-flexbox-grid": "1.1.3",
+    "react-fontawesome": "1.6.1",
+    "react-redux": "5.0.6",
+    "react-router-dom": "4.2.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "react-tap-event-plugin": "2.0.1",
+    "react-telephone-input": "4.2.3",
+    "redux": "3.7.2",
+    "redux-form": "7.1.2",
+    "redux-saga": "0.15.6",
+    "screenfull": "3.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
+    "babel-plugin-transform-imports": "1.4.1",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "babel-register": "6.26.0",
+    "compression-webpack-plugin": "1.0.1",
+    "copy-webpack-plugin": "4.2.0",
+    "cross-env": "5.1.1",
+    "css-loader": "0.28.7",
+    "enzyme": "3.1.1",
+    "enzyme-adapter-react-15": "1.0.5",
+    "enzyme-to-json": "3.2.1",
+    "eslint": "4.10.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-import-resolver-webpack": "0.8.3",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-css-modules": "2.7.5",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jest": "21.2.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "eslint-plugin-redux-saga": "0.6.0",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.5",
+    "flow-bin": "0.58.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "21.2.1",
+    "jest-enzyme": "4.0.1",
+    "mockdate": "2.0.2",
+    "node-sass": "4.6.0",
+    "postcss-loader": "2.0.8",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-test-renderer": "15.6.1",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "url-loader": "0.6.2",
+    "webpack": "3.8.1",
+    "webpack-bundle-analyzer": "2.9.0",
+    "webpack-dev-server": "2.9.4",
+    "webpack-merge": "4.1.1"
+  }
+}

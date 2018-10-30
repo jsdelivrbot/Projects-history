@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order capturing Snapshot of Order 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "To",
+          "name": "email",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Subject",
+          "name": "subject",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Message to supplier",
+          "name": "message",
+          "type": "textarea",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "email": "",
+        "message": "",
+        "subject": "",
+      }
+    }
+    loading={false}
+    title="Email Purchase Order"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <form
+      className="form"
+    >
+      <Connect(OrderInfo)
+        disabled={true}
+        isNewOrder={false}
+        status="status"
+      />
+      <POTabs
+        isNewOrder={false}
+        orderId="1"
+        status="status"
+      />
+    </form>
+  </Spin>
+</div>
+`;

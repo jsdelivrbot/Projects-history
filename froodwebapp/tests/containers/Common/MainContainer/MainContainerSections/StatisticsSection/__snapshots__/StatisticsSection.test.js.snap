@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatisticsSection capturing Snapshot of StatisticsSection 1`] = `
+<div
+  className="statistics"
+>
+  <div
+    className="statisticsItem"
+    key="0"
+  >
+    <div>
+      $12
+    </div>
+    <div>
+      Some description
+    </div>
+  </div>
+  <div
+    className="statisticsItem"
+    key="1"
+  >
+    <div
+      style={
+        Object {
+          "color": "green",
+        }
+      }
+    >
+      +12
+    </div>
+    <div>
+      Some description
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainTab capturing Snapshot of MainTab 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <form
+    className="form"
+  >
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Description
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          name="description"
+          placeholder="Description"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Country
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          menuItems={Array []}
+          name="country.id"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Dealing Currency
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          menuItems={Array []}
+          name="currency.id"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Website
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          name="website"
+          placeholder="abc.com (Optional)"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Payment Terms
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          menuItems={Array []}
+          name="paymentTerms.id"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+      >
+        <label>
+          Tax Identification Number
+        </label>
+      </Col>
+      <Col
+        lg={4}
+      >
+        <Field
+          component={[Function]}
+          name="tin"
+          placeholder="Any text"
+        />
+      </Col>
+    </Row>
+    <Controls
+      cancelButtonVisible={false}
+      submitButtonVisible={true}
+    />
+  </form>
+</Spin>
+`;

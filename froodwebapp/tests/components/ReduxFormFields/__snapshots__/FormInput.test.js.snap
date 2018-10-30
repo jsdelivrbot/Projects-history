@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput captures snapshot of FormInput 1`] = `
+<span
+  className="ant-input-affix-wrapper"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <input
+    className="ant-input ant-input-disabled"
+    disabled={true}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder={undefined}
+    style={null}
+    type="text"
+    value={4}
+  />
+</span>
+`;

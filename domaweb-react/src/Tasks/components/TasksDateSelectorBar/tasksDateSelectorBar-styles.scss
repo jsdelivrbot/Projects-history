@@ -1,0 +1,61 @@
+.top_bar{
+  position: relative;
+  background-color: #eee;
+  min-height: 56px;
+  width: 100%;
+  display: table;
+  font-size: 18px;
+  color:#808080;
+}
+
+.top_bar__backBttn {
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 56px;
+}
+
+.top_bar__backBttn:hover {
+    color: #aaa;
+}
+
+.previous{
+ display: table-cell;
+  width:110px;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 56px;
+  cursor: pointer;
+}
+.dateChanger{
+   display: table-cell;
+   text-align: center;
+}
+.next{
+   display: table-cell;
+   width:95px;
+   font-size: 14px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .top_bar{
+      min-height: 50px;
+    }
+    .previous{
+      line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .top_bar{
+      min-height: 50px;
+    }
+    .previous{
+      font-size: 12px;
+     padding-left: 0px;
+    }
+
+    .next{
+       font-size: 12px;
+    }
+}

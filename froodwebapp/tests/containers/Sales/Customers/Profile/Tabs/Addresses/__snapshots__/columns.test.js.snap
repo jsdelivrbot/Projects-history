@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`columns capturing Snapshot of columns 1`] = `
+<columns
+  handleDelete={[Function]}
+  handleEdit={[Function]}
+/>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormCustomerOrderAutoComplete captures snapshot of FormCustomerOrderAutoComplete 1`] = `
+<Connect(CustomerOrderAutoComplete)
+  alignRight={false}
+  disabled={false}
+  onChange={[Function]}
+  onSelect={[Function]}
+/>
+`;

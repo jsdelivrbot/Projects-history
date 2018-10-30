@@ -1,0 +1,19 @@
+@import '~styles/common.scss';
+@import '~styles/colors.scss';
+
+.searchSection {
+  @extend .rowsContainer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.saveFilterButton {
+  background-color: $main-red;
+  color: $main-white;
+  margin-right: 1rem;
+}
+
+.deleteFilterButton {
+  background-color: $main-red;
+  color: $main-white;
+}

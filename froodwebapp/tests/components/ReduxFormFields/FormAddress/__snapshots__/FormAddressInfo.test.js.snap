@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormAddressInfo captures snapshot of FormAddressInfo 1`] = `
+<AddressInfo
+  user="Some value"
+/>
+`;

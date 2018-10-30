@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemWithNestedItems captures snapshot of ItemWithNestedItems 1`] = `
+<div
+  className="nestedMenuContainer"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  role="button"
+  tabIndex={0}
+  title="/v1/inventory/"
+>
+  Inventory
+  <div
+    className="iconContainer"
+  >
+    <i
+      className="anticon anticon-plus"
+      onClick={undefined}
+      title="/icon/"
+    />
+    <span
+      aria-hidden={true}
+      className="fa fa-fa-caret-right fa-caret-right caretIcon"
+    />
+  </div>
+  <div
+    className="nestedMenuItemsContainer"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="nestedMenuItem"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "backgroundColor": "white",
+        }
+      }
+      tabIndex={0}
+      title="/v1/categories/"
+    >
+      first item
+      <div
+        className="iconContainer"
+      >
+        <i
+          className="anticon anticon-plus"
+          onClick={undefined}
+          title="/v1/icons/"
+        />
+      </div>
+    </div>
+    <div
+      className="nestedMenuItem"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "backgroundColor": "white",
+        }
+      }
+      tabIndex={0}
+      title="/v1/inventory/"
+    >
+      second item
+      <div
+        className="iconContainer"
+      />
+    </div>
+  </div>
+</div>
+`;

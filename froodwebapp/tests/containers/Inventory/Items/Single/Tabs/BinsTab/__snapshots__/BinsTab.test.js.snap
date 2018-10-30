@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinsTab capturing Snapshot of BinsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "SKU/Variant",
+          "menuItems": Array [
+            Object {
+              "key": undefined,
+              "value": undefined,
+            },
+          ],
+          "name": "skuId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Bin",
+          "menuItems": Array [],
+          "name": "binId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Reorder Threashold",
+          "name": "reorderThreshold",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Reorder Quantity",
+          "name": "reorderQty",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "binId": "",
+        "id": "",
+        "reorderQty": "",
+        "reorderThreshold": "",
+        "skuId": "",
+      }
+    }
+    loading={false}
+    title="New SKU Bin Link"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      end="lg"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <Col
+        lg={4}
+        md={true}
+        xs={true}
+      >
+        <Search
+          onChange={[Function]}
+          placeholder="Type to search SKU/Variant"
+          prefixCls="ant-input-search"
+        />
+      </Col>
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <ActionButton
+          onClick={[Function]}
+          style={
+            Object {
+              "float": "right",
+            }
+          }
+        >
+          New Link
+        </ActionButton>
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "sku",
+            "title": "SKU",
+          },
+          Object {
+            "dataIndex": "binName",
+            "title": "Bin",
+          },
+          Object {
+            "dataIndex": "reorderThreshold",
+            "title": "Reorder Threshold",
+          },
+          Object {
+            "dataIndex": "reorderQty",
+            "title": "Reorder Qty",
+          },
+          Object {
+            "render": [Function],
+            "title": "ACTION",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

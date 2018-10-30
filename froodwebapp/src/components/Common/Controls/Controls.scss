@@ -1,0 +1,41 @@
+@import '~styles/colors.scss';
+$border-width: 1px;
+
+.buttons {
+  text-align: end;
+  button {
+    margin: 0 0.5rem;
+    width: 6rem;
+    background: transparent;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.cancelButton {
+  border: $border-width solid $cancel-button-color;
+  color: $cancel-button-color;
+  &:hover{
+    background: $cancel-button-color;
+    color: $main-white;
+  }
+}
+
+.saveButton {
+  border: $border-width solid $save-button-color;
+  color: $save-button-color;
+  &:hover{
+    background: $save-button-color;
+    color: $main-white;
+  }
+}
+
+.updateButton {
+  border: $border-width solid $update-button-color;
+  color: $update-button-color;
+  &:hover{
+    background: $update-button-color;
+    color: $main-white;
+  }
+}

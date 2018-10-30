@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table captures snapshot of Table 1`] = `
+<div
+  className="table"
+/>
+`;

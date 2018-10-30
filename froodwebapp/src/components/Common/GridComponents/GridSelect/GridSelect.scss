@@ -1,0 +1,20 @@
+.gridSelect {
+  height: 100%;
+  width: 100%;
+  > div {
+    border-bottom: none;
+    border-top: none;
+    border-radius: 0;
+    height: 100%;
+    > div {
+      line-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      > div {
+        float: none;
+      }
+    }
+  }
+}

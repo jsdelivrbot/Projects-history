@@ -1,0 +1,19 @@
+@import "../Login/login";
+
+.page-register {
+  @include auth-form-styles()
+}
+
+//Fix for modal backdrop used at the rest of the site, does not work on the register page
+.modal-backdrop {
+  z-index: auto;
+}
+
+//Fix for modal backdrop used at the rest of the site, does not work on the register page
+.modal-backdrop.in {
+  opacity: 0;
+}
+
+.close {
+  font-size: 20px;
+}

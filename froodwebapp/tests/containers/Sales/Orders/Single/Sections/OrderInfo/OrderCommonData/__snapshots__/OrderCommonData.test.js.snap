@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderCommonData capturing Snapshot of OrderCommonData 1`] = `
+<div>
+  <Row
+    middle="xs"
+  >
+    <Col
+      lg={true}
+      md={true}
+      sm={true}
+      xs={true}
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "black",
+            "borderRadius": "1rem",
+            "color": "white",
+            "marginLeft": "auto",
+            "padding": "0.4rem 2rem",
+            "textAlign": "center",
+            "width": "fit-content",
+          }
+        }
+      >
+        status
+      </div>
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      xs={true}
+    >
+      <strong>
+        Order Channel
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        name="channel.name"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      xs={true}
+    >
+      <strong>
+        Channel Ref
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={true}
+        name="channelRefNo"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      xs={true}
+    >
+      <strong>
+        Order Date
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        activeFromToday={true}
+        component={[Function]}
+        disabled={false}
+        name="orderDate"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Payment Terms
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        menuItems={Array []}
+        name="paymentTerms.id"
+        placeholder="Payment Term"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Delivery Method
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        menuItems={Array []}
+        name="deliveryMethodId"
+        placeholder="Delivery Method"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Expected Delivery Date
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        firstActiveDate={"2017-10-31T22:00:00.000Z"}
+        lastActiveDate={"2017-10-31T22:00:00.000Z"}
+        name="deliveryDate"
+      />
+    </Col>
+  </Row>
+  <Row
+    end="xs"
+    middle="xs"
+  >
+    <Col>
+      <strong>
+        Delivery Slot
+      </strong>
+    </Col>
+    <Col
+      lg={4}
+      md={8}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        menuItems={Array []}
+        name="deliverySlotId"
+        placeholder="Delivery Slot"
+      />
+    </Col>
+  </Row>
+</div>
+`;

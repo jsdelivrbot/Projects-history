@@ -1,0 +1,9 @@
+@import "../Login/login";
+
+.page-recover {
+  @include auth-form-styles();
+
+  a:hover {
+    text-decoration: none;
+  }
+}

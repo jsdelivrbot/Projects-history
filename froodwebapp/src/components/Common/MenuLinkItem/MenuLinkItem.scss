@@ -1,0 +1,17 @@
+@import '~styles/colors.scss';
+.menuLinkCard {
+  margin-top: 1rem;
+  p {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+    color: $main-black;
+  }
+  img {
+    pointer-events: none;
+    width: 190px;
+    height: 190px;
+    display: block;
+    margin: 0 auto;
+  }
+}

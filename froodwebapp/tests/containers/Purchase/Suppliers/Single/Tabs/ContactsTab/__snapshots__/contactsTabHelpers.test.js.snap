@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contactsTabHelpers capturing Snapshot of contactsTabHelpers 1`] = `
+<contactsTabHelpers
+  handleActivate={[Function]}
+  handleDeactivate={[Function]}
+/>
+`;

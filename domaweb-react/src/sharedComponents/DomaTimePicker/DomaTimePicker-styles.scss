@@ -1,0 +1,53 @@
+:global {
+
+  //::-webkit-scrollbar {
+  //  display: none;
+  //}
+
+  .rc-time-picker {
+    width:100%;
+  }
+  [role="button"] {
+    display: none;
+    cursor: pointer;
+  }
+
+  .rc-time-picker-input {
+      background: #F5F3F5 url("../../assets/images/sharedComponent/clock.svg") 90% center/20px 20px no-repeat;
+      border: 0px;
+      border-radius: 0px;
+      outline: none;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      color:#333333;
+      height: 30px;
+  }
+  .rc-time-picker-panel-narrow{
+      max-width: 142px;
+  }
+
+  .rc-time-picker-panel-input-wrap{
+      background-color: #F5F3F5;
+  }
+  .rc-time-picker-panel-input {
+      background-color: #F5F3F5;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+  }
+  .rc-time-picker-panel-select{
+    width: 69px;
+    li{
+      padding: 0 0 0 26px;
+    }
+  }
+  .rc-time-picker-panel-input:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .rc-time-picker-panel-input-invalid {
+    border-color: red !important;
+  }
+}

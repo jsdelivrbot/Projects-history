@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingDataPage capturing Snapshot of LoadingDataPage 1`] = `
+<div
+  className="loadingDataPage"
+>
+  <Spin
+    prefixCls="ant-spin"
+    size="large"
+    spinning={false}
+    tip="Loading Application Data..."
+    wrapperClassName=""
+  />
+</div>
+`;

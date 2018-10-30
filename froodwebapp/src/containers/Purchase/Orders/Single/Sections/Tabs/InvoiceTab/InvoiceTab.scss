@@ -1,0 +1,31 @@
+@import "~styles/common.scss";
+@import "~styles/colors.scss";
+
+.invoiceCard {
+  @extend .card;
+  background-color: #F0F2F5;
+  border-color: rgba(0, 0, 0, 0.2);
+  div[class*='row']:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.uploadButton {
+  border: 1px solid;
+  height: 6rem;
+  i {
+    padding-top: 0.8rem;
+    font-size: 2.4rem;
+    width: 100%;
+  }
+  span {
+    position: relative;
+    bottom: 0.5rem;
+  }
+}
+
+.errorMessage {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  color: $main-red;
+}

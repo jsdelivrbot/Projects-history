@@ -1,0 +1,10 @@
+@import '~styles/icons.scss';
+@import '~styles/colors.scss';
+
+.addIcon {
+  @extend .icon;
+  font-size: 20px;
+  color: $main-green;
+  margin: 0 0.5rem;
+  vertical-align: sub;
+}

@@ -1,0 +1,6 @@
+{
+  "APIURL"          : "https://testapi.qntlr.com/api/",
+  "CODEGENURL"      : "https://testcodegen.qntlr.com/api/",
+  "LOGENTRIESTOKEN" : "UNKOWN-UNKNOWN-UNKOWN-UNKOWN",
+  "PUSHERKEY"       : "74ff61f2673b6775c1e0"
+}

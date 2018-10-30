@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FroodSearchInput captures snapshot of FroodSearchInput 1`] = `
+<span
+  className="ant-input-search input ant-input-affix-wrapper"
+  style={undefined}
+>
+  <input
+    className="ant-input"
+    disabled={false}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder={undefined}
+    style={null}
+    type="text"
+  />
+  <span
+    className="ant-input-suffix"
+  >
+    <i
+      className="anticon anticon-search ant-input-search-icon"
+      onClick={[Function]}
+    />
+  </span>
+</span>
+`;

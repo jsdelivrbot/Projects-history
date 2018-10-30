@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContainer capturing Snapshot of MainContainer 1`] = `
+<div>
+  <Connect(TopButtons)
+    handleToggleStats={[Function]}
+    statsVisible={false}
+  />
+  <AutoCompleteSection
+    autocomplete={Array []}
+    getAllItemsRequest={[Function]}
+    inputPlaceholder="autocomplete"
+    keyword="keyword"
+    loadingAutoComplete={false}
+    renderItem={[Function]}
+    searchRequest={[Function]}
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": "5px",
+        "margin": "-10px",
+        "padding": "10px",
+      }
+    }
+  >
+    <Spin
+      prefixCls="ant-spin"
+      size="default"
+      spinning={false}
+      wrapperClassName=""
+    >
+      <FilterTabs
+        activeFilterId="3"
+        changeActiveFilterId={[Function]}
+        columns={Array []}
+        deleteFilterRequest={[Function]}
+        filters={Array []}
+        getAllItemsRequest={[Function]}
+        getWithFilterRequest={[Function]}
+        limit={21}
+        offset={14}
+        saveFilterRequest={[Function]}
+        updateColumnsRequest={[Function]}
+        updateFilterRequest={[Function]}
+      />
+      <TableSection
+        activeFilterId="3"
+        columns={Array []}
+        data={
+          Array [
+            Object {
+              "id": 2,
+              "pathname": "/inventory/",
+            },
+          ]
+        }
+        getAllItemsRequest={[Function]}
+        getWithFilterRequest={[Function]}
+        handleRowClick={[Function]}
+        limit={21}
+        loadingTableData={false}
+        offset={14}
+        totalRows={1}
+        updateColumnsRequest={[Function]}
+      />
+    </Spin>
+  </div>
+</div>
+`;

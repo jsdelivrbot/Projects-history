@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UOMTab capturing Snapshot of UOMTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New UOM"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Units Of Measurement (UOM)",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "UOM Description",
+          "name": "description",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "description": "",
+        "name": "",
+      }
+    }
+    loading={false}
+    title="New UOM"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search uoms"
+        />
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "UOM",
+            "width": "25%",
+          },
+          Object {
+            "dataIndex": "description",
+            "title": "Description",
+            "width": "55%",
+          },
+          Object {
+            "render": [Function],
+            "title": "Actions",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

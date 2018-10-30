@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingIcon captures snapshot of SettingIcon 1`] = `
+<i
+  className="anticon anticon-setting settingsIcon"
+  onClick={[Function]}
+/>
+`;

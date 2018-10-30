@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage capturing Snapshot of LoginPage 1`] = `
+<form
+  className="loginForm"
+>
+  <Row
+    middle="xs"
+  >
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        name="email"
+        placeholder="Email"
+        prefix={
+          <Icon
+            style={
+              Object {
+                "fontSize": 13,
+              }
+            }
+            type="user"
+          />
+        }
+        type="email"
+      />
+    </Col>
+  </Row>
+  <Row
+    middle="xs"
+  >
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <Field
+        component={[Function]}
+        name="password"
+        placeholder="Password"
+        prefix={
+          <Icon
+            style={
+              Object {
+                "fontSize": 13,
+              }
+            }
+            type="lock"
+          />
+        }
+        type="password"
+      />
+    </Col>
+  </Row>
+  <Row
+    middle="xs"
+  >
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <Button
+        className="loginButton"
+        clicked={false}
+        ghost={false}
+        loading={false}
+        prefixCls="ant-btn"
+        type="primary"
+      >
+        Log in
+      </Button>
+    </Col>
+  </Row>
+</form>
+`;

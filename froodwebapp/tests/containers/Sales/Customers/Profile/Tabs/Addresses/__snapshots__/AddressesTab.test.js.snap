@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressesTab capturing Snapshot of AddressesTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Label",
+          "name": "label",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Postal Code",
+          "name": "postalCode",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "State",
+          "menuItems": Array [],
+          "name": "state",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "City",
+          "menuItems": Array [],
+          "name": "city",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Suburb",
+          "name": "suburb",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 1",
+          "name": "address1",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 2",
+          "name": "address2",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "name": "isDefault",
+          "text": "Make this default address",
+          "type": "checkbox",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "address1": "",
+        "address2": "",
+        "city": "",
+        "id": undefined,
+        "isDefault": false,
+        "label": "",
+        "postalCode": "",
+        "state": "",
+        "suburb": "",
+      }
+    }
+    loading={false}
+    title="New Address"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      start="xs"
+    >
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <GridTable
+          columns={
+            Array [
+              Object {
+                "dataIndex": "label",
+                "title": "Label",
+              },
+              Object {
+                "dataIndex": "address",
+                "render": [Function],
+                "title": "Address",
+              },
+              Object {
+                "dataIndex": "suburb",
+                "title": "Suburb",
+              },
+              Object {
+                "dataIndex": "cityName",
+                "title": "City",
+              },
+              Object {
+                "dataIndex": "stateName",
+                "title": "State",
+              },
+              Object {
+                "dataIndex": "postalCode",
+                "title": "Postal Code",
+              },
+              Object {
+                "dataIndex": "isDefault",
+                "title": "Default",
+                "type": "checkbox",
+              },
+              Object {
+                "dataIndex": "action",
+                "key": "action",
+                "render": [Function],
+                "title": "Actions",
+              },
+            ]
+          }
+          dataSource={Array []}
+          pagination={false}
+          rowKey="id"
+          size="small"
+          updateTableData={[Function]}
+        />
+        <NewTableRow
+          addNewRowText="Add New Address"
+          addOtherRowText="Add Another Address"
+          hasData={false}
+          onClick={[Function]}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

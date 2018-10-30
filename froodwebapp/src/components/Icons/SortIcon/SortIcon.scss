@@ -1,0 +1,9 @@
+@import '~styles/icons.scss';
+@import '~styles/colors.scss';
+
+.sortIcon {
+  @extend .icon;
+  padding: 0 0 0 0.5rem;
+  color: $main-black;
+  font-size: 0.8rem;
+}

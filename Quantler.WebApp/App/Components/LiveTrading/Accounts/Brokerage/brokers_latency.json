@@ -1,0 +1,258 @@
+[
+  {
+    "name": "AAAFx",
+    "image": "Art/Images/brokers/aaafx.png",
+    "latency": {
+      "london": 0,
+      "eua": 6
+    }
+  },
+  {
+    "name": "Advanced Markets FX",
+    "image": "Art/Images/brokers/advancedmarkets.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+  {
+    "name": "Alpari US",
+    "image": "Art/Images/brokers/alpari.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+	{
+    "name": "Global Prime",
+    "image": "Art/Images/brokers/globalprime.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+  {
+    "name": "Argus FX",
+    "image": "Art/Images/brokers/argus.png",
+    "latency": {
+      "london": 0,
+      "eua": 7
+    }
+  },
+  {
+    "name": "ATC",
+    "image": "Art/Images/brokers/atc.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "AuraFX",
+    "image": "Art/Images/brokers/aurafx.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+  {
+    "name": "AxiTrader",
+    "image": "Art/Images/brokers/axitrader.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Core Liquidity",
+    "image": "Art/Images/brokers/coreliquidity.png",
+    "latency": {
+      "london": 0,
+      "eua": 5
+    }
+  },
+  {
+    "name": "Currenex",
+    "image": "Art/Images/brokers/currenex.png",
+    "latency": {
+      "london": 0,
+      "eua": 2
+    }
+  },
+  {
+    "name": "FirewoodFX",
+    "image": "Art/Images/brokers/firewoodfx.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "FOREX.com",
+    "image": "Art/Images/brokers/forex.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+  {
+    "name": "Forex FS",
+    "image": "Art/Images/brokers/forexfs.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "FXCM",
+    "image": "Art/Images/brokers/fxcm.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "FXCM UK",
+    "image": "Art/Images/brokers/fxcm.png",
+    "latency": {
+      "london": 0,
+      "eua": 0.5
+    }
+  },
+  {
+    "name": "FXDD",
+    "image": "Art/Images/brokers/fxdd.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "FXOptimax",
+    "image": "Art/Images/brokers/fxoptimax.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "FXPremax",
+    "image": "Art/Images/brokers/fxpremax.png",
+    "latency": {
+      "london": 0,
+      "eua": 2
+    }
+  },
+  {
+    "name": "Go Markets",
+    "image": "Art/Images/brokers/gomarkets.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "IC Markets",
+    "image": "Art/Images/brokers/icmarkets.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Institutional Liquidity",
+    "image": "Art/Images/brokers/institutionalliquidity.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "JFD Brokers",
+    "image": "Art/Images/brokers/jfdbrokers.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "JustForex",
+    "image": "Art/Images/brokers/justforex.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Nord FX",
+    "image": "Art/Images/brokers/nordfx.png",
+    "latency": {
+      "london": 0,
+      "eua": 7
+    }
+  },
+  {
+    "name": "Oanda",
+    "image": "Art/Images/brokers/oanda.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "OneTrade",
+    "image": "Art/Images/brokers/onetrade.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Pepperstone",
+    "image": "Art/Images/brokers/pepperstone.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "ProfiForex",
+    "image": "Art/Images/brokers/profiforex.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "SFX Markets",
+    "image": "Art/Images/brokers/sfxmarkets.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Solidary Markets FX",
+    "image": "Art/Images/brokers/solidarymarkets.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Synergy FX",
+    "image": "Art/Images/brokers/synergyfx.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  },
+  {
+    "name": "Valbury Capital",
+    "image": "Art/Images/brokers/valbury.png",
+    "latency": {
+      "london": 0,
+      "eua": 1
+    }
+  }
+]

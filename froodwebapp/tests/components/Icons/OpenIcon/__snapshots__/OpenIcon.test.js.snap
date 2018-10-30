@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpenIcon captures snapshot of OpenIcon 1`] = `
+<i
+  className="anticon anticon-plus-circle-o openIcon"
+  onClick={[Function]}
+/>
+`;

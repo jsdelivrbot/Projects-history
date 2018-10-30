@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteIcon captures snapshot of DeleteIcon 1`] = `
+<i
+  className="anticon anticon-post deleteIcon"
+  id={14}
+  onClick={[Function]}
+/>
+`;

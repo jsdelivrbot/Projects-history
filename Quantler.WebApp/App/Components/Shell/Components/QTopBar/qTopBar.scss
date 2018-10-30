@@ -1,0 +1,11 @@
+@import "../../../Styles/QBootStrapVariables";
+
+.q-top-bar {
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background: $brand-primary;
+  overflow: hidden;
+}

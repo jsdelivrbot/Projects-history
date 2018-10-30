@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<path style="fill:#00796B;" d="M0,50C0,22.4,22.4,0,50,0s50,22.4,50,50s-22.4,50-50,50S0,77.6,0,50"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="24.8" y="26.2" width="49.4" height="49.4">
+		
+			<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+		<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+		<feBlend  in="source" in2="back" mode="normal"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="24.8" y="26.2" width="49.4" height="49.4" id="SVGID_1_">
+	<g style="filter:url(#Adobe_OpacityMaskFilter);">
+		<path style="fill:#FFFFFF;" d="M76.6,23.2c-0.4,6.2-2.1,11.6,0.9,18.3C69.8,43.2,54,61.8,48.8,71C41.6,62.3,33,55.6,27.1,53.5
+			l14.1-8.3L48,58.1C48,58.1,59.1,32,76.6,23.2 M80.1,18l-4.9,2.4c-13.3,6.6-22.9,22.3-27.4,30.8l-4-7.4l-1.5-2.9l-2.8,1.7
+			l-14.1,8.3l-5.8,3.4l6.4,2.2c5.6,1.9,13.8,8.6,20.4,16.5l2.9,3.5l2.2-3.9c5.1-9.1,20.4-26.6,26.6-28l3.8-0.8l-1.6-3.5
+			c-2-4.4-1.5-8.2-1-12.6c0.2-1.3,0.3-2.7,0.4-4.2L80.1,18L80.1,18z"/>
+	</g>
+</mask>
+<g style="mask:url(#SVGID_1_);">
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M49.5,26.3c5.9,0,11.8,0,17.7,0c4.8,0,7.1,2.3,7.1,7.1
+		c0,11.8,0.1,23.5,0,35.3c0,4.7-2.4,7-7.2,7c-11.6,0-23.3,0-34.9,0c-5,0-7.3-2.3-7.3-7.3c0-11.6,0-23.3,0-34.9
+		c0-4.9,2.3-7.1,7.4-7.2C38,26.2,43.8,26.3,49.5,26.3z M70.9,51.1c0-5.5-0.1-11,0-16.5c0.1-3.6-1.3-5.1-4.9-5.1c-11,0.1-22,0.1-33,0
+		c-3.4,0-4.9,1.2-4.9,4.7c0.1,11.1,0.1,22.3,0,33.4c0,3.2,1.2,4.7,4.5,4.7c11.3-0.1,22.5-0.1,33.8,0c3.3,0,4.5-1.6,4.5-4.7
+		C70.8,62.1,70.9,56.6,70.9,51.1z"/>
+</g>
+<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M77.4,41.5C69.8,43.2,54,61.8,48.8,71
+	C41.6,62.3,33,55.6,27.1,53.5l14.1-8.3L48,58.1c0,0,11.1-26.2,28.6-34.9C76.2,29.5,74.5,34.9,77.4,41.5z"/>
+</svg>

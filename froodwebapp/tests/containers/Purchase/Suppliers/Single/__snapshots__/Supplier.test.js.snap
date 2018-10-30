@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Supplier capturing Snapshot of Supplier 1`] = `
+<div>
+  <withRouter(Connect(PurchaseSupplierTabs))
+    isNewSupplier={false}
+    supplierId={1}
+  />
+</div>
+`;

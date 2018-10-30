@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RefreshIcon captures snapshot of RefeshIcon 1`] = `
+<i
+  className="anticon anticon-sync refreshIcon"
+  onClick={[Function]}
+/>
+`;

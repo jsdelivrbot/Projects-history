@@ -1,0 +1,31 @@
+@import './../../../../assets/styles/variables.scss';
+
+.ReportModal {
+  @media print {
+    background-color: #fff !important;
+  }
+}
+
+.ReportModal__Header {
+  background-color: $task-background-color;
+  color: #fff;
+  padding: 8px 8px 8px 13px;
+  font-size: 12pt;
+  
+  button {
+    color: #fff !important;
+    opacity: .9 !important;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+
+  &__BtnClose {
+    float: right;
+  }
+}

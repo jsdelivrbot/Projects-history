@@ -1,0 +1,15 @@
+export const ADD_NEW_COMPANY = 'ADD_NEW_COMPANY';
+export const ADD_NEW_TECHNOLOGY = 'ADD_NEW_TECHNOLOGY';
+export const ADD_NEW_SERVICE = 'ADD_NEW_SERVICE';
+export const ADD_NEW_STRATEGY = 'ADD_NEW_STRATEGY';
+export const ADD_NEW_RELATIONSHIP = 'ADD_NEW_RELATIONSHIP';
+export const ADD_NEW_GEOGRAPHIC_AREA = 'ADD_NEW_GEOGRAPHIC_AREA';
+
+export const ADD_PATH_TO_STORE = 'ADD_PATH_TO_STORE';
+
+export const LOAD = 'LOAD';
+
+export const GET_USER_ID = 'GET_USER_ID';
+export const CREATE_USER_ID = 'CREATE_USER_ID';
+
+

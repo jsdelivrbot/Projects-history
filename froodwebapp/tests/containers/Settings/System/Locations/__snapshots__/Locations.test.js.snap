@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locations capturing Snapshot of Locations 1`] = `
+<div>
+  <PageHeader
+    bigText="Company Locations"
+    smallText="Manage company locations"
+  />
+  <Row>
+    <Col
+      lg={true}
+    >
+      <Tabs
+        activeKey="locations"
+        animated={false}
+        hideAdd={false}
+        onTabClick={[Function]}
+        prefixCls="ant-tabs"
+      >
+        <TabPane
+          key="locations"
+          placeholder={null}
+          tab="Locations"
+        >
+          <withRouter(Connect(LocationsTab)) />
+        </TabPane>
+        <TabPane
+          key="zones"
+          placeholder={null}
+          tab="Zones"
+        >
+          <Connect(ZonesTab) />
+        </TabPane>
+        <TabPane
+          key="bins"
+          placeholder={null}
+          tab="Bins"
+        >
+          <Connect(BinsTab) />
+        </TabPane>
+      </Tabs>
+    </Col>
+  </Row>
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormDatePicker captures snapshot of FormDatePicker 1`] = `
+<GridTable
+  dataSource={4}
+  input={
+    Object {
+      "onChange": [Function],
+      "value": 4,
+    }
+  }
+  updateTableData={[Function]}
+/>
+`;

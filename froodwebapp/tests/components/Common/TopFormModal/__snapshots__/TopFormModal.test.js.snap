@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopFormModal captures snapshot of TopFormModal 1`] = `
+<div>
+  <Modal
+    className="modal"
+    confirmLoading={true}
+    maskTransitionName="fade"
+    okText="ok"
+    okType="primary"
+    onCancel={[Function]}
+    prefixCls="ant-modal"
+    title="title"
+    transitionName="zoom"
+    visible={false}
+    width={520}
+  >
+    <form
+      className="form"
+    />
+  </Modal>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bundles capturing Snapshot of Bundles 1`] = `
+<Connect(MainContainer)
+  actionColumnVisible={false}
+  autocompletePlaceholder="Search by sku code"
+  getRowClickRedirectLink={[Function]}
+  newButtonLink="/inventory/item-bundles/new"
+  newButtonText="New Bundle"
+  newButtonVisible={true}
+  renderAutocompleteItem={[Function]}
+/>
+`;

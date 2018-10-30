@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Items capturing Snapshot of Items 1`] = `
+<Connect(MainContainer)
+  actionColumnVisible={false}
+  autocompletePlaceholder="Search by sku code"
+  getRowClickRedirectLink={[Function]}
+  newButtonLink="/inventory/all-items/new"
+  newButtonText="New Inventory"
+  newButtonVisible={true}
+  renderAutocompleteItem={[Function]}
+/>
+`;

@@ -1,0 +1,22 @@
+@import '~styles/colors.scss';
+
+$height: 2.5rem;
+
+.breadcrumb {
+  padding-left: 3rem;
+  height: $height;
+  line-height: $height;
+  background-color: $breadcrumb-color;
+  width: 100%;
+  color: $breadcrumb-text-color;
+}
+
+.brItem {
+  a {
+    color: $main-red;
+    text-decoration: none;
+    &:hover {
+      color: $main-red;
+    }
+  }
+}

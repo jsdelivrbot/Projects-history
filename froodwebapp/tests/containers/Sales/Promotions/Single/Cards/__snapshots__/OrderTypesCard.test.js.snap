@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderTypesCard capturing Snapshot of OrderTypesCard 1`] = `
+<Col
+  className="cardWrapper"
+>
+  <Card
+    className="card"
+  >
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Apply to Order Type
+      </Col>
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="orderType"
+          props={
+            Object {
+              "menuItems": Array [],
+            }
+          }
+        />
+      </Col>
+    </Row>
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Qualifier
+      </Col>
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="domains"
+          placeholder="Qualifier"
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

@@ -1,0 +1,172 @@
+body {
+  background-color: #eff3f6;
+}
+
+.wrapper {
+	margin: 25px auto;
+}
+
+.side-nav {
+  background-color: #eff3f6;
+  border-radius: 5px;
+  position:fixed;
+  text-align: center;
+}
+
+.view-container {
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.step-title {
+  width: 600px;
+  font-size: .75em;
+  /*margin: 0 auto;*/
+}
+
+.step-title > p {
+  padding: 5px;
+}
+
+.step-hint {
+  margin-bottom: 40px; 
+}
+
+.step-hint p {
+  font-size: .75em;
+  margin-bottom: 7px; 
+  line-height: 1.2;
+}
+
+.input-group {
+  margin: 0;
+  padding: 0;
+}
+
+.table-grey {
+  background-color: #eff3f6;
+}
+
+.table-instruction {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 30px;
+  /*max-width: 1000px;*/
+  width: 1000px;
+}
+
+.table-instruction p {
+  font-style: italic;
+  margin: 20px 0 10px 0;
+}
+
+.table-instruction .strategy-column-header {
+  font-style: normal;
+  width: 87%;
+  text-align: right;
+}
+
+.coloured-boxes { 
+  position: absolute;
+  border-left: 1px solid grey;
+  width: 50%;
+  height: 60%;
+  bottom: 5px;
+  right: 5px;
+}
+
+.coloured-boxes div {
+  border-top: 1px solid black;
+  height: 50%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.coloured-boxes div:first-child {
+  background-color: #eff3f6;
+}
+
+.coloured-boxes div:last-child {
+  background-color: #DCEDC8;
+}
+
+.text-input {
+  margin-right: 25px;
+}
+
+.table-content {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.dropdown {
+  margin-bottom: 10px;
+}
+
+.btn-secondary {
+  background-color: #AED581;
+  width: 300px;
+}
+
+.dropdown-menu {
+  width: 300px;
+}
+
+td.w-25 {
+  padding: 0 10px;
+}
+
+.key-instructions {
+  width: 600px;
+  font-size: .75em;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+.progress-header {
+  text-align: center;
+  margin: 10px;
+}
+
+a.side-link{
+  text-decoration: none;
+} 
+
+.active div{
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.bottom-button {
+  margin-bottom: 50px;
+}
+
+.custom-aligned {
+  margin-top: 20%;
+  margin-left:12%;
+}
+
+.step1-title {
+  width: auto;
+}
+
+.step1-table {
+  padding: 5px 15px;
+}
+
+.titleText {
+  text-align: center;
+}
+
+.nextBtn {
+  float: right;
+}
+
+.rowWithoutBorder {
+  border-bottom: none!important;
+}

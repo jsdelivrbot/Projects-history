@@ -1,0 +1,10 @@
+.tasksMenu {
+  position: absolute;
+  right: 0;
+  top: 10.5rem;
+  height: calc(100vh - 12.5rem);
+  z-index: 50;
+  background-color: white;
+  padding: 2rem;
+  border-left: 1px solid #CCCCCC;
+}

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumerationFormatsPage capturing Snapshot of NumerationFormatsPage 1`] = `
+<div>
+  <PageHeader
+    bigText="Adamant and Co. Ltd - Numeration Formats"
+  />
+  <form
+    className="form"
+  >
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Customer Quotation/Estimate
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="quotation"
+          placeholder="QU0001"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Sales Orders
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="sales"
+          placeholder="SQ0001"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Customer Invoices
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="invoices"
+          placeholder="INV0001"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Shipments
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="shipments"
+          placeholder="SHP0001"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Purchase Orders
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="purchase"
+          placeholder="PO0001"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col>
+        <label>
+          Goods Received Note
+        </label>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="note"
+          placeholder="GRN0001"
+        />
+      </Col>
+    </Row>
+    <div>
+      error
+    </div>
+    <Controls
+      submitButtonVisible={true}
+    />
+  </form>
+</div>
+`;

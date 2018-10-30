@@ -1,0 +1,28 @@
+
+
+.left_col	{
+	float:left;
+	overflow: hidden;
+}
+
+
+.right_col{
+	margin:0 0 0 125px;
+	height: 100%;
+
+	/* Remove padding on print mode */
+	@media print {
+		margin: 0;
+	}
+}
+
+//::-webkit-scrollbar {
+//  display: none;
+//}
+
+
+@media screen and (max-width: 960px) {
+	.right_col{
+		margin: 0 0px;
+	}
+}

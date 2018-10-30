@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutoCompleteSection capturing Snapshot of AutoCompleteSection 1`] = `
+<Row
+  style={
+    Object {
+      "margin": 0,
+    }
+  }
+>
+  <Col
+    lg={4}
+    md={5}
+    sm={7}
+    xs={true}
+  >
+    <Row
+      className="autocompleteSection"
+      middle="xs"
+      style={
+        Object {
+          "borderBottom": "1px solid lightgrey",
+        }
+      }
+    >
+      <Icon
+        className="searchIcon"
+        type="search"
+      />
+      <Col
+        lg={true}
+        md={true}
+        sm={true}
+        xs={true}
+      >
+        <AutoComplete
+          getItemValue={[Function]}
+          inputPlaceholder="SKU"
+          inputStyle={
+            Object {
+              "backgroundColor": "transparent",
+              "border": "none",
+              "fontSize": "1rem",
+              "visibility": "visible",
+            }
+          }
+          items={
+            Array [
+              "First SKU",
+              "Inventory",
+            ]
+          }
+          loadingAutoComplete={false}
+          onChange={[Function]}
+          onSelect={[Function]}
+          renderItem={[Function]}
+          value="Jack Sparrow"
+        />
+      </Col>
+      <Icon
+        className="closeIcon"
+        onClick={[Function]}
+        type="close"
+      />
+    </Row>
+  </Col>
+</Row>
+`;

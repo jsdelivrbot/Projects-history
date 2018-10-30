@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TotalAndNotes capturing Snapshot of TotalAndNotes 1`] = `
+<Row
+  className="statsRow"
+>
+  <Col
+    md={6}
+    xs={12}
+  >
+    <Row
+      end="xs"
+      middle="xs"
+    >
+      <Col
+        lg={3}
+        md={6}
+        xs={12}
+      >
+        <strong>
+          Supplier Notes
+        </strong>
+      </Col>
+      <Col
+        lg={9}
+        md={6}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="vendorNotes"
+          placeholder="Any text"
+        />
+      </Col>
+    </Row>
+    <Row
+      end="xs"
+      middle="xs"
+    >
+      <Col
+        lg={3}
+        md={6}
+        xs={12}
+      >
+        <strong>
+          Internal Notes
+        </strong>
+      </Col>
+      <Col
+        lg={9}
+        md={6}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="internalNotes"
+          placeholder="Any text"
+        />
+      </Col>
+    </Row>
+  </Col>
+  <Col
+    className="stats"
+    md={4}
+    mdOffset={2}
+    xs={12}
+  >
+    <Row
+      className="total"
+    >
+      <Col
+        xs={8}
+      >
+        <strong>
+          Sub Total (Before Tax)
+        </strong>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <strong>
+          0.00 currency
+        </strong>
+      </Col>
+    </Row>
+    <Row
+      className="total"
+    >
+      <Col
+        xs={8}
+      >
+        <strong>
+          Taxes
+        </strong>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <strong>
+          0.00 currency
+        </strong>
+      </Col>
+    </Row>
+    <Row
+      className="total"
+    >
+      <Col
+        xs={8}
+      >
+        <strong>
+          Shipping
+        </strong>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="shipping"
+        />
+      </Col>
+    </Row>
+    <Row
+      className="total"
+    >
+      <Col
+        xs={8}
+      >
+        <strong>
+          Adjustment
+        </strong>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="adjustment"
+        />
+      </Col>
+    </Row>
+    <Row
+      className="total"
+    >
+      <Col
+        xs={8}
+      >
+        <strong>
+          Total
+        </strong>
+      </Col>
+      <Col
+        xs={4}
+      >
+        <strong>
+          2.00 currency
+        </strong>
+      </Col>
+    </Row>
+  </Col>
+</Row>
+`;

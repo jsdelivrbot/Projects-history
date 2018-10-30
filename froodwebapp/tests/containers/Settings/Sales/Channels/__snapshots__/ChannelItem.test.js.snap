@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChannelItem capturing Snapshot of ChannelItem 1`] = `
+<div
+  className="channelItem"
+>
+  <div>
+    <Checkbox
+      checked={false}
+      indeterminate={false}
+      onChange={[Function]}
+      prefixCls="ant-checkbox"
+    >
+      Enabled
+    </Checkbox>
+  </div>
+  <div />
+  <div>
+    <Button
+      disabled={true}
+      onClick={[Function]}
+    >
+      Configure
+    </Button>
+  </div>
+</div>
+`;

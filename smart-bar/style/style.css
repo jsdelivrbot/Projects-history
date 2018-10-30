@@ -1,0 +1,23 @@
+.app-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.app-menu {
+    float: left;
+    width: 20%;
+}
+
+.app-children-container {
+    width: 100%;
+    float:left;
+}
+
+.app-children {
+    display: table;
+    margin: 0 auto;
+}
+
+.menu-icons {
+    padding-right:15px;
+}

@@ -1,0 +1,23 @@
+.stats {
+  margin-top: 2rem;
+  div[class*="row"] {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+  div[class*="row"]:last-child {
+    background-color: #CCCCCC;
+  }
+}
+
+.statsRow {
+  margin-top: 1rem;
+}
+
+.total {
+  margin-bottom: 1rem;
+}
+
+.row {
+  margin-bottom: 2rem;
+}

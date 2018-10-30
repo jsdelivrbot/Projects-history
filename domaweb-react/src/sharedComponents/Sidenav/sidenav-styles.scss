@@ -1,0 +1,388 @@
+
+/*Sidenav Component**/
+@import '../../assets/styles/variables.scss';
+/*Overlay Effect*/
+.overlay {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  margin-left: 15px;
+  z-index: 2;
+}
+/*Sidenav Styles*/
+.sidenav__nav::-webkit-scrollbar {
+    display: none;
+}
+.sidenav__nav {
+  display: block;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: $sidemenu-background-color;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  overflow: auto;
+  overflow-x: hidden;
+  z-index: 101;
+}
+
+.sidenav__close__bttn {
+  position: absolute;
+  left: 85%;
+  display: none;
+}
+
+.sidenav__close__bttn_txt {}
+
+.sidenav__close__bttn_txt:hover {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.sidenav_burger_menu {
+  color:white;
+  display: none;
+}
+
+.sidenav_burger_menu_home {
+  color:black;
+  display: none;
+}
+
+
+.sidenav__burger__menu__img {
+  margin:10px 0 0 10px;
+}
+
+.sidenav__nav__menu {
+  padding: 0;
+}
+
+.sideNav_swiper{
+    width:30px;
+    min-height: 100%;
+    position: fixed;
+    left:0px;
+    z-index: 100;
+    margin-top: 35px;
+}
+.sideNav_swiper_closed{
+    width:30px;
+}
+
+.sideNav_swiper_wide{
+    width:100%;
+}
+/****
+**Inner sidenav Component
+  Log component*/
+
+.logo {
+  margin-top: 30px;
+  height: 150px;
+  text-align: center;
+}
+
+.logo__image {
+  width: 60px;
+  height: 60px;
+}
+/*Side Menu item component*/
+
+.item {
+  list-style: none;
+  text-align: center;
+}
+
+.item__link {
+  display: block;
+  width: 125px;
+  height: 115px;
+  color: darkgray;
+  line-height: 190px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+/*Fix for safari CSS transition over background-image bug */
+:root .item__link,
+_::-webkit-full-page-media,
+_:future {
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+/** Sidenav backgounds styles when mouse over and out */
+
+.user_background {
+  background: url("../../assets/images/sideNav/icon_user.svg") no-repeat center 20%;
+  background-size: 90px;
+  line-height: 265px;
+  height: 170px;
+}
+
+
+.booking_background {
+  background: url("../../assets/images/sideNav/icon_tasks.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.booking_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_tasks--hover.svg");
+  background-color: $booking-background-color;
+}
+
+.tasks_background {
+  background: url("../../assets/images/sideNav/icon_tasks.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.tasks_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_tasks--hover.svg");
+  background-color: $task-background-color;
+}
+
+.customers_background {
+  background: url("../../assets/images/sideNav/icon_customers.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.customers_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_customers--hover.svg");
+  background-color: $customers-background-color;
+}
+
+.wallet_background {
+  background: url("../../assets/images/sideNav/icon_wallet.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.wallet_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_wallet--hover.svg");
+  background-color: $wallet-background-color;
+}
+
+.calendar_background {
+  background: url("../../assets/images/sideNav/icon_calendar.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.calendar_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_calendar--hover.svg");
+  background-color: $calendar-background-color;
+}
+
+.messages_background {
+  background: url("../../assets/images/sideNav/icon_messages.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.messages_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_messages--hover.svg");
+  background-color: $messages-background-color;
+}
+
+.settings_background {
+  background: url("../../assets/images/sideNav/icon_settings.svg") no-repeat center 30%;
+  background-size: $subemenu-nav-item-size;
+}
+
+.settings_background:hover {
+  background-image: url("../../assets/images/sideNav/icon_settings--hover.svg");
+  background-color: $settings-background-color;
+}
+
+.logout_background {
+  background: url("../../assets/images/sideNav/icon_logout.svg") no-repeat 60% 30%;
+  height: 145px;
+  background-size: 70px;
+  line-height: 225px;
+}
+/** sidenav Styles when the state is selected */
+
+.tasks_background_selected {
+  background-color: $task-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_tasks--hover.svg");
+}
+
+.booking_background_selected {
+  background-color: $booking-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_tasks--hover.svg");
+}
+
+.customers_background_selected {
+  background-color: $customers-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_customers--hover.svg");
+}
+
+.wallet_background_selected {
+  background-color: $wallet-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_wallet--hover.svg");
+}
+
+.calendar_background_selected {
+  background-color: $calendar-background-color;
+  background-image: url("../../assets/images/sideNav/icon_calendar--hover.svg");
+  color: white;
+}
+
+.messages_background_selected {
+  background-color: $messages-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_messages--hover.svg");
+}
+
+.settings_background_selected {
+  background-color: $settings-background-color;
+  color: white;
+  background-image: url("../../assets/images/sideNav/icon_settings--hover.svg");
+}
+/*Bread crumb style*/
+
+.bread_crumb {
+  background-color: green;
+}
+
+.bread_crumb_img {
+  background-color: green;
+}
+/*@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+
+.item__link {
+
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+}*/
+/*Hide the sidenav for print*/
+@media print {
+  .sidenav {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+   @-webkit-keyframes slideIn{
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 115px;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 115px;
+    }
+  }
+  @-webkit-keyframes slideOut {
+    from {
+      width: 115px;
+    }
+
+    to {
+      width: 0;
+    }
+  }
+  @keyframes slideOut {
+    from {
+      width: 115px;
+    }
+
+    to {
+      width: 0;
+    }
+  }
+
+  .slideIn {
+    -webkit-animation: slideIn 0.5s;
+    animation: slideIn 0.5s;
+  }
+
+  .slideOut {
+    -webkit-animation: slideOut 0.5s;
+    animation: slideOut 0.5s;
+  }
+
+  .sidenav__nav {
+    display: none;
+  }
+
+  .sidenav__close__bttn {
+    display: block;
+  }
+
+  .sidenav__burger__menu {
+    display: block;
+  }
+
+  .logo{
+    height: 120px;
+  }
+  .item__link {
+    width: 115px;
+    height: 100px;
+    line-height: 170px;
+  }
+
+  .user_background {
+    line-height: 230px !important;
+    height: 150px !important;
+    background-size: 70px;
+  }
+
+
+  $subemenu-nav-item-size: 60px;
+
+  .tasks_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+  .booking_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+  .customers_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+
+  .wallet_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+    .calendar_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+
+  .messages_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+
+  .settings_background {
+    background-size: $subemenu-nav-item-size;
+  }
+
+
+}

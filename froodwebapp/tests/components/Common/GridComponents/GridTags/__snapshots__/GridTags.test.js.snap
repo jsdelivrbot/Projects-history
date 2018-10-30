@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridTags captures snapshot of GridTags 1`] = `
+<div>
+  <input
+    autoFocus={false}
+    className="ant-input ant-input-sm"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="small"
+    style={
+      Object {
+        "width": 150,
+      }
+    }
+    type="text"
+    value=""
+  />
+</div>
+`;

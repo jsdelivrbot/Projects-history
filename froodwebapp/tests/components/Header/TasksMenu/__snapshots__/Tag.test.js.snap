@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag captures snapshot of tag 1`] = `
+<Tag
+  closable={true}
+  onClose={[Function]}
+  prefixCls="ant-tag"
+  style={
+    Object {
+      "display": "block",
+      "margin": "0.5rem 0",
+    }
+  }
+/>
+`;

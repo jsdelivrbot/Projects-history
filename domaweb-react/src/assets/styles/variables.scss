@@ -1,0 +1,172 @@
+/**
+base colors
+**/
+
+$primary-text-color: #808080;
+
+/*For side menu background color*/
+
+
+/**
+* Screen Break points
+**/
+
+$screen-sm: 600px;
+$screen-md: 960px;
+$screen-lg: 1280px;
+$grid-gutter-width: 16px;
+
+/****
+sidemenu colors
+***/
+
+$sidemenu-background-color: #f2f2f2;
+
+/*For side menu*/
+
+$sidemenu-text-color: #e6e6e6;
+$subemenu-nav-item-size: 70px;
+
+/*for side menue text color*/
+$subemenu-lines-color: #ccc;
+/*For lines used to seperate submenue items*/
+
+/****
+booking satate colors
+***/
+
+$booking-background-color:#51A4E6;
+
+/****
+Task satate colors
+***/
+
+$task-background-color: #ee1f79; /*Will be used when the task is selected*/
+
+$task-border-color: #f2f2f2;
+$task-start-bttn-color: #00aff0;  /*To finnish the tasks*/
+$task-pause-bttn-color: #9b34cd;  /*To pause the tasks*/
+$task-finish-bttn-color: #679a01;  /*To finish the tasks*/
+
+$task-done-color: #40b54a; /*Need to give proper name*/
+$task-attention-color: #f69419; /*Need to give proper name*/
+$task-late-color: #d52730; /*Need to give proper name*/
+
+$task-customer-present-color: #8cc540; /*Color to use when the customer is present*/
+$task-customer-absent-color: #eb1e24; /*Color to use when the customer is absent*/
+$task-customer-keys-color: #07adf2; /*Color to use when the customer reuiqred keys*/
+
+$task-time-text-color: #03aeee; /*To finnish the tasks*/
+
+$task-primary-heading-color: #fca504; /*Primary Heading color in Tasksection of task state*/
+$task-secondary-heading-color: #02adf5; /*Secondary Heading color in Tasksection of task state*/
+
+
+/****
+Customer satate colors
+***/
+
+$customers-background-color: #8cc63f;
+
+/*Will be used when the customer is selected*/
+
+
+/***
+user satate colors
+***/
+
+$user-background-color: #3FA9F5;
+
+/*Will be used when the user profile is selected*/
+
+
+/***
+wallet satate colors
+***/
+
+$wallet-background-color: #f7931e;
+
+/*Will be used when the wallet is selected*/
+
+
+/***
+Callendar satate colors
+***/
+
+$calendar-background-color: #22B573;
+
+/*Will be used when the wallet is selected*/
+
+
+/***
+Messages satate colors
+***/
+
+$messages-background-color: #26C6DA;
+
+/*Will be used when the wallet is selected*/
+
+
+/***
+settings satate colors
+***/
+
+$settings-background-color: #F15A24;
+
+/*Will be used when the wallet is selected*/
+
+
+/******
+*Old varibales. Need to be removed
+*****/
+
+$sidenav-open-width: 150px;
+
+/*The width of sidenav*/
+
+$topnav-height: 50px;
+
+/* colors */
+
+$body-color: #ededed;
+$background-color: #f7f7f7;
+$content-color: white;
+$content-contrast-color: #f4f4f4;
+$disabled-opacity: 0.65;
+$sidenav-border-color: #a7a7a7;
+$sidenav-collapsed-width: 0px;
+$sidenav-background-color: #a7a7a7;
+$bottombar-height: 52px;
+$topbar-height: 56px;
+
+/* topnav colors for each view */
+
+$customers-bg-color: #87c13f;
+
+/* symbols */
+
+$symbol-sm: 44px;
+$symbol-md: 56px;
+$symbol-lg: 88px;
+
+/* font-sizes */
+
+$font-size-sm: 1.2em;
+$font-size-md: 1.4em;
+$font-size-lg: 1.8em;
+$shadow-key-umbra-opacity: 0.2 !default;
+$shadow-key-penumbra-opacity: 0.14 !default;
+$shadow-ambient-shadow-opacity: 0.12 !default;
+$shadow-4dp: 0px 2px 4px -1px rgba(0, 0, 0, $shadow-key-umbra-opacity),
+0px 4px 5px 0px rgba(0, 0, 0, $shadow-key-penumbra-opacity),
+0px 1px 10px 0px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+
+
+/* modal styles */
+
+$modal__header-padding: 20px;
+$modal_header__border-bottom: 1px solid #41A6E2;
+$modal__header-background: #41A6E2;
+
+
+$primary__checkbox: #808080;

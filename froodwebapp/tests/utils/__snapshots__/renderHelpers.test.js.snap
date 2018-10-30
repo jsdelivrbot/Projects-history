@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderAutocompleteItem returns jsx 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#f7f7f7",
+      "border": "3px solid #f7f7f7",
+      "borderRadius": "3px",
+      "margin": "0.3rem",
+      "padding": "0.5rem 1rem",
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "display": "inline-block",
+        "marginRight": "1rem",
+        "verticalAlign": "top",
+      }
+    }
+  >
+    Just a simple header :
+  </span>
+  <span
+    style={
+      Object {
+        "display": "inline-block",
+        "textAlign": "start",
+      }
+    }
+  >
+    <div>
+      <span
+        style={
+          Object {
+            "color": "red",
+            "display": "inline-block",
+          }
+        }
+      >
+        1
+      </span>
+      <span>
+         - first
+      </span>
+    </div>
+    <div>
+      <span
+        style={
+          Object {
+            "color": "blue",
+            "display": "inline-block",
+          }
+        }
+      >
+        2
+      </span>
+      <span>
+         - second
+      </span>
+    </div>
+    <div>
+      <span
+        style={
+          Object {
+            "color": "green",
+            "display": "inline-block",
+          }
+        }
+      >
+        3
+      </span>
+      <span>
+         - third
+      </span>
+    </div>
+    <div>
+      <span
+        style={
+          Object {
+            "color": "brown",
+            "display": "inline-block",
+          }
+        }
+      >
+        4
+      </span>
+      <span>
+         - fourth
+      </span>
+    </div>
+  </span>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderInfo capturing Snapshot of OrderInfo 1`] = `
+<Row
+  className="orderInfo"
+>
+  <Col
+    lg={7}
+    md={6}
+    xs={true}
+  >
+    <Connect(Address)
+      disabled={false}
+      isNewOrder={false}
+    />
+  </Col>
+  <OrderCommonData
+    contactUsers={Array []}
+    disabled={false}
+    isNewOrder={false}
+    payterms={Array []}
+    shippingMethods={Array []}
+    status="status"
+    statusColor="black"
+  />
+</Row>
+`;

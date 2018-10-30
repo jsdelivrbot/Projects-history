@@ -1,0 +1,34 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/global.scss';
+
+.header {
+  //background-color: $task-customer-present-color;
+  color: $sidemenu-background-color;
+  font-weight: bold;
+  padding: 10px;
+  margin: 15px 15px 5px 15px;
+  cursor: pointer;
+  display: inline-block;
+  width: 95%;
+}
+
+.expand_button {
+  margin: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: $sidemenu-background-color;
+  //color: $task-customer-present-color;
+  padding: 0px 3px 0px 3px;
+  //font-size: 5;
+}
+
+.icon {
+  height: 100%;
+  width: 10px;
+  display: inline-block;
+
+}
+
+.number {
+  float: right;
+}

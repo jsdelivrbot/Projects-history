@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FroodDatePicker captures snapshot of FroodDatePicker 1`] = `
+<span
+  className="ant-calendar-picker"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    onBlur={undefined}
+    onClick={[Function]}
+    onFocus={undefined}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    onTouchStart={[Function]}
+  >
+    <input
+      className="ant-calendar-picker-input ant-input"
+      disabled={undefined}
+      placeholder="请选择日期"
+      readOnly={true}
+      value="Invalid date"
+    />
+    <span
+      className="ant-calendar-picker-icon"
+    />
+  </div>
+</span>
+`;

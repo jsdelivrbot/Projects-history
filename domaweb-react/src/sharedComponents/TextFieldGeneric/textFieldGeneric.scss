@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables.scss';
+
+.textfield {
+  width: 100%;
+  background-color:  $sidemenu-background-color;
+  height: 2.5em;
+  padding-left: 0.5em;
+}
+
+.textArea {
+  width: 100%;
+  background-color:  $sidemenu-background-color;
+  padding-left: 0.5em;
+}
+
+.textfield_small {
+  background-color: lightgrey;
+  width: 20%;
+  background-color:  $sidemenu-background-color;
+  height: 2.5em;
+  padding-left: 0.5em;
+}
+
+.textfield_medium {
+  background-color: lightgrey;
+  width: 40%;
+  background-color:  $sidemenu-background-color;
+  height: 2.5em;
+  padding-left: 0.5em;
+}
+
+.text {
+  font-size: 85%;
+  color: $primary-text-color;
+}
+
+.wrapper {
+  padding-left: 5px;
+}

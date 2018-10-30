@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulkMenu captures snapshot of BulkMenu 1`] = `
+<div
+  className="bulkMenu"
+>
+  <div
+    className="bulkMenuHeader"
+  >
+    Actions
+     (3 selected)
+    <span
+      aria-hidden={true}
+      className="fa fa-fa-caret-down fa-caret-down bulkMenuToggleIcon"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

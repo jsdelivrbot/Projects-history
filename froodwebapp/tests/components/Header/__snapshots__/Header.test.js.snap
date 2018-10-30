@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header captures snapshot of Header 1`] = `
+<header>
+  <Connect(TasksMenu)
+    handleMenuOpen={[Function]}
+    isOpened={false}
+  />
+  <div
+    className="topHeader"
+  >
+    <img
+      alt="logo"
+      className="headerLogo"
+      src="test-file-stub"
+    />
+    <Select
+      choiceTransitionName="zoom"
+      className="languageDropdown"
+      defaultValue="english"
+      id="languages"
+      prefixCls="ant-select"
+      showSearch={false}
+      style={
+        Object {
+          "marginRight": 0,
+        }
+      }
+      transitionName="slide-up"
+    >
+      <Option
+        value="english"
+      >
+        <img
+          alt="US Flag"
+          className="flag"
+          src="test-file-stub"
+        />
+        English US
+      </Option>
+      <Option
+        value="chinese"
+      >
+        <img
+          alt="CN Flag"
+          className="flag"
+          src="test-file-stub"
+        />
+        Chinese
+      </Option>
+    </Select>
+    <div>
+      <Dropdown
+        id="user"
+        mouseEnterDelay={0.15}
+        mouseLeaveDelay={0.1}
+        overlay={
+          <Menu
+            className=""
+            onClick={[Function]}
+            prefixCls="ant-menu"
+            theme="light"
+          >
+            <MenuItem>
+              Log Out
+            </MenuItem>
+          </Menu>
+        }
+        placement="bottomLeft"
+        prefixCls="ant-dropdown"
+      >
+        <Button
+          className="profileDropdown"
+          clicked={false}
+          ghost={false}
+          loading={false}
+          prefixCls="ant-btn"
+          size="large"
+          type="ghost"
+        >
+          ERROR
+        </Button>
+      </Dropdown>
+      <FontAwesome
+        className="arrows-alt fullscreenIcon"
+        name="arrows-alt"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</header>
+`;

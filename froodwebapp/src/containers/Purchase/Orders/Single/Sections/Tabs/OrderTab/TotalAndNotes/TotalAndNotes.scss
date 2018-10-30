@@ -1,0 +1,22 @@
+.stats {
+  div[class*="row"] {
+    margin: 0;
+    height: 3rem;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+  div[class*="row"]:last-child {
+    height: 2rem;
+    background-color: #CCCCCC;
+  }
+}
+
+.statsRow {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.total {
+  margin-bottom: 1rem;
+}

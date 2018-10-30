@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SuppliersTab capturing Snapshot of SuppliersTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "SKU/Variant",
+          "menuItems": Array [
+            Object {
+              "key": "1",
+              "value": "sku",
+            },
+          ],
+          "name": "sku",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Choose Supplier Name or Add new",
+          "name": "supplierId",
+          "type": "supplierAutoComplete",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Supplier SKU",
+          "name": "supplierSku",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Suplier Product Name",
+          "name": "supplierSkuName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "UOM",
+          "menuItems": Array [],
+          "name": "uomId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Min Purchase Quantity",
+          "name": "minPurchaseQuantity",
+          "type": "number",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "name": "isDefault",
+          "text": "Make this suppplier default for SKU",
+          "type": "checkbox",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "id": "",
+        "isDefault": true,
+        "minPurchaseQuantity": "",
+        "sku": "",
+        "supplierId": "",
+        "supplierSku": "",
+        "supplierSkuName": "",
+        "uomId": "",
+      }
+    }
+    loading={false}
+    title="New Supplier Link"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      end="lg"
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      <Col
+        lg={4}
+      >
+        <Search
+          onChange={[Function]}
+          placeholder="Type to search SKU/Variant"
+          prefixCls="ant-input-search"
+        />
+      </Col>
+      <Col
+        lg={true}
+      >
+        <ActionButton
+          onClick={[Function]}
+          style={
+            Object {
+              "float": "right",
+            }
+          }
+        >
+          New Link
+        </ActionButton>
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        lg={true}
+        md={true}
+        sm={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "sku",
+                "title": "SKU",
+              },
+              Object {
+                "dataIndex": "supplierName",
+                "title": "SUPPLIER",
+              },
+              Object {
+                "dataIndex": "supplierSku",
+                "title": "SUPPLIER SKU",
+              },
+              Object {
+                "dataIndex": "supplierSkuName",
+                "title": "SUPPLIER PRODUCT NAME",
+              },
+              Object {
+                "dataIndex": "uomName",
+                "title": "PURCHASE UOM",
+              },
+              Object {
+                "dataIndex": "minPurchaseQuantity",
+                "title": "MIN PURCHASE QTY",
+              },
+              Object {
+                "dataIndex": "lastSupplied",
+                "title": "LAST SUPPLIED",
+              },
+              Object {
+                "dataIndex": "isDefault",
+                "render": [Function],
+                "title": "DEFAULT",
+              },
+              Object {
+                "render": [Function],
+                "title": "ACTION",
+              },
+            ]
+          }
+          dataSource={
+            Array [
+              Object {
+                "id": "1",
+                "sku": "sku",
+              },
+            ]
+          }
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          pagination={false}
+          prefixCls="ant-table"
+          rowKey="id"
+          rowSelection={null}
+          showHeader={true}
+          size="small"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

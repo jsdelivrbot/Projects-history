@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StickyTable captures snapshot of StickyTable 1`] = `
+<div
+  className="stickyTable"
+  id="frood-sticky-table"
+>
+  <div
+    className="xScrollbar"
+    id="x-scrollbar"
+  >
+    <div />
+  </div>
+  <div
+    className="rightBottomCorner"
+    id="right-bottom-corner"
+  />
+  <div
+    className="leftBottomCorner"
+    id="left-bottom-corner"
+  />
+  <div
+    className="yScrollbar"
+    id="y-scrollbar"
+  >
+    <div />
+  </div>
+  <div
+    className="stickyCorner"
+    id="sticky-corner"
+  >
+    <Table />
+  </div>
+  <div
+    className="stickyHeader"
+    id="sticky-header"
+  >
+    <Table />
+  </div>
+  <div
+    className="stickyTableYWrapper"
+    id="sticky-table-y-wrapper"
+    style={
+      Object {
+        "maxHeight": NaN,
+      }
+    }
+  >
+    <div
+      className="stickyColumn"
+      id="sticky-column"
+    >
+      <Table />
+    </div>
+    <div
+      className="stickyTableXWrapper"
+      id="sticky-table-x-wrapper"
+    >
+      <Table>
+        <h1
+          key=".$1"
+        >
+          Some data
+        </h1>
+        <h1
+          key=".$2"
+        >
+          Some data
+        </h1>
+      </Table>
+    </div>
+  </div>
+</div>
+`;

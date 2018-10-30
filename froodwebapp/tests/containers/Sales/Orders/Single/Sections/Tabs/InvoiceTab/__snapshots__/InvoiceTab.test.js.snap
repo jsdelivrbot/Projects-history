@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceTab capturing Snapshot of InvoiceTab 1`] = `
+<div>
+  <OrderTabHeader
+    headerLabel="Tax Invoice"
+    primaryButtonText="Download"
+  >
+    <Row>
+      <Col
+        lg={true}
+      >
+        Payment Date: 
+      </Col>
+    </Row>
+  </OrderTabHeader>
+  <Row>
+    <Col
+      xs={true}
+    >
+      <Table
+        bordered={false}
+        className="table"
+        columns={
+          Array [
+            Object {
+              "render": [Function],
+              "title": "ORDER TYPE",
+            },
+            Object {
+              "dataIndex": "name",
+              "title": "ITEM NAME",
+            },
+            Object {
+              "dataIndex": "uomName",
+              "title": "UOM",
+            },
+            Object {
+              "dataIndex": "orderQty",
+              "title": "ORDER QTY",
+            },
+            Object {
+              "dataIndex": "price",
+              "render": [Function],
+              "title": "PRICE",
+            },
+            Object {
+              "dataIndex": "discount",
+              "render": [Function],
+              "title": "DISCOUNT",
+            },
+            Object {
+              "dataIndex": "tax",
+              "render": [Function],
+              "title": "TAX",
+            },
+            Object {
+              "dataIndex": "total",
+              "render": [Function],
+              "title": "TOTAL",
+            },
+          ]
+        }
+        dataSource={Array []}
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="lineNo"
+        rowSelection={null}
+        showHeader={true}
+        size="small"
+        useFixedHeader={false}
+      />
+      <InvoiceTotalAndNotes
+        data={Array []}
+      />
+    </Col>
+  </Row>
+</div>
+`;

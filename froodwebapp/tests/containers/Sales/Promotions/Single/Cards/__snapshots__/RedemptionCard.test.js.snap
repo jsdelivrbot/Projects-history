@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RedemptionCard capturing Snapshot of RedemptionCard 1`] = `
+<Col>
+  <Card
+    className="card"
+  >
+    <Row
+      bottom="xs"
+      start="xs"
+    >
+      <Col
+        className="radioGroup"
+        lg={3}
+        md={3}
+        sm={2}
+        xs={4}
+      >
+        <Field
+          component={[Function]}
+          name="isLimited"
+          radioButtonValues={
+            Array [
+              Object {
+                "text": "Unlimited",
+                "value": false,
+              },
+              Object {
+                "text": "Limited Use",
+                "value": true,
+              },
+            ]
+          }
+          type="checkbox"
+        />
+      </Col>
+      <Col
+        lg={2}
+        md={2}
+        sm={1}
+        xs={3}
+      >
+        <Field
+          component={[Function]}
+          disabled={true}
+          name="qualifyingOrder"
+          placeholder="Number"
+        />
+      </Col>
+    </Row>
+    <Row
+      start="xs"
+    >
+      <Col
+        className="floatLeft"
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="forSingleTime"
+          text="Single Time Use Per Customer"
+        />
+      </Col>
+    </Row>
+    <Row
+      start="xs"
+    >
+      <Col
+        className="floatLeft"
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="forFirstPurchase"
+          text="First Time Use Only"
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

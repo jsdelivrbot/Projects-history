@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UOM capturing Snapshot of UOM 1`] = `
+<Row>
+  <Col
+    lg={true}
+  >
+    <Tabs
+      activeKey="uom"
+      animated={false}
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="uom"
+        placeholder={null}
+        tab="UOM"
+      >
+        <Connect(UOMTab) />
+      </TabPane>
+      <TabPane
+        key="conversions"
+        placeholder={null}
+        tab="Conversions"
+      >
+        <Connect(ConversionsTab) />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

@@ -1,0 +1,156 @@
+@import './../../../assets/styles/variables.scss';
+
+.footer__col__buttons {
+	margin-bottom: -15px;
+}
+.modal__content {
+	height: 150px;
+}
+
+.modal__header {
+  padding: 14px;
+  border-bottom: 1px solid #41A6E2;
+  //background: $modal__header-background;
+  background: #5e5e5e;
+  font-size: 18px;
+  color: #ffffff;
+  padding-left: 30px;
+
+  button {
+    color: white;
+    opacity: 1;
+    font-size: 23px;
+    font-weight: 100;
+    text-shadow: none;
+    height: 25px;
+    line-height: 25px;
+    white-space: nowrap;
+  }
+
+  button:hover {
+    color: white;
+    opacity: 0.8;
+  }
+}
+
+.modal_title {
+  font-size: 18px;
+}
+
+.modal__btn {
+  color: #FFFFFF;
+	background-color: #808080;
+  border-color: #808080;
+  border-radius: 0px;
+  font-size: 12px;
+	font-weight: 100;
+	width: 100%;
+}
+
+
+.modal__btn:hover {
+  color: #FFFFFF;
+  background-color: #0071BC;
+  border-color: #0071BC;
+  border-radius: 0px;
+}
+
+.button_row {
+  display: flex;
+}
+
+.button_single_task {
+  width: 29%;
+  padding: 0 5px;
+
+  button {
+    background-color: #00AEEF;
+    line-height: 22px;
+  }
+  button:hover {
+    background-color:#009FDB;
+  }
+}
+
+.button_repeated_task {
+  width: 33%;
+  padding: 0 5px;
+
+  button {
+    background-color: #669900;
+    line-height: 22px;
+  }
+  button:hover {
+    background-color:#588400;
+  }
+}
+
+.button_cancel_move {
+  width: 13%;
+  padding: 0 5px;
+
+  button {
+    background-color: #C1272D;
+    line-height: 22px;
+  }
+  button:hover {
+    background-color:#940c12;
+  }
+}
+
+.button_employee_dropdown {
+  width: 23%;
+  padding: 0 5px;
+
+  button {
+    background-color: #4D4D4D;
+    line-height: 22px;
+  }
+  button:hover {
+    background-color:#3f3f3f;
+  }
+}
+
+.asking_label {
+  color: #92278E;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.asking_label:after {
+   content: ' ';
+   display: block;
+   border: 0.5px solid #41a6e2;
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   width: 98%;
+   margin-top: 6px;
+ }
+
+
+.current_employee_label {
+  color: #92278E;
+  padding-left: 25px;
+  padding-bottom: 35px;
+}
+
+.group_items_list {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.group_items_list_item {
+  display: flex;
+}
+
+.list_bullet {
+  margin-right: 10px;
+}
+
+.react_select_adapter {
+  div {
+    border: 0;
+    background-color: #4D4D4D;
+    color: white;
+  }
+}

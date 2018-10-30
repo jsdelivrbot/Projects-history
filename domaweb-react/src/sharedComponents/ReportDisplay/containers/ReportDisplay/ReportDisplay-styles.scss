@@ -1,0 +1,76 @@
+.ReportDisplay {
+  overflow-x: hidden;
+}
+
+.ReportDisplay__Metadata {
+  display: none;
+  margin-bottom: 20px;
+
+  &__Title {
+    font-size: 20pt;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  &__CustomerInfo {
+    float: right;
+    text-align: right;
+
+    &__Name {
+      font-size: 15pt;
+    }
+  
+    &__CustomerSSN {
+      font-size: 12pt;
+    }
+  }
+
+  @media print {
+    display: block;
+  }
+}
+
+.ReportDisplay__NoReport {
+  text-align: center;
+  position: relative;
+  height: 200px;
+
+  span {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ReportDisplay__Filters {
+  margin-bottom: 8px;
+
+  &__SearchBar {
+    width: 100%;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+:global {
+  // Overwrite infinite scroll specified height on print
+  .infinite-scroll-component {
+    @media print {
+      height: auto !important;
+    }
+  }
+}
+
+.ReportDisplay__Row_Overflow {
+  overflow: visible !important;
+}
+
+.ReportDisplay__EndDate {
+  .react-datepicker__triangle {
+    margin-left: 90px !important;
+  }
+}

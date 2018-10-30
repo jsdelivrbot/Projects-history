@@ -1,0 +1,11 @@
+@import '~styles/colors.scss';
+
+.addressList {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 18rem;
+  > div {
+    padding: 15px;
+    border-bottom: 1px solid #CCCCCC;
+  }
+}

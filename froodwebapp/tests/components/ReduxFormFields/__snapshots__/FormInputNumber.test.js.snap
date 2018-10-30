@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInputNumber captures snapshot of FormInputNumber 1`] = `
+<InputNumber
+  className="btn"
+  disabled={false}
+  formatter={[Function]}
+  max={14}
+  min={4}
+  onChange={[Function]}
+  parser={[Function]}
+  placeholder="placeholder"
+  prefixCls="ant-input-number"
+  step={1}
+  style={Object {}}
+  value={4}
+/>
+`;

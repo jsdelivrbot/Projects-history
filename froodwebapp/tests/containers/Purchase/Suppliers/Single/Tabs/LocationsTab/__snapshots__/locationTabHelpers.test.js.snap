@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`locationTabHelpers capturing Snapshot of locationTabHelpers 1`] = `
+<locationTabHelpers
+  handleActivate={[Function]}
+  handleDeactivate={[Function]}
+/>
+`;

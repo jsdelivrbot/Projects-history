@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridInput captures snapshot of GridInput 1`] = `
+<input
+  autoFocus={false}
+  className="ant-input ant-input-sm gridInput"
+  disabled={false}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  size="small"
+  type="text"
+  value={1}
+/>
+`;

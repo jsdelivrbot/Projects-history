@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSelect captures snapshot of FormSelect 1`] = `
+<div
+  className="select ant-select ant-select-disabled"
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseDown={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  onTouchStart={undefined}
+  style={undefined}
+>
+  <div
+    aria-autocomplete="list"
+    aria-expanded={false}
+    aria-haspopup="true"
+    className="ant-select-selection
+            ant-select-selection--single"
+    onKeyDown={[Function]}
+    role="combobox"
+    tabIndex={0}
+  >
+    <div
+      className="ant-select-selection__rendered"
+    >
+      <div
+        className="ant-select-selection__placeholder"
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "WebkitUserSelect": "none",
+            "display": "none",
+            "userSelect": "none",
+          }
+        }
+        unselectable="unselectable"
+      >
+        Enter value
+      </div>
+      <div
+        className="ant-select-selection-selected-value"
+        style={
+          Object {
+            "display": "block",
+            "opacity": 1,
+          }
+        }
+        title="properties"
+      >
+        properties
+      </div>
+      <div
+        className="ant-select-search ant-select-search--inline"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <div
+          className="ant-select-search__field__wrap"
+        >
+          <input
+            autoComplete="off"
+            className="ant-select-search__field"
+            disabled={true}
+            id={undefined}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            value=""
+          />
+          <span
+            className="ant-select-search__field__mirror"
+          >
+            
+             
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      className="ant-select-arrow"
+      onClick={[Function]}
+      style={
+        Object {
+          "WebkitUserSelect": "none",
+          "userSelect": "none",
+        }
+      }
+      unselectable="unselectable"
+    >
+      <b />
+    </span>
+  </div>
+</div>
+`;

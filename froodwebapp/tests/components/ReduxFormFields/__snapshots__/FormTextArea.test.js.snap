@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTextArea captures snapshot of FormTextArea 1`] = `
+<TextArea
+  autosize={
+    Object {
+      "maxRows": 6,
+      "minRows": 4,
+    }
+  }
+  className="btn"
+  disabled={false}
+  onChange={[Function]}
+  placeholder="placeholder"
+  prefixCls="ant-input"
+  style={Object {}}
+  value={4}
+/>
+`;

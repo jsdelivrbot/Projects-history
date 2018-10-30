@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterTabs capturing Snapshot of FilterTabs 1`] = `
+<div>
+  <TabsSection
+    activeTabId="1"
+    changeActiveFilterId={[Function]}
+    columns={
+      Array [
+        Object {
+          "displayName": "Inventory",
+          "id": 1,
+          "isDefault": false,
+          "order": "first order",
+        },
+        Object {
+          "displayName": "Price lists",
+          "id": 2,
+          "isDefault": true,
+          "order": "second order",
+        },
+      ]
+    }
+    getAllItemsRequest={[Function]}
+    getWithFilterRequest={[Function]}
+    handleToggleSearchSection={[Function]}
+    limit={10}
+    offset={15}
+    tabs={Array []}
+    updateColumnsRequest={[Function]}
+  />
+</div>
+`;

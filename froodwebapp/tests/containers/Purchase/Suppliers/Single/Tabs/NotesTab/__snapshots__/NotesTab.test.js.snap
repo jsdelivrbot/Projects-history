@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotesTab capturing Snapshot of NotesTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="Add Note"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Note",
+          "name": "notes",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "notes": "",
+      }
+    }
+    loading={false}
+    title="Add Note"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "date",
+            "title": "Date",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "notes",
+            "title": "Notes",
+            "width": "60%",
+          },
+          Object {
+            "dataIndex": "addedBy",
+            "title": "Added By",
+            "width": "20%",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="middle"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

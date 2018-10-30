@@ -1,0 +1,65 @@
+.DomaTabHeader__MainWrapper {
+  background-color: rgb(241, 241, 241);
+}
+
+.DomaTabHeader__Items {
+  padding-left: 0px;
+  display: inline-block;
+  width: 84%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.DomaTabHeader__ItemWrapper {
+  display: inline-block;
+  width: 30%;
+
+  &_Single {
+    width: 100%;
+  }
+}
+
+.DomaTabHeader__ItemWrapper__Item {
+  font-size: 12pt;
+  cursor: pointer;
+  color: rgb(117, 117, 117);
+
+  &_Active {
+    color: rgb(38, 174, 238);
+    cursor: default;
+    font-weight: 600;
+  }
+}
+
+.DomaTabHeader__BtnSlider {
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+
+  &_Right {
+    float: right;
+  }
+
+  &_DesktopDisabled {
+    @media screen and (min-width: 767px) {
+      visibility: hidden;
+    }
+  }
+
+  &_MobileDisabled {
+    @media screen and (max-width: 767px) {
+      visibility: hidden;
+    }
+  }
+}
+
+.DomaTabHeader__BtnSlider__Icon {
+  color: rgb(117, 117, 117);
+  font-size: 24pt;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}

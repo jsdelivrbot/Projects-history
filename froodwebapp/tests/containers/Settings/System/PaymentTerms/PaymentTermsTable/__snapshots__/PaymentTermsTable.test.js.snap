@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentTermsTable capturing Snapshot of PaymentTermsTable 1`] = `
+<Row>
+  <Col
+    lg={true}
+  >
+    <ReduxForm
+      buttonText="New Term"
+      fields={
+        Array [
+          Object {
+            "editableForExistingItem": false,
+            "header": "Term",
+            "name": "name",
+            "type": "text",
+          },
+          Object {
+            "editableForExistingItem": true,
+            "header": "Due In Days",
+            "name": "dueDays",
+            "type": "text",
+          },
+          Object {
+            "editableForExistingItem": true,
+            "header": "From",
+            "menuItems": Array [],
+            "name": "from",
+            "type": "select",
+          },
+        ]
+      }
+      handleSave={[Function]}
+      handleToggleModal={[Function]}
+      initialValues={
+        Object {
+          "dueDays": "",
+          "from": "",
+          "name": "",
+        }
+      }
+      loading={false}
+      title="New Term"
+      visible={false}
+    />
+    <Spin
+      prefixCls="ant-spin"
+      size="default"
+      spinning={false}
+      wrapperClassName=""
+    >
+      <Row>
+        <Col
+          lg={4}
+        >
+          <FroodSearchInput
+            onChange={[Function]}
+            placeholder="Type to search payment terms"
+          />
+        </Col>
+      </Row>
+      <Table
+        bordered={false}
+        className="table"
+        columns={
+          Array [
+            Object {
+              "dataIndex": "name",
+              "title": "Terms",
+              "width": "33%",
+            },
+            Object {
+              "dataIndex": "dueDays",
+              "title": "Due In Days",
+              "width": "33%",
+            },
+            Object {
+              "render": [Function],
+              "title": "Action",
+              "width": "33%",
+            },
+          ]
+        }
+        dataSource={Array []}
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        prefixCls="ant-table"
+        rowKey="id"
+        rowSelection={null}
+        showHeader={true}
+        size="small"
+        useFixedHeader={false}
+      />
+    </Spin>
+  </Col>
+</Row>
+`;

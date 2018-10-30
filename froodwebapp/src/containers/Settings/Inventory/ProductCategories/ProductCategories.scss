@@ -1,0 +1,16 @@
+@import '~styles/colors.scss';
+
+.highlight {
+  color: $main-red;
+}
+
+.treeNode {
+  &::before {
+    margin: 28px 0 !important;
+  }
+  span[class*='ant-tree-node-content-wrapper'] {
+    vertical-align: baseline;
+  }
+}
+
+

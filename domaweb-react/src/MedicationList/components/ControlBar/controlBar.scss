@@ -1,0 +1,20 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/global.scss';
+
+.controlBar {
+  background-color: $sidemenu-background-color;
+  margin-top: -17px;
+  padding: 10px;
+  text-align: center;
+  //margin-bottom: 0px;
+  height: 50px;
+}
+
+.tab {
+  cursor: pointer;
+}
+
+.chosenTab {
+  color: $booking-background-color;
+  font-weight: bold;
+}

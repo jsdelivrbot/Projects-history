@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoCard capturing Snapshot of InfoCard 1`] = `
+<Col
+  className="cardWrapper"
+>
+  <Card
+    className="card"
+  >
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Code
+      </Col>
+      <Col
+        lg={6}
+        md={6}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          disabled={true}
+          name="code"
+          placeholder="Code"
+        />
+      </Col>
+    </Row>
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Title
+      </Col>
+      <Col
+        lg={6}
+        md={6}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="title"
+          placeholder="Title"
+        />
+      </Col>
+    </Row>
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Description
+      </Col>
+      <Col
+        lg={6}
+        md={6}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="desc"
+          placeholder="Description"
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

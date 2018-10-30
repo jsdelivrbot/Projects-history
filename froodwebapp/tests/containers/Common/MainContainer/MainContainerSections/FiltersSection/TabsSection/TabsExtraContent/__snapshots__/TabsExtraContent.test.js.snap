@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsExtraContent capturing Snapshot of TabsExtraContent 1`] = `
+<div
+  className="tabsExtraContent"
+>
+  <Row
+    around="xs"
+  >
+    <Col
+      lg={true}
+    />
+    <Col
+      lg={true}
+    />
+  </Row>
+  <ColumnsModal
+    columns={
+      Array [
+        Object {
+          "displayName": "Inventory",
+          "id": 1,
+          "isDefault": false,
+          "order": "first order",
+          "tableDataType": "Table data of first column",
+        },
+        Object {
+          "displayName": "Price lists",
+          "id": 2,
+          "isDefault": true,
+          "order": "second order",
+          "tableDataType": "Table data of second column",
+        },
+      ]
+    }
+    onToggleColumnsModal={[Function]}
+    onUpdateDefaultColumns={[Function]}
+    visible={false}
+  />
+</div>
+`;

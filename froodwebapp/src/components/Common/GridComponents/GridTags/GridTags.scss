@@ -1,0 +1,13 @@
+@import '~styles/colors.scss';
+
+.tagClosable {
+  margin: 0.2rem;
+  i {
+    color: $main-red;
+  }
+}
+
+.tagInput {
+  width: 7rem;
+  margin: 0.2rem;
+}

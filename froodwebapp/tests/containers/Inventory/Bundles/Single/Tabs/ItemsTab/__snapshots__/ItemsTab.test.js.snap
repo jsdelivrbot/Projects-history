@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsTab capturing Snapshot of ItemsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "filterByLocationId": 3,
+          "header": "SKU/Variant",
+          "name": "sku",
+          "type": "skuAutoComplete",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Category",
+          "name": "categoryName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "UOM",
+          "name": "uomName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Quantity to add in Bundle",
+          "name": "qty",
+          "type": "number",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "categoryName": "",
+        "id": "new",
+        "qty": "",
+        "sku": Object {},
+        "uomName": "",
+      }
+    }
+    loading={true}
+    title="New Item"
+    visible={false}
+  />
+  <Row
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <Col
+      lg={true}
+    >
+      <ActionButton
+        onClick={[Function]}
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        New Item
+      </ActionButton>
+    </Col>
+  </Row>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={true}
+    wrapperClassName=""
+  >
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "sku",
+            "title": "SKU",
+          },
+          Object {
+            "dataIndex": "skuName",
+            "title": "Name",
+          },
+          Object {
+            "dataIndex": "categoryName",
+            "title": "Category",
+          },
+          Object {
+            "dataIndex": "uomName",
+            "title": "UOM",
+          },
+          Object {
+            "dataIndex": "qty",
+            "title": "Quantity",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

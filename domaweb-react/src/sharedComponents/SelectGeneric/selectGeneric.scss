@@ -1,0 +1,19 @@
+@import 'src/assets/styles/variables.scss';
+
+.short_box {
+  width: 100%;
+  height: 2.5em;
+  background-color: $sidemenu-background-color;
+  //margin-bottom: 2em;
+  //margin-left: 1em;
+}
+
+.text {
+  font-size: 85%;
+}
+
+.wrapper {
+  //margin: 3px;
+  //margin-right: 5px;
+  color: $primary-text-color;
+}

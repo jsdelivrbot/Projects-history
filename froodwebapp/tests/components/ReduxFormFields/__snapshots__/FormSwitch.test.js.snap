@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSwitch captures snapshot of FormSwitch 1`] = `
+<span
+  checked={true}
+  className="ant-switch-small ant-switch ant-switch-checked"
+  defaultChecked={false}
+  onChange={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseUp={[Function]}
+  size="small"
+  tabIndex={0}
+  value={true}
+>
+  <span
+    className="ant-switch-inner"
+  >
+    checked text
+  </span>
+</span>
+`;

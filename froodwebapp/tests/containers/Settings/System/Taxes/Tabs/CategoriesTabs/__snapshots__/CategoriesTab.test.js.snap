@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaxCodesTab capturing Snapshot of TaxCodesTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New Category"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Tax Category Name",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Buy Tax Code",
+          "menuItems": Array [],
+          "name": "buyRateId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Sell Tax Code",
+          "menuItems": Array [],
+          "name": "sellRateId",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "buyRateId": "",
+        "name": "",
+        "sellRateId": "",
+      }
+    }
+    loading={false}
+    title="New Tax Category"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search tax categories"
+        />
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "Tax Category",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "buyRate.code",
+            "title": "Buy Tax Code",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "sellRate.code",
+            "title": "Sell Tax Code",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "isActive",
+            "render": [Function],
+            "title": "Status",
+            "width": "20%",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+            "width": "20%",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

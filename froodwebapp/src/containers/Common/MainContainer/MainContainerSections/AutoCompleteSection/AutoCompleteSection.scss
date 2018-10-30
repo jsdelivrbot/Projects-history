@@ -1,0 +1,31 @@
+.autocompleteSection {
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  input {
+    visibility: hidden;
+  }
+  > i[class*='closeIcon'] {
+    visibility: hidden;
+  }
+  &:hover {
+    border-bottom: 1px solid lightgrey;
+    input {
+      visibility: visible;
+      border-radius: 0;
+      border: none;
+    }
+    > i[class*='closeIcon'] {
+      visibility: visible;
+    }
+  }
+}
+
+.searchIcon {
+  font-size: 1rem;
+}
+
+.closeIcon {
+  font-size: 1rem;
+  cursor: pointer;
+}

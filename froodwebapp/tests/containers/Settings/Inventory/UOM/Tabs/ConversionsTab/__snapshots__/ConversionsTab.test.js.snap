@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConversionsTab capturing Snapshot of ConversionsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Rate",
+          "name": "fromQty",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Unit",
+          "name": "fromUnit",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Rate",
+          "name": "toQty",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Unit",
+          "menuItems": Array [],
+          "name": "toId",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "fromQty": "",
+        "fromUnit": "",
+        "id": "",
+        "toId": "",
+        "toQty": "",
+      }
+    }
+    loading={false}
+    title="New Conversion"
+    visible={false}
+  />
+  <Row
+    between="xs"
+  >
+    <Col
+      lg={4}
+      md={6}
+      xs={true}
+    >
+      Conversion for UOM
+      <Select
+        choiceTransitionName="zoom"
+        className="select"
+        onChange={[Function]}
+        prefixCls="ant-select"
+        showSearch={false}
+        transitionName="slide-up"
+      />
+    </Col>
+    <Col
+      xs={1}
+    >
+      <ActionButton
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        New
+      </ActionButton>
+    </Col>
+  </Row>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      className="row"
+    >
+      <Table
+        bordered={false}
+        className="table"
+        columns={
+          Array [
+            Object {
+              "dataIndex": "fromQty",
+              "title": "QUANTITY",
+            },
+            Object {
+              "dataIndex": "fromName",
+              "title": "UOM",
+            },
+            Object {
+              "dataIndex": "eq",
+              "render": [Function],
+              "title": "EQUALS",
+            },
+            Object {
+              "dataIndex": "toQty",
+              "title": "QUANTITY",
+            },
+            Object {
+              "dataIndex": "toName",
+              "title": "UOM",
+            },
+            Object {
+              "render": [Function],
+              "title": "ACTIONS",
+            },
+          ]
+        }
+        dataSource={Array []}
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        prefixCls="ant-table"
+        rowKey="id"
+        rowSelection={null}
+        showHeader={true}
+        size="large"
+        small="small"
+        useFixedHeader={false}
+      />
+    </Row>
+  </Spin>
+</div>
+`;

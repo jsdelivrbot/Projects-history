@@ -1,0 +1,43 @@
+@import '~styles/colors.scss';
+
+$main-icon-size: 1.2rem;
+$main-font-size: 14px;
+$company-font-size: $main-font-size + 2px;
+
+.addressUserName {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  strong {
+   flex: 1
+  }
+  font-size: $company-font-size;
+}
+
+.addressInfo {
+  div {
+    line-height: 1.5rem;
+  }
+  &:hover {
+    color: $main-black;
+  }
+  width: 100%;
+  padding: 0;
+  color: $main-black;
+  font-size: $main-font-size;
+  border: none;
+  background: transparent;
+  height: auto;
+  text-align: left;
+  div#phoneNo {
+    font-size: $main-font-size;
+    margin-bottom: 0;
+  }
+}
+
+.editIcon {
+  margin-left: 1rem;
+  font-size: $main-icon-size;
+  color: $main-black;
+  cursor: pointer;
+}

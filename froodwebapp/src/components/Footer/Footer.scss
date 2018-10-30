@@ -1,0 +1,10 @@
+@import '~styles/colors.scss';
+
+.footer {
+  text-align: center;
+  background-color: $footer-color;
+  color: $main-white;
+  font-weight: 100;
+  height: 2rem;
+  line-height: 2rem;
+}

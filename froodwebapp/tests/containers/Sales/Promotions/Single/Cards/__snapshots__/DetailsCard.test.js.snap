@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsCard capturing Snapshot of DetailsCard 1`] = `
+<Col
+  className="cardWrapper"
+>
+  <Card
+    className="card"
+  >
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Promotion Type
+      </Col>
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="type"
+          props={
+            Object {
+              "menuItems": Array [],
+            }
+          }
+        />
+      </Col>
+    </Row>
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      />
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          formatter={[Function]}
+          name="value"
+          parser={[Function]}
+          placeholder="Number"
+          step={1}
+        />
+      </Col>
+    </Row>
+    <Row
+      className="floatLeft"
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+      />
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="requireMinumumPurchase"
+          onChange={[Function]}
+          text="Required minimum purchase"
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

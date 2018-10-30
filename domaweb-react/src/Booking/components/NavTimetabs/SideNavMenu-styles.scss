@@ -1,0 +1,124 @@
+@import './../../../assets/styles/variables.scss';
+
+// reset global style fo the custom sidebar
+:global {
+  .custom-sidebar-class {
+    width: 200px;
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+}
+
+.menu {
+  width: 200px;
+  overflow-x: auto;
+}
+
+.sidenav {
+  padding: 0px 15px 0px 25px;
+  max-width: 187px;
+  max-height: 100vh;
+  //overflow-y: scroll;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sidenav__list {
+  font-size: 18px;
+	line-height: 1.5em;
+}
+.sidenav__header {
+	color: #0071BC;
+	line-height: 2em;
+}
+
+h5.sidenav__header:after {
+  content: ' ';
+  display: block;
+  border: 1px solid #0071BC;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.sidenav__item {
+	font-size: 14px;
+	color: #000000;
+}
+
+.sidenav__item__icon {
+	margin-right: 5px;
+  height: 15px;
+  width: 15px;
+}
+.edit__icon {
+  background: #0071bc;
+  color: #fff;
+  padding: 1px;
+}
+
+.nav__edit {
+  float: right;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.box{
+	width:15px;
+	height:15px;
+}
+
+.red{
+	background:#f00;
+}
+
+.types {
+	height:100%;
+	width:5px;
+	background-color:pink;
+	display:block;
+	overflow:auto
+}
+
+.sidenav__list {
+  line-height: 1.5em;
+}
+.sidenav__header {
+  color: #0071BC;
+  padding: 10px 0px 10px 0px;
+}
+
+
+.sidenav__item {
+  font-size: 14px;
+  color: #808080;
+  padding: 5px auto;
+}
+
+.sidenav__item__icon {
+  margin-right: 5px;
+}
+
+.box{
+  width:15px;
+  height:15px;
+}
+
+.red{
+  background:#f00;
+}
+
+.booking__types {
+  height:100%;
+  width:5px;
+  background-color:pink;
+  display:block;
+  overflow:auto
+}
+
+.active {
+  background: #000000;
+}

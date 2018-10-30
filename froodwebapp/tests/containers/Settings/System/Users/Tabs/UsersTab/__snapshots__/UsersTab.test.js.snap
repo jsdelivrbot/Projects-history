@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersTab capturing Snapshot of UsersTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New User"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Name",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Email Address",
+          "name": "email",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Role",
+          "menuItems": Array [],
+          "name": "roleId",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "email": "",
+        "name": "",
+        "roleId": "",
+      }
+    }
+    loading={false}
+    title="New User"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search users"
+        />
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "Name",
+          },
+          Object {
+            "dataIndex": "email",
+            "title": "Email",
+          },
+          Object {
+            "dataIndex": "role",
+            "title": "Role",
+          },
+          Object {
+            "dataIndex": "isActive",
+            "render": [Function],
+            "title": "Status",
+          },
+          Object {
+            "dataIndex": "lastLoginTime",
+            "title": "Last Login",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

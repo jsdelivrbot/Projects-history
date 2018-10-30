@@ -1,0 +1,64 @@
+/* Override default react-datepicker input style */
+:global {
+	input.react-datepicker-ignore-onclickoutside {
+	    width: 100%;
+	    background: #f1f1f1;
+	    font-size: 15px;
+	    height: 30px;
+	    padding-left: 10px;
+	}
+	.react-datepicker-wrapper {
+	    display: inline-block;
+	    background: #f1f1f1;
+	    width: 100%;
+	}
+
+	.react-datepicker__input-container {
+	    position: relative;
+	    display: inline-block;
+	    width: 100%;
+	}
+	.react-datepicker {
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 11px;
+    background-color: #fff;
+    color: #dedede;
+    border: 1px solid #aeaeae;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: relative;
+    min-width: 153px;
+	}
+}
+
+
+input.datepicker {
+    background: #f1f1f1;
+    width: 100%;
+    font-size: 15px;
+    height: 30px;
+    padding-left: 10px;
+    text-align: center;
+		color: #808080;
+}
+
+.date__wrapper {
+    width: 100%;
+    display: inline-flex;
+}
+
+.previous {
+  height: 30px;
+  background: #808080;
+  width: 23px;
+}
+
+.next {
+  height: 30px;
+  background: #808080;
+  width: 23px;
+}
+.previous__icon, .next__icon {
+	color: #FFF;
+	margin-top: 3px;
+}

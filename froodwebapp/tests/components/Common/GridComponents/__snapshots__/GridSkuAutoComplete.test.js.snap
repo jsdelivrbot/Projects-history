@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridSkuAutoComplete captures snapshot of GridSkuAutoComplete 1`] = `
+<Connect(SkuAutoComplete)
+  disabled={false}
+  inputStyle={
+    Object {
+      "borderBottom": "none",
+      "borderRadius": "0",
+      "borderTop": "none",
+      "color": "f0f2f5",
+      "fontWeight": 300,
+      "height": "100%",
+      "textAlign": "center",
+    }
+  }
+  onChange={[Function]}
+  onSelect={[Function]}
+  value="value"
+  vendorId={1}
+/>
+`;

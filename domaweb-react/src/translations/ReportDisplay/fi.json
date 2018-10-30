@@ -1,0 +1,11 @@
+{
+  "app.containers.ReportDisplay.title": "Raportit",
+  "app.containers.ReportDisplay.startDate": "Aloitus-pvm",
+  "app.containers.ReportDisplay.endDate": "Lopetus-pvm",
+  "app.containers.ReportDisplay.textOnly": "Vain teksti",
+  "app.containers.ReportDisplay.noReport": "Raportteja ei ole saatavilla.",
+  "app.containers.ReportDisplay.noReportWithFilters": "Raportteja ei löytynyt näillä hakuehdoilla",
+  "app.containers.ReportModal.header": "Raportit",
+  "app.components.Report.freeText": "Vapaa teksti",
+  "app.components.ReportItem.additionalDetails": "Muuta huomioitavaa"
+}

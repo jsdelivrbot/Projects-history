@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTableRows captures snapshot of getTableRows 1`] = `
+<getTableRows
+  actionColumn={false}
+  data={
+    Array [
+      Object {
+        "id": "first row",
+      },
+      Object {
+        "id": "second row",
+      },
+    ]
+  }
+  handleDownloadItem={[Function]}
+  handleRowClick={[Function]}
+  handleSelectRows={[Function]}
+  handleSort={[Function]}
+  handleUpdateColumnsOrder={[Function]}
+  headers={
+    Array [
+      Object {
+        "dataType": "number",
+        "handleSort": [Function],
+        "id": 2,
+        "isSortable": true,
+        "key": 2,
+        "moveHeader": [Function],
+        "name": "second header",
+        "saveHeaderOrder": [Function],
+        "value": "some value",
+      },
+    ]
+  }
+  selectedRows={
+    Array [
+      "first row",
+      "second row",
+    ]
+  }
+/>
+`;

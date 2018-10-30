@@ -1,0 +1,18 @@
+{
+  "app.components.AddTaskModal.startdate": "Aloituspäivämäärä",
+  "app.components.AddTaskModal.endate": "Lopetuspäivämäärä",
+  "app.components.AddTaskModal.customer": "Asiakkaat",
+  "app.components.AddTaskModal.addnewtask": "Lisää uusi tehtävä",
+  "app.components.AddTaskModal.tasktypes": "Tehtävätyypit",
+  "app.components.AddTaskModal.selectTasktype": "Valitse tehtävän tyyppi",
+  "app.components.AddTaskModal.addtask": "Lisää tehtävä",
+  "app.components.AddTaskModal.close": "Sulje",
+  "app.components.AddTaskModal.fieldMandatory": "Tämä on pakollinen kenttä",
+  "app.components.AddTaskModal.dateMandatory": "Aloituspäivämäärä ei voi olla suurempi kuin lopetuspäivämäärä",
+  "app.components.AddTaskModal.duration": "Kesto",
+  "app.components.AddTaskModal.realtimeframe": "Ajanjakso",
+  "app.components.AddTaskModal.description": "Kuvaus",
+  "app.components.AddTaskModal.selectcustomers": "Valitse asiakas",
+  "app.components.AddTaskModal.addtasksuccess": "Tehtävä lisätty onnistuneesti",
+  "app.components.AddTaskModal.addtaskerror": "Virhe tehtävää lisätessä! Tarkista pakolliset kentät"
+}

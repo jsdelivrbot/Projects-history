@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditsTab capturing Snapshot of CreditsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New"
+    buttonVisible={true}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Customer",
+          "name": "customerName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Add credit amount",
+          "name": "creditAmount",
+          "type": "number",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Credit description",
+          "name": "description",
+          "type": "textarea",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "creditAmount": "",
+        "customerName": "",
+        "description": "",
+        "id": null,
+      }
+    }
+    loading={false}
+    title="Add Credit"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "date",
+                "title": "Date",
+              },
+              Object {
+                "dataIndex": "added",
+                "title": "Credit Added",
+              },
+              Object {
+                "dataIndex": "used",
+                "title": "Credit Used",
+              },
+              Object {
+                "dataIndex": "balance",
+                "title": "Credit Balance",
+              },
+              Object {
+                "dataIndex": "remarks",
+                "title": "Remarks",
+              },
+            ]
+          }
+          dataSource={Array []}
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          pagination={
+            Object {
+              "showSizeChanger": true,
+              "showTotal": [Function],
+              "size": "default",
+              "total": 0,
+            }
+          }
+          prefixCls="ant-table"
+          rowKey="key"
+          rowSelection={null}
+          showHeader={true}
+          size="small"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

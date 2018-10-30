@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTelephoneInput captures snapshot of FormTelephoneInput 1`] = `
+<OnClickOutside(ReactTelephoneInput)
+  classNames="reactTelephoneInput"
+  defaultCountry="default country"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  flagsImagePath="test-file-stub"
+  onChange={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  value="+undefinedundefined"
+/>
+`;

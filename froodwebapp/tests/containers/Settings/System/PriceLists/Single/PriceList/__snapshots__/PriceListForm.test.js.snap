@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceListForm capturing Snapshot of PriceListForm 1`] = `
+<div>
+  <PageHeader
+    bigText="Price Lists"
+    smallText="A price list is non-standard set of prices that can be attached to channels (Sell Type) or vendors (Buy Type)."
+  />
+  <form
+    className="form"
+  >
+    <Row
+      center="xs"
+    >
+      <Col
+        lg={4}
+        xs={12}
+      >
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              Price List Name
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              component={[Function]}
+              name="name"
+              placeholder="Price List Name"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              Price List Code
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              name="code"
+              placeholder="Price List Code"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              Currency
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              menuItems={Array []}
+              name="currencyId"
+              type="text"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              List Type
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              className="radioGroup"
+              component={[Function]}
+              disabled={true}
+              name="type"
+              radioButtonValues={
+                Array [
+                  Object {
+                    "text": "BUY",
+                    "value": 1,
+                  },
+                  Object {
+                    "text": "SELL",
+                    "value": 2,
+                  },
+                ]
+              }
+            />
+          </Col>
+        </Row>
+      </Col>
+      <Col
+        lg={4}
+        xs={12}
+      >
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              Description
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              component={[Function]}
+              name="description"
+              placeholder="Description"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={4}
+          >
+            <label>
+              Price Type
+            </label>
+          </Col>
+          <Col
+            xs={8}
+          >
+            <Field
+              className="radioGroup"
+              component={[Function]}
+              name="isTaxIncl"
+              radioButtonValues={
+                Array [
+                  Object {
+                    "text": "TAX INCLUSIVE",
+                    "value": true,
+                  },
+                  Object {
+                    "text": "TAX EXCLUSIVE",
+                    "value": false,
+                  },
+                ]
+              }
+              type="checkbox"
+            />
+          </Col>
+        </Row>
+        <Row
+          end="xs"
+        >
+          <Col
+            xs={true}
+          >
+            <Controls
+              cancel={false}
+              submitButtonVisible={true}
+            />
+          </Col>
+        </Row>
+      </Col>
+    </Row>
+  </form>
+</div>
+`;

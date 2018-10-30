@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerProfile capturing Snapshot of Address 1`] = `
+<Row>
+  <Col
+    lg={4}
+  >
+    <Field
+      allAddresses={Array []}
+      component={[Function]}
+      disabled={false}
+      handleAddressRedirect={[Function]}
+      name="billingAddress"
+      title="Ship To:"
+    />
+    <Field
+      component={[Function]}
+      name="billingAddress"
+    />
+  </Col>
+  <Col
+    lg={4}
+  >
+    <Field
+      allAddresses={Array []}
+      component={[Function]}
+      disabled={false}
+      handleAddressRedirect={[Function]}
+      name="shippingAddress"
+      title="Bill To:"
+    />
+    <Field
+      component={[Function]}
+      name="shippingAddress"
+    />
+  </Col>
+</Row>
+`;

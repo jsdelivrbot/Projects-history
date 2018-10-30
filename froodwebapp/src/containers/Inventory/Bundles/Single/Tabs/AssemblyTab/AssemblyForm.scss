@@ -1,0 +1,11 @@
+@import '~styles/colors.scss';
+
+.disassembledButton {
+  border: $border-width solid $cancel-button-color;
+  color: $cancel-button-color;
+}
+
+.assembledButton {
+  border: $border-width solid $save-button-color;
+  color: $save-button-color;
+}

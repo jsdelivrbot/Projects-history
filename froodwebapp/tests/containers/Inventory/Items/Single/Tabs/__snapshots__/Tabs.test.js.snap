@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsTabs capturing Snapshot of ItemsTabs 1`] = `
+<Row>
+  <Col
+    lg={true}
+    md={true}
+    sm={true}
+    xs={true}
+  >
+    <Tabs
+      activeKey="main"
+      animated={false}
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+      tabBarExtraContent={
+        <ActionButton
+          onClick={[Function]}
+        >
+          Add Variants
+        </ActionButton>
+      }
+    >
+      <TabPane
+        key="main"
+        placeholder={null}
+        tab="Main"
+      >
+        <Connect(ReduxForm)
+          hasInitialProductVariants={false}
+          isNewSkuItem={false}
+          itemId="1"
+          productKeyColumnDisabled={false}
+        />
+      </TabPane>
+      <TabPane
+        key="bins"
+        placeholder={null}
+        tab="Bins"
+      >
+        <Connect(BinsTab)
+          itemId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="suppliers"
+        placeholder={null}
+        tab="Suppliers"
+      >
+        <Connect(SuppliersTab)
+          itemId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="uom"
+        placeholder={null}
+        tab="UOM"
+      >
+        <Connect(UOMTab)
+          itemId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="images"
+        placeholder={null}
+        tab="Images"
+      >
+        <Connect(ImagesTab)
+          itemId="1"
+        />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

@@ -1,0 +1,23 @@
+.Report {
+  padding: 5px 5px;
+
+  &__Header{
+    margin-bottom: 10px;
+  }
+
+  &_PrintHidden {
+    @media print {
+      display: none;
+    }
+  }
+}
+
+.Report__ReportItem {
+  border-bottom: 1px dashed rgb(117, 117, 117);;
+  margin-bottom: 5px;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+}

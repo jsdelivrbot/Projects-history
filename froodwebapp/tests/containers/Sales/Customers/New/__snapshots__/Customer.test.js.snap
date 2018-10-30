@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customer capturing Snapshot of Customer 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <PageHeader
+    bigText="Customer Details"
+    smallText="Enter your customer details, name, type to setup your relationship"
+  />
+  <form
+    className="form"
+  >
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={6}
+        xs={true}
+      >
+        <label>
+          <strong>
+            Customer type
+          </strong>
+        </label>
+      </Col>
+      <Col
+        lg={4}
+        md={6}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="type"
+          radioButtonValues={
+            Array [
+              Object {
+                "text": "B2C",
+                "value": "0",
+              },
+              Object {
+                "text": "B2B",
+                "value": "1",
+              },
+            ]
+          }
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={6}
+        xs={true}
+      >
+        <label>
+          <strong>
+            First name
+          </strong>
+        </label>
+      </Col>
+      <Col
+        lg={4}
+        md={6}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="firstName"
+          placeholder="first name"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={6}
+        xs={true}
+      >
+        <label>
+          <strong>
+            Last name
+          </strong>
+        </label>
+      </Col>
+      <Col
+        lg={4}
+        md={6}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="lastName"
+          placeholder="last name"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={6}
+        xs={true}
+      >
+        <label>
+          <strong>
+            Email address
+          </strong>
+        </label>
+      </Col>
+      <Col
+        lg={4}
+        md={6}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="email"
+          placeholder="someone@xyz.com"
+          type="email"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={6}
+        xs={true}
+      >
+        <label>
+          <strong>
+            Contact number
+          </strong>
+        </label>
+      </Col>
+      <Col
+        lg={4}
+        md={6}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          defaultCountry="sg"
+          name="phone"
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+      middle="xs"
+    >
+      <Col
+        lg={6}
+        md={6}
+        xs={true}
+      >
+        <Controls
+          cancelButtonVisible={false}
+          submitButtonText="Create"
+          submitButtonVisible={true}
+        />
+      </Col>
+    </Row>
+  </form>
+</Spin>
+`;

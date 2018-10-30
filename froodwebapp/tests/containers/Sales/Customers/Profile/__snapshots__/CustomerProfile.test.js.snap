@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerProfile capturing Snapshot of CustomerProfile 1`] = `
+<Row>
+  <Col
+    lg={true}
+    md={true}
+    xs={true}
+  >
+    <Tabs
+      activeKey="profile"
+      animated={false}
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="profile"
+        placeholder={null}
+        tab="Profile"
+      >
+        <Connect(ReduxForm)
+          customerId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="addresses"
+        placeholder={null}
+        tab="Addresses"
+      >
+        <Connect(AddressesTab)
+          activeAddressId={null}
+          customerId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="orders"
+        placeholder={null}
+        tab="Orders"
+      >
+        <Connect(OrdersTab)
+          customerId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="credits"
+        placeholder={null}
+        tab="Credits"
+      >
+        <Connect(CreditsTab)
+          customerId="1"
+        />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

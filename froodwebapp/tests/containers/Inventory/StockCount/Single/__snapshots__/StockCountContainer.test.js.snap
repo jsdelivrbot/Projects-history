@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCountContainer capturing Snapshot of StockCountContainer 1`] = `
+<withRouter(Connect(StockCount))
+  isNewStockCount={false}
+  stockCountId={1}
+/>
+`;

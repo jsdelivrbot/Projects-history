@@ -1,0 +1,27 @@
+/* Default global settings */
+:global {
+  body {
+    font-family: sourceSansPro;
+  }
+
+  // Global style for print
+  @media print {
+    .modal {
+      position: relative;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      visibility: visible;
+      /**Remove scrollbar for printing.**/
+      overflow: visible !important;
+      -ms-overflow-style: none !important;
+    }
+    .modal-dialog {
+      visibility: visible !important;
+      /**Remove scrollbar for printing.**/
+      overflow: visible !important;
+      -ms-overflow-style: none !important;      
+    }
+  }
+}

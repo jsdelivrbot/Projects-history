@@ -1,0 +1,111 @@
+@import '~styles/colors.scss';
+$page-side-margin: 3rem;
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+// Top Header
+.topHeader {
+  @extend .header;
+  background-color: $top-header-color;
+  height: 2.5rem;
+}
+
+.headerTitle {
+  color: orange;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-left: $page-side-margin;
+  flex: 1 1 auto;
+}
+
+.headerLogo {
+  height: 80%;
+  margin-left: $page-side-margin;
+}
+
+.languageDropdown {
+  color: rgb(76, 132, 206);
+  margin-left: auto;
+  div {
+   background-color: transparent;
+   border-color: transparent;
+   &:focus {
+     border-color: transparent;
+     outline: 0;
+     box-shadow: none;
+   }
+  }
+}
+
+.profileDropdown {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #D0021B;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.flag {
+  max-height: 1rem;
+  height: 1rem;
+  width: 1.5rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.fullscreenIcon {
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: $page-side-margin;
+}
+
+// Bottom Header
+
+.bottomHeader {
+  @extend .header;
+  background-color: $bottom-header-color;
+  height: 5.5rem;
+  min-height: 5.5rem;
+  align-items: baseline;
+  div[class*="container"]:first-child {
+    margin-left: $page-side-margin;
+  }
+  div[class*="container"]:nth-child(7) {
+    margin-right: $page-side-margin;
+  }
+}
+
+$break-small: 768px;
+
+.mobileMenu {
+	display: block;
+	margin: auto $page-side-margin;
+  @media screen and (max-width: $break-small) {
+    display: initial;
+  }
+  @media screen and (min-width: $break-small) {
+    display: none;
+  }
+}
+
+.mobileMenuIcon {
+	font-size: 2rem;
+  cursor: pointer;
+	color: white;
+  display: block;
+	margin: auto 3rem;
+  @media screen and (max-width: $break-small) {
+    display: initial;
+  }
+  @media screen and (min-width: $break-small) {
+    display: none;
+  }
+}
+
+
+
+

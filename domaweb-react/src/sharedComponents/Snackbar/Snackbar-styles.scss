@@ -1,0 +1,55 @@
+.snackbar {
+  overflow: hidden;
+  background-color: #bf3727;
+  padding: 10px 20px 7px 21px;
+  color: #fff;
+  min-width: 288px;
+  max-width: 568px;
+  position: fixed;
+  bottom: 6px;
+  left: 15px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow-x: overlay;
+  overflow-y: scroll;
+  z-index: 1000;
+  margin-left: 126px;
+  left: 25%;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.animated {
+  animation-name: snackbar-show;
+  animation-duration: 5s;
+  animation-direction: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+.snackbar .snackbar__message {
+  overflow: hidden;
+  line-height: 1.2em;
+  min-height: 1.2em;
+  max-height: 2.4em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.snackbar .snackbar__action {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 48px;
+  color: #bf3727;
+}
+.snackbar .snackbar__action a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}

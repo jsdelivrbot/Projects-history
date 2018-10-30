@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppliesToCard capturing Snapshot of AppliesToCard 1`] = `
+<Col
+  className="cardWrapper"
+>
+  <Card
+    className="card"
+  >
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        Applies to
+      </Col>
+      <Col
+        lg={5}
+        md={5}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="condition"
+          props={
+            Object {
+              "menuItems": Array [],
+            }
+          }
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCount capturing Snapshot of prepareOrder 1`] = `
+<prepareOrder
+  formData={
+    Object {
+      "billingAddress": Object {
+        "addressId": 15,
+        "id": 1,
+      },
+      "date": "Some date",
+      "deliveryDate": "Delivery date",
+      "details": Array [
+        Object {
+          "discount": "discount",
+          "qty": 10,
+          "sku": "sku",
+        },
+      ],
+      "internalNotes": "Internal notes",
+      "paymentTerms": Object {
+        "id": 1,
+      },
+      "shippingAddress": Object {
+        "addressId": 15,
+        "id": 1,
+      },
+      "value": "Form values",
+      "vendor": "Vendor",
+      "vendorNotes": "Vendor notes",
+    }
+  }
+/>
+`;

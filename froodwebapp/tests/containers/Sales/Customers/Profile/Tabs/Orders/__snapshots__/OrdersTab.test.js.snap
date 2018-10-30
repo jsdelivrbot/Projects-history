@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrdersTab capturing Snapshot of OrdersTab 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <div
+    className="rowsContainer"
+  >
+    <Row>
+      <Col
+        lg={4}
+        md={4}
+        xs={true}
+      >
+        <Connect(CustomerOrderAutoComplete)
+          customerId="1"
+          onChange={[Function]}
+          onSelect={[Function]}
+          value=""
+        />
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        lg={true}
+        md={true}
+        sm={true}
+        xs={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "id",
+                "title": "Order No",
+              },
+              Object {
+                "dataIndex": "paidOrder",
+                "title": "Paid",
+              },
+              Object {
+                "dataIndex": "orderDate",
+                "title": "Order Date",
+              },
+              Object {
+                "dataIndex": "expectedDeliveryDate",
+                "title": "Delivery On",
+              },
+              Object {
+                "dataIndex": "pickUpDate",
+                "title": "Pick Up Date",
+              },
+              Object {
+                "dataIndex": "status",
+                "title": "Status",
+              },
+              Object {
+                "dataIndex": "promotionDiscount",
+                "title": "Promotion Discount",
+              },
+              Object {
+                "dataIndex": "action",
+                "render": [Function],
+                "title": "Actions",
+              },
+            ]
+          }
+          dataSource={Array []}
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          pagination={false}
+          prefixCls="ant-table"
+          rowKey="key"
+          rowSelection={null}
+          showHeader={true}
+          size="small"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+    <Row
+      end="xs"
+    >
+      <Col
+        lg={true}
+        md={true}
+        sm={true}
+        xs={true}
+      >
+        <_a
+          current={1}
+          onChange={[Function]}
+          onShowSizeChange={[Function]}
+          pageSize={10}
+          prefixCls="ant-pagination"
+          selectPrefixCls="ant-select"
+          showSizeChanger={true}
+          showTotal={[Function]}
+        />
+      </Col>
+    </Row>
+  </div>
+</Spin>
+`;

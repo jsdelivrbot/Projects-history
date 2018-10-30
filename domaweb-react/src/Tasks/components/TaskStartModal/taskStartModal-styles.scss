@@ -1,0 +1,135 @@
+@import '../../../assets/styles/variables.scss';
+
+.modal{
+  padding: 0px;
+}
+
+.modal_header{
+  background-color: $task-background-color;
+  color: white;
+  padding: 10px 10px 10px 15px;
+}
+
+.modal_heading{
+  margin: 0px;
+  font-size: 24px
+}
+
+.close_icon{
+  top:10px;
+  fill: white;
+}
+
+.modal_body{
+  padding: 10px;
+}
+
+.task__info_top{
+    margin: 0;
+    padding: 8px;
+    background-color: #F7EDC9;
+    background-size: 25px 25px;
+    color: $primary-text-color;
+}
+.task__info_top__text {
+    background: url("../../../assets/images/tasks/symbol_info.svg") no-repeat left center;
+    margin-left: 0px;
+    padding-left: 25px;
+}
+
+
+.task_time_table_column{
+  padding: 5px 25px 0px 0px;
+}
+
+.task_section_heading {
+    color: $task-secondary-heading-color;
+    border-bottom: $task-secondary-heading-color 1px solid;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    position: relative;
+    clear: both;
+}
+
+
+.section_box_left {
+    width: 100%;
+}
+
+.date_section{
+  width: 40%;
+  float: left;
+}
+
+.date_section_heading{
+  width: 100%;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.date_section_datetime{
+  width: 100%;
+}
+
+.date_section_date{
+  width: 50%;
+  float: left;
+}
+
+.date_section_time{
+  width: 50%;
+  float: right;
+}
+
+.plus_icon {
+    background-color: $task-secondary-heading-color;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 18px;
+}
+
+.plus_icon:hover {
+    background-color: #0f6889;
+}
+
+.button_div{
+  margin-top: 20px;
+}
+
+.cancel_button{
+  float: left;
+  background-color: #817F81;
+  color: white;
+  padding: 7px 24px;
+  border: 0;
+  font-size: 16px;
+  height: 32px;
+  min-width:0;
+}
+
+.cancel_button:hover{
+  background-color: #565556;
+}
+
+.confirm_button{
+  float: right;
+  background-color: #6A9803;
+  color: white;
+  padding: 7px 24px;
+  border: 0;
+  font-size: 16px;
+  height: 32px;
+  min-width:0;
+}
+
+.confirm_button:hover {
+  background-color: #476804;
+}

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutoComplete captures snapshot of AutoComplete with true loadingAutoComplete 1`] = `
+<Autocomplete
+  autoHighlight={true}
+  getItemValue={[Function]}
+  inputProps={
+    Object {
+      "className": "autoCompleteInput",
+      "disabled": false,
+      "lang": "en",
+      "onBlur": [Function],
+      "onFocus": [Function],
+      "placeholder": "placeholder",
+      "style": Object {
+        "backgroundColor": "white",
+        "color": "inherit",
+        "cursor": false,
+      },
+    }
+  }
+  items={
+    Array [
+      "item1",
+      "item2",
+    ]
+  }
+  menuStyle={
+    Object {
+      "background": "rgba(255, 255, 255, 0.9)",
+      "borderRadius": "3px",
+      "boxShadow": "0 2px 12px rgba(0, 0, 0, 0.1)",
+      "fontSize": "90%",
+      "maxHeight": "50%",
+      "overflow": "auto",
+      "padding": "2px 0",
+      "position": "fixed",
+    }
+  }
+  onChange={[Function]}
+  onMenuVisibilityChange={[Function]}
+  onSelect={[Function]}
+  renderInput={[Function]}
+  renderItem={[Function]}
+  renderMenu={[Function]}
+  selectOnBlur={false}
+  value="Some value"
+  wrapperProps={
+    Object {
+      "className": "autoComplete",
+    }
+  }
+  wrapperStyle={
+    Object {
+      "display": "inline-block",
+    }
+  }
+/>
+`;

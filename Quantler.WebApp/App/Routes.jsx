@@ -1,0 +1,20 @@
+export let Routes = {
+  Accounts: '/accounts/',
+  Algorithms: '/algorithms',
+  Backtester: '/backtester/',
+  Community: '/community/',
+  CommunityPost: '/community/post/',
+  CommunityNewPost: '/community/post/new',
+  Dashboard: '/',
+  Management: '/management',
+  Marketplace: '/marketplace',
+  MarketplaceTemplate: '/marketplace/template/',
+  Faq: '/faq',
+  Login: '/login',
+  Recover: '/recover',
+  Register: '/register',
+  Samples: '/samples',
+  SampleDetails: '/samples/details/',
+  SampleAdd: '/samples/add',
+  Templates: '/templates/'
+}

@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactsTab capturing Snapshot of ContactsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New Contact"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Location",
+          "menuItems": Array [],
+          "name": "locationId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "First Name",
+          "name": "firstName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Last Name",
+          "name": "lastName",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Phone Number",
+          "name": "phone",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Fax",
+          "name": "fax",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Email",
+          "name": "email",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Corporate Title",
+          "name": "title",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Make this default contact",
+          "name": "isDefault",
+          "type": "checkbox",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Include in all emails",
+          "name": "includeInEmails",
+          "type": "checkbox",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "email": "",
+        "fax": "",
+        "firstName": "",
+        "id": "",
+        "includeInEmails": "",
+        "isDefault": "",
+        "lastName": "",
+        "locationId": "",
+        "name": "",
+        "phone": "",
+        "title": "",
+      }
+    }
+    loading={false}
+    title="New Contact"
+    visible={false}
+  />
+  <Row
+    className="row"
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      lg={1}
+    >
+      Locations
+    </Col>
+    <Col
+      lg={4}
+      md={6}
+      xs={true}
+    >
+      <Select
+        choiceTransitionName="zoom"
+        className="select"
+        onChange={[Function]}
+        prefixCls="ant-select"
+        showSearch={false}
+        transitionName="slide-up"
+        value={null}
+      />
+    </Col>
+    <Col
+      lg="7"
+    />
+  </Row>
+  <Row
+    className="row"
+  >
+    <Col
+      lg={true}
+      md={true}
+      xs={true}
+    >
+      <GridTable
+        className="table"
+        columns={
+          Array [
+            Object {
+              "dataIndex": "name",
+              "title": "Name",
+            },
+            Object {
+              "dataIndex": "phone",
+              "title": "Phone",
+            },
+            Object {
+              "dataIndex": "fax",
+              "title": "Fax",
+            },
+            Object {
+              "dataIndex": "email",
+              "title": "Email",
+            },
+            Object {
+              "dataIndex": "title",
+              "title": "Title",
+            },
+            Object {
+              "dataIndex": "isDefault",
+              "title": "Default",
+              "type": "checkbox",
+            },
+            Object {
+              "dataIndex": "includeInEmails",
+              "title": "Include in Emails",
+              "type": "checkbox",
+            },
+            Object {
+              "render": [Function],
+              "title": "Action",
+            },
+          ]
+        }
+        dataSource={Array []}
+        expandable={false}
+        loadingData={false}
+        readonly={false}
+        rowKey="id"
+        updateTableData={[Function]}
+      />
+    </Col>
+  </Row>
+</div>
+`;

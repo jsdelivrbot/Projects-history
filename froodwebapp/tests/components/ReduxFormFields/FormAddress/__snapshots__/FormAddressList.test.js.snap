@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormAddressList captures snapshot of FormAddressList 1`] = `
+<div
+  className="addressList"
+>
+  <div
+    key="1"
+  >
+    <AddressInfo
+      addressClick={[Function]}
+      editIconClick={[Function]}
+      editIconVisible={true}
+      user={
+        Object {
+          "address": Object {
+            "id": "1",
+          },
+        }
+      }
+    />
+  </div>
+</div>
+`;

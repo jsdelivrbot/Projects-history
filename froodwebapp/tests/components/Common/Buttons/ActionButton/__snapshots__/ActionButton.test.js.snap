@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionButton captures snapshot of ActionButton 1`] = `
+<Button
+  className="actionButton"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <FontAwesome
+    className="fa-th"
+    name="fa-th"
+  />
+  <h1>
+    Test checking
+  </h1>
+</Button>
+`;

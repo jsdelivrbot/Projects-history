@@ -1,0 +1,73 @@
+:global {
+  .modal-open .modal {
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 98%;
+  }
+}
+// Repetition tab
+
+.repetition__row_tab {
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-bottom: 10px;
+
+}
+.repetition__row_icon_and_label {
+  padding: 5px;
+  background: #f1f1f1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 0;
+}
+.repetition__row_icon_and_label:hover {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.repetition__add_button {
+  margin: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.repetition__row_rep {
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 10px;
+}
+
+.EveryNDay__nDayNumberInput {
+  background: #f1f1f1;
+  font-weight: normal;
+  height: 29px;
+  font-size: 14px;
+}
+
+.EveryNDay__nDayNumberLabel {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.repetition__deleteicon {
+  float: right;
+}
+
+.repetition__deleteicon_disabled {
+  opacity: 0.3;
+}
+
+.repetition__datepicker_row {
+  padding-top: 19px;
+}
+
+.repetition__showEndDate_checkbox {
+  padding-top: 45px;
+}
+
+.modal_tab_repetition_wrapper {
+  height: 890px;
+  overflow-x: hidden;
+  padding: 12px;
+}

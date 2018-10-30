@@ -1,0 +1,35 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react",
+    "flow"
+  ],
+  "retainLines": true,
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["transform-imports", {
+          "lodash": {
+            "transform": "lodash/${member}",
+            "preventFullImport": true
+          },
+          "redux-form": {
+            "transform": "redux-form/es/${member}",
+            "preventFullImport": true
+          },
+          "antd": {
+            "transform": "antd/lib/${member}",
+            "preventFullImport": true,
+            "kebabCase": true
+          }
+        }]
+      ]
+    }
+  }
+}

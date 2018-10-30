@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormBundleAutoComplete captures snapshot of FormBundleAutoComplete 1`] = `
+<Connect(BundleAutoComplete)
+  alignRight={false}
+  disabled={false}
+  onChange={[Function]}
+  onSelect={[Function]}
+/>
+`;

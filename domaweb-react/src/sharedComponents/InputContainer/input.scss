@@ -1,0 +1,87 @@
+@import 'src/assets/styles/variables.scss';
+
+$height: 2.2em;
+$background: #F2F2F2;
+$textcolor: #4D4D4D;
+$errorColor: #C1272D;
+$active: #00AEEF;
+$allowed: #7AB600;
+$disabled:  #9F9F9F;
+
+.wrapper {
+    background-color: $background;
+    padding: 0px;
+    margin: 0px;
+}
+
+.textfield {
+  background-color:  $background;
+  min-height: $height;
+  padding: 0px;
+  margin: 0px;
+  color: $textcolor;
+  border: none;
+  margin-bottom: 1px;
+  resize: none;
+}
+
+.withInlineError {
+    width: 90%;
+}
+
+.withoutInlineError {
+    width: 100%;
+}
+
+.disabled {
+    color: $disabled;
+    cursor: not-allowed;
+}
+
+.input:focus{
+    outline: none;
+}
+
+
+.error {
+    border: 1.5px solid $errorColor;
+}
+
+.focus {
+    border: 1.5px solid $active;
+}
+
+.allowed {
+    border: 1.5px solid $allowed;
+}
+
+.notifications {
+    font-size: 12px;
+    color: $errorColor;
+}
+
+.warning {
+    color: $errorColor;
+}
+
+.success {
+    color: $allowed;
+}
+
+.icon {
+    height: $height;
+    border: none;
+    width: 8%;
+    right: 1em;
+    top: 2em;
+    svg {
+        float: right;
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+    }
+}
+
+.length {
+    float: right;
+    color: $disabled;
+}

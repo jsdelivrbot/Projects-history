@@ -1,0 +1,181 @@
+@import '~styles/colors.scss';
+@import '~styles/fonts.scss';
+
+$cell-padding: 0.5rem 0.75rem;
+$cursor: pointer;
+
+.dynamicTable {
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-top: none;
+}
+
+.actionText {
+  text-decoration: underline;
+  color: $main-black;
+}
+
+.dynamicTableAlert {
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+  background-color: $main-white;
+}
+
+.stickyTable {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  .cell {
+    display: table-cell;
+    white-space: pre;
+    border-bottom: 1px solid $main-gray;
+    border-collapse: collapse;
+    font-weight: $table-body-font-weight;
+    padding: $cell-padding;
+  }
+  .row {
+    display: table-row;
+    cursor: $cursor;
+    &:hover {
+      background-color: $row-hover-color;
+    }
+  }
+
+  .rightBottomCorner {
+    position: absolute;
+    height: 0.95rem;
+    width: 0.95rem;
+    bottom: -1px;
+    right: -1px;
+    background-color: #fafafa;
+    z-index: 20;
+  }
+
+  .table{
+    display: table;
+  }
+  .stickyCorner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    .cell {
+      background-color: $main-gray;
+      border-bottom: none;
+    }
+  }
+  .stickyHeader {
+    position: absolute;
+    z-index: 2;
+    div[class*="row"] {
+      div[class*="cell"]:last-child {
+        padding-right: 2rem;
+      }
+    }
+    .cell {
+      background-color: $main-gray;
+      color: rgba(0,0,0,.85);
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+  }
+  .stickyColumn {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    border-right: 1px solid $main-gray;
+    .table {
+      .row:first-child {
+        .cell {
+          border-bottom: none;
+        }
+      }
+    }
+    .cell {
+      vertical-align: middle;
+    }
+  }
+  .stickyTableXWrapper {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    .table {
+      /*
+      Hack to make table paint on it's own layer.
+      Because of this it won't paint when the scrollbar paints.
+      This one was crucial for performance.
+      Scrolling is probably 10-20x smoother.
+      */
+      width: 100%;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      div[class*="row"]:first-child {
+        background-color: $main-gray;
+        color: rgba(0,0,0,.85);
+        font-weight: $table-header-font-weight;
+        text-transform: uppercase;
+        div[class*="cell"] {
+          border-bottom: none;
+        }
+      }
+      div[class*="row"] {
+        div[class*="cell"]:last-child {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+  .stickyTableYWrapper {
+    z-index: 0;
+    position: relative;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    /* Hack to hide scrollbars */
+    padding-right: 17px;
+    margin-right: -17px;
+  }
+}
+
+.xScrollbar {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5;
+  overflow: auto;
+  bottom: -1px;
+  height: 20px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  div {
+    height: 100%;
+  }
+}
+
+.yScrollbar {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5;
+  overflow: auto;
+  right: -1px;
+  top: 0px;
+  height: 100%;
+  width: 20px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  div {
+    width: 100%;
+  }
+}
+
+/* Scrollbars */
+.stickyTableYWrapper::-webkit-scrollbar,
+.stickyTableXWrapper::-webkit-scrollbar {
+  display: none;
+}
+

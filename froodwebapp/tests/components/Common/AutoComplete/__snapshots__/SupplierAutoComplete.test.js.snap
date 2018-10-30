@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SupplierAutoComplete captures snapshot of SupplierAutoComplete 1`] = `
+<AutoComplete
+  alignRight={false}
+  disabled={false}
+  getItemValue={[Function]}
+  inputPlaceholder="Search Supplier"
+  items={Array []}
+  loadingAutoComplete={false}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onSelect={[Function]}
+  renderItem={[Function]}
+  value="value"
+/>
+`;

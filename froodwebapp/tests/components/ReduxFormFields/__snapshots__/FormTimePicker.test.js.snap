@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTimePicker captures snapshot of FormTimePicker 1`] = `
+<span
+  className="ant-time-picker "
+  onBlur={undefined}
+  onClick={undefined}
+  onFocus={undefined}
+  onMouseDown={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  onTouchStart={undefined}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <input
+    autoComplete={undefined}
+    className="ant-time-picker-input"
+    disabled={true}
+    name={undefined}
+    onKeyDown={[Function]}
+    placeholder="请选择时间"
+    readOnly={true}
+    type="text"
+    value="Invalid date"
+  />
+  <span
+    className="ant-time-picker-icon"
+  />
+</span>
+`;

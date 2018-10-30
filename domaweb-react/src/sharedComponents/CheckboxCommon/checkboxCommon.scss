@@ -1,0 +1,53 @@
+@import 'src/assets/styles/variables.scss';
+
+.wrapper {
+  //margin: 1em;
+  margin-left: 0px;
+  //margin-right: 1em;
+  padding-right: 2px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.box {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  //margin: 0.2em;
+  overflow: hidden;
+  align-content: center;
+}
+
+.clicked {
+  background-color: #669900;
+  border: 2.5px solid #669900;
+}
+
+.unclicked {
+  background-color: white;
+  border: 2.5px solid $primary-text-color;
+}
+
+.text {
+  margin-bottom: 1em;
+  margin-left: 3px;
+  padding-bottom: 2px;
+}
+
+.icon {
+  //margin-bottom: 3px;
+  margin: auto;
+  width: 200%;
+  height: 200%;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+.enabled {
+  opacity: 1;
+}

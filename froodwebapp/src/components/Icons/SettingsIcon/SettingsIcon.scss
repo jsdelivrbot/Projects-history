@@ -1,0 +1,8 @@
+@import '~styles/icons.scss';
+@import '~styles/colors.scss';
+
+.settingsIcon {
+  @extend .icon;
+  color: $main-black;
+  font-size: 1.15rem;
+}

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceListContainer capturing Snapshot of PriceListContainer 1`] = `
+<withRouter(Connect(PriceList))
+  isNewPriceList={false}
+  priceListId="1"
+/>
+`;

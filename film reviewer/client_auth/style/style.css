@@ -1,0 +1,16 @@
+.error {
+    color: red;
+}
+
+.film-detail-for-all {
+    padding-bottom: 15px;
+}
+
+.film-detail-for-btns {
+    margin-bottom: 15px;
+}
+
+.image-properties {
+    /*height:500px;*/
+    width: 500px;
+}

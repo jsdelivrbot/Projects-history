@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Orders capturing Snapshot of Orders 1`] = `
+<Connect(MainContainer)
+  actionColumnVisible={false}
+  autocompletePlaceholder="Search by code, delivery date, vendor name"
+  getRowClickRedirectLink={[Function]}
+  getStatisticsColumns={[Function]}
+  newButtonLink="/purchase/orders/new"
+  newButtonText="New Purchase"
+  newButtonVisible={true}
+  renderAutocompleteItem={[Function]}
+/>
+`;

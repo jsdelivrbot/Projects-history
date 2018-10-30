@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidityCard capturing Snapshot of ValidityCard 1`] = `
+<Col>
+  <Card
+    className="card"
+  >
+    <Row
+      middle="xs"
+    >
+      <Col
+        lg={2}
+        md={2}
+        xs={12}
+      >
+        Start Date
+      </Col>
+      <Col
+        lg={4}
+        md={4}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="startDate"
+        />
+      </Col>
+      <Col
+        lg={2}
+        md={2}
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          name="startTime"
+          timeFormat="HH:mm"
+        />
+      </Col>
+    </Row>
+    <Row
+      className="floatLeft"
+      middle="xs"
+    >
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <Field
+          component={[Function]}
+          name="requireEndDate"
+          onChange={[Function]}
+          text="Required End Date"
+        />
+      </Col>
+    </Row>
+  </Card>
+</Col>
+`;

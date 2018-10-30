@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceListTab capturing Snapshot of PriceListTab 1`] = `
+<div>
+  <Row
+    className="row"
+    end="xs"
+    middle="xs"
+  >
+    <Col
+      lg={1}
+    >
+      Price List
+    </Col>
+    <Col
+      lg={4}
+      md={6}
+      xs={true}
+    >
+      <Select
+        choiceTransitionName="zoom"
+        className="select"
+        onChange={[Function]}
+        prefixCls="ant-select"
+        showSearch={false}
+        transitionName="slide-up"
+        value={null}
+      />
+    </Col>
+    <Col
+      lg={2}
+    >
+      <Button
+        clicked={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+        type="primary"
+      >
+        Attach Price List
+      </Button>
+    </Col>
+    <Col
+      lg={5}
+      md={5}
+    />
+  </Row>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      className="row"
+    >
+      <Col
+        lg={true}
+        md={true}
+        xs={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "product",
+                "title": "Product name",
+              },
+              Object {
+                "dataIndex": "sku",
+                "title": "SKU",
+              },
+              Object {
+                "dataIndex": "vendorSku",
+                "title": "Vendor SKU",
+              },
+              Object {
+                "dataIndex": "price",
+                "title": "Buy Price",
+              },
+            ]
+          }
+          dataSource={Array []}
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          prefixCls="ant-table"
+          rowKey="sku"
+          rowSelection={null}
+          showHeader={true}
+          size="middle"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

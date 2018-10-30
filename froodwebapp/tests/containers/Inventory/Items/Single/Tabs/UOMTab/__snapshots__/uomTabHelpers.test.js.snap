@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`uomTabHelpers capturing Snapshot of uomTabHelpers 1`] = `
+<uomTabHelpers
+  handleDeactivate={[Function]}
+  handleEdit={[Function]}
+/>
+`;

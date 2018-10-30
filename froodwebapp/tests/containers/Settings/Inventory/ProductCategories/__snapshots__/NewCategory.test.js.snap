@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCategory capturing Snapshot of NewCategory 1`] = `
+<form
+  className="form"
+>
+  <Row
+    center="xs"
+    middle="xs"
+  >
+    <Col>
+      <h3>
+        No product categories found
+      </h3>
+    </Col>
+  </Row>
+  <Row
+    center="xs"
+    middle="xs"
+  >
+    <Col
+      lg={4}
+      md={4}
+      sm={12}
+      xs={12}
+    >
+      <Field
+        component={[Function]}
+        name="name"
+        placeholder="Add your first parent category"
+      />
+    </Col>
+  </Row>
+  <Row
+    center="xs"
+    middle="xs"
+  >
+    <Col>
+      <Button
+        clicked={false}
+        disabled={false}
+        ghost={false}
+        htmlType="submit"
+        loading={false}
+        prefixCls="ant-btn"
+        type="primary"
+      >
+        Add
+      </Button>
+    </Col>
+  </Row>
+</form>
+`;

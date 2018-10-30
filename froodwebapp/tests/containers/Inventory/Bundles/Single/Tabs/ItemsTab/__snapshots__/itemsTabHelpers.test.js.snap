@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`itemsTabHelpers capturing Snapshot of itemsTabHelpers 1`] = `
+<itemsTabHelpers
+  handleDeactivate={[Function]}
+  handleEdit={[Function]}
+/>
+`;

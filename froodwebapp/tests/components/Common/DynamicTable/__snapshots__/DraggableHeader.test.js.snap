@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableHeader capturing Snapshot of DraggableHeader 1`] = `
+<div
+  className="cell"
+  id="sticky-header-cell-2"
+  key="Some text"
+  style={
+    Object {
+      "cursor": "move",
+      "opacity": 1,
+      "textAlign": "left",
+    }
+  }
+>
+  Some text
+</div>
+`;

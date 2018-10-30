@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FroodSwitch captures snapshot of FroodSwitch 1`] = `
+<span
+  checked={false}
+  className="ant-switch-small ant-switch ant-switch-disabled"
+  defaultChecked={false}
+  id={1}
+  onChange={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseUp={[Function]}
+  size="small"
+  tabIndex={-1}
+>
+  <span
+    className="ant-switch-inner"
+  >
+    all night
+  </span>
+</span>
+`;

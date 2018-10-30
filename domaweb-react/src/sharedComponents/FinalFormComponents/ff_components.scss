@@ -1,0 +1,43 @@
+@import 'src/assets/styles/variables.scss';
+
+$height: 2.2em;
+$background: #F2F2F2;
+$textcolor: #4D4D4D;
+
+.textfield {
+  width: 100%;
+  background-color:  $background;
+  height: $height;
+  padding-left: 0.5em;
+  //margin: 2px;
+  color: $textcolor;
+  border: none;
+}
+
+.textarea {
+  width: 100%;
+  background-color:  $background;
+  padding-left: 0.5em;
+  color: $textcolor;
+  border: none;
+}
+
+.select {
+  height: $height;
+  background-color: $background;
+  width: 100%;
+  color: $textcolor;
+  border: none;
+}
+
+.label {
+  color:  #4D4D4D;
+}
+
+.error {
+  color: red;
+}
+
+.datepickerWrapper {
+  margin: 5px;
+}

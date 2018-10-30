@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCount capturing Snapshot of StockCount 1`] = `
+<div>
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row
+      className="formWrapper"
+    >
+      <Col
+        xs={true}
+      >
+        <Connect(ReduxForm)
+          initialValues={
+            Object {
+              "details": Array [
+                Object {
+                  "sku": "some sku",
+                },
+              ],
+            }
+          }
+          isNewStockCount={false}
+          started={false}
+          tableData={Array []}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

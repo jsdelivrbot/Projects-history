@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Promotions capturing Snapshot of Promotions 1`] = `
+<Connect(MainContainer)
+  actionColumnVisible={false}
+  autocompletePlaceholder="Search by promotion code"
+  getRowClickRedirectLink={[Function]}
+  newButtonLink="/sales/promotions/new"
+  newButtonText="New Promotion"
+  newButtonVisible={true}
+  renderAutocompleteItem={[Function]}
+/>
+`;

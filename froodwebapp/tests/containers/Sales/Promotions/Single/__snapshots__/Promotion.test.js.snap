@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Promotion capturing Snapshot of Promotion 1`] = `
+<Spin
+  prefixCls="ant-spin"
+  size="default"
+  spinning={false}
+  wrapperClassName=""
+>
+  <ReduxForm
+    buttonText="Add"
+    buttonVisible={false}
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Bundle",
+          "name": "sku",
+          "type": "bundleAutoComplete",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Product Name",
+          "name": "productName",
+          "type": "text",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={null}
+    loading={false}
+    title="Select Bundle"
+    visible={false}
+  />
+  <form
+    className="form"
+  >
+    <Row
+      center="xs"
+    >
+      <Col
+        md={6}
+      >
+        <InfoCard
+          isNewPromotion={false}
+        />
+        <Connect(DetailsCard)
+          condition={1}
+          constants={
+            Object {
+              "freeItem": 2,
+              "freeShipping": 8,
+              "itemBundle": 2,
+              "itemSku": 3,
+              "percentOff": 3,
+              "productCat": 5,
+              "valueOff": 4,
+            }
+          }
+          handleFormatter={[Function]}
+          handleParser={[Function]}
+          handleToggleModal={[Function]}
+          hasMinPurchase={false}
+          setMinPurchage={[Function]}
+          type={1}
+        />
+        <Connect(OrderTypesCard) />
+        <Connect(AppliesToCard)
+          condition={1}
+          constants={
+            Object {
+              "freeItem": 2,
+              "freeShipping": 8,
+              "itemBundle": 2,
+              "itemSku": 3,
+              "percentOff": 3,
+              "productCat": 5,
+              "valueOff": 4,
+            }
+          }
+          handleToggleModal={[Function]}
+        />
+        <RedemptionCard
+          isLimited={false}
+        />
+        <ValidityCard
+          requireEndDate={false}
+          setNoEndDate={[Function]}
+        />
+      </Col>
+    </Row>
+    <Row
+      center="xs"
+    >
+      <Col
+        md={6}
+      >
+        <Controls
+          cancelButtonVisible={false}
+          submitButtonText="Update"
+          submitButtonVisible={true}
+        />
+      </Col>
+    </Row>
+  </form>
+</Spin>
+`;

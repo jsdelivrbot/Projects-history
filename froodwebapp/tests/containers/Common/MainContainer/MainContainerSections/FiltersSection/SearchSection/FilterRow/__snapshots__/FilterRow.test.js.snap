@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterRow capturing Snapshot of FilterRow 1`] = `
+<Row
+  middle="xs"
+>
+  <Col
+    lg={1}
+    md={1}
+    sm={1}
+    xs={2}
+  >
+    <FroodSelect
+      id={1}
+      menuItems={
+        Array [
+          Object {
+            "key": 7,
+            "symbol": "and",
+            "type": "2",
+            "value": "And",
+          },
+          Object {
+            "key": 8,
+            "symbol": "or",
+            "type": "2",
+            "value": "Or",
+          },
+        ]
+      }
+      onChange={[Function]}
+      value={1}
+    />
+  </Col>
+  <Col
+    lg={2}
+    md={3}
+    sm={3}
+    xs={true}
+  >
+    <FroodSelect
+      id={1}
+      menuItems={
+        Array [
+          Object {
+            "key": 1,
+            "value": undefined,
+          },
+          Object {
+            "key": 2,
+            "value": undefined,
+          },
+        ]
+      }
+      onChange={[Function]}
+      value={1}
+    />
+  </Col>
+  <Col
+    lg={2}
+    md={2}
+    sm={2}
+    xs={true}
+  >
+    <FroodSelect
+      id={1}
+      menuItems={
+        Array [
+          Object {
+            "key": 1,
+            "symbol": "=",
+            "type": "1",
+            "value": "Is equal to",
+          },
+          Object {
+            "key": 2,
+            "symbol": ">",
+            "type": "1",
+            "value": "Is greater than",
+          },
+          Object {
+            "key": 3,
+            "symbol": "<",
+            "type": "1",
+            "value": "Is less than",
+          },
+          Object {
+            "key": 4,
+            "symbol": ">=",
+            "type": "1",
+            "value": "Is greater than equal to",
+          },
+          Object {
+            "key": 5,
+            "symbol": "<=",
+            "type": "1",
+            "value": "Is less than equal to",
+          },
+          Object {
+            "key": 6,
+            "symbol": "!=",
+            "type": "1",
+            "value": "Not equal to",
+          },
+        ]
+      }
+      onChange={[Function]}
+      value={1}
+    />
+  </Col>
+  <Col
+    lg={3}
+    md={4}
+    sm={4}
+    xs={true}
+  >
+    <div />
+  </Col>
+  <Col
+    lg={1}
+    md={2}
+    sm={2}
+    xs={true}
+  />
+</Row>
+`;

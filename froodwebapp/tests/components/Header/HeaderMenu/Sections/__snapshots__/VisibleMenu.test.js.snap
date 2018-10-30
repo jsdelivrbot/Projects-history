@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisibleMenu captures snapshot of VisibleMenu 1`] = `
+<div
+  className="visibleMenu"
+>
+  <div
+    className="menuIcon"
+  >
+    <span
+      aria-hidden={true}
+      className="fa fa-deleted deleted"
+    />
+  </div>
+  <div>
+    INVENTORY
+  </div>
+  <div
+    className="arrowIcon"
+    style={
+      Object {
+        "color": "inherit",
+      }
+    }
+  >
+    <span
+      aria-hidden={true}
+      className="fa fa-fa-chevron-down fa-chevron-down"
+    />
+  </div>
+</div>
+`;

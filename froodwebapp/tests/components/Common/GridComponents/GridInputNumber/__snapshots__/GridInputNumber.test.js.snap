@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridInputNumber captures snapshot of GridInputNumber 1`] = `
+<InputNumber
+  autoFocus={false}
+  className="gridInputNumber"
+  disabled={false}
+  formatter={[Function]}
+  max={1}
+  min={false}
+  onChange={[Function]}
+  onPressEnter={[Function]}
+  parser={[Function]}
+  prefixCls="ant-input-number"
+  size="small"
+  step={1}
+  value={1}
+/>
+`;

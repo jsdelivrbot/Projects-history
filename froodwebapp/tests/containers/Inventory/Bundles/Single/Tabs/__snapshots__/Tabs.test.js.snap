@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemBundlesTabs capturing Snapshot of ItemBundlesTabs 1`] = `
+<Row>
+  <Col
+    lg={true}
+  >
+    <Tabs
+      activeKey="main"
+      animated={false}
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="main"
+        placeholder={null}
+        tab="Main"
+      >
+        <Connect(ReduxForm)
+          isNewBundle={false}
+        />
+      </TabPane>
+      <TabPane
+        key="items"
+        placeholder={null}
+        tab="Items"
+      >
+        <Connect(ItemsTab)
+          bundleId="1"
+        />
+      </TabPane>
+      <TabPane
+        key="assembly"
+        placeholder={null}
+        tab="Assembly"
+      >
+        <Connect(AssemblyTab)
+          bundleId="1"
+        />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

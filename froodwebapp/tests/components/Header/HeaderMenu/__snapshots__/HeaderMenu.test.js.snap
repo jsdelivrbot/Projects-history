@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMenu captures snapshot of HeaderMenu 1`] = `
+<div
+  className="container"
+  onClick={undefined}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="button"
+  style={undefined}
+  tabIndex={0}
+>
+  <button
+    className="button"
+  >
+    <div
+      className="visibleMenu"
+    >
+      <div
+        className="menuIcon"
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-deleted deleted"
+        />
+      </div>
+      <div>
+        CATEGORY
+      </div>
+      <div
+        className="arrowIcon"
+        style={
+          Object {
+            "color": "inherit",
+          }
+        }
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-fa-chevron-down fa-chevron-down"
+        />
+      </div>
+    </div>
+    <div
+      className="menu"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    />
+  </button>
+</div>
+`;

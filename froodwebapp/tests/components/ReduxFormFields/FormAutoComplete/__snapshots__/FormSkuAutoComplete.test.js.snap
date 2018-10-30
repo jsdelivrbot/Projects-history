@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormAutoComplete captures snapshot of FormAutoComplete 1`] = `
+<Connect(SkuAutoComplete)
+  alignRight={false}
+  disabled={false}
+  onChange={[Function]}
+  onSelect={[Function]}
+/>
+`;

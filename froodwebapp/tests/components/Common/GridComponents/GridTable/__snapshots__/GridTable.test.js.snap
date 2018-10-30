@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridTable captures snapshot of GridTable 1`] = `
+<div
+  className="ant-spin-nested-loading"
+  style={null}
+>
+  <div
+    className="ant-spin-container"
+  >
+    <div
+      className="ant-table-wrapper gridTable"
+      style={undefined}
+    >
+      <div
+        className="ant-spin-nested-loading"
+        style={null}
+      >
+        <div
+          className="ant-spin-container"
+        >
+          <div
+            className="ant-table ant-table-small ant-table-scroll-position-left"
+            style={Object {}}
+          >
+            <div
+              className="ant-table-content"
+            >
+              <div
+                className="ant-table-body"
+                onScroll={[Function]}
+                style={Object {}}
+              >
+                <table
+                  className=""
+                  style={Object {}}
+                >
+                  <colgroup>
+                    <col
+                      style={
+                        Object {
+                          "minWidth": 100,
+                          "width": 100,
+                        }
+                      }
+                    />
+                  </colgroup>
+                  <thead
+                    className="ant-table-thead"
+                  >
+                    <tr
+                      style={null}
+                    >
+                      <th
+                        className="row"
+                      >
+                        <span>
+                          Some title
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    className="ant-table-tbody"
+                  >
+                    <tr
+                      className="ant-table-row  ant-table-row-level-0"
+                      onClick={[Function]}
+                      onContextMenu={[Function]}
+                      onDoubleClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "height": null,
+                        }
+                      }
+                    >
+                      <td
+                        className="row"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="ant-table-row-indent indent-level-0"
+                          style={
+                            Object {
+                              "paddingLeft": "0px",
+                            }
+                          }
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

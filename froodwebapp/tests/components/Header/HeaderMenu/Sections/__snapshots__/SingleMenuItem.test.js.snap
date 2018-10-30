@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleMenuItem captures snapshot of SingleMenuItem 1`] = `
+<div
+  className="singleItemContainer"
+  id="/v1/inventory/"
+  onClick={[Function]}
+  role="button"
+  style={
+    Object {
+      "backgroundColor": "initial",
+    }
+  }
+  tabIndex={0}
+  title="/v1/inventory/"
+>
+  <div>
+    Inventory
+  </div>
+  <div
+    className="iconContainer"
+  >
+    <i
+      className="anticon anticon-plus"
+      id="/icon/"
+      onClick={[Function]}
+      title="/icon/"
+    />
+  </div>
+</div>
+`;

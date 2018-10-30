@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceLists capturing Snapshot of PriceLists 1`] = `
+<div>
+  <Connect(TopButtons)
+    newButtonLink="/settings/system/price-lists/new"
+    newButtonText="New Price List"
+    newButtonVisible={true}
+  />
+  <PageHeader
+    bigText="Price Lists"
+    smallText="A price list is non-standart set of prices that can be attached to channels (Sell Type) or vendors (Buy Type)."
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search price lists"
+        />
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        xs={true}
+      >
+        <Table
+          bordered={false}
+          className="table"
+          columns={
+            Array [
+              Object {
+                "dataIndex": "name",
+                "title": "Name",
+              },
+              Object {
+                "dataIndex": "code",
+                "title": "Code",
+              },
+              Object {
+                "dataIndex": "description",
+                "title": "Description",
+              },
+              Object {
+                "dataIndex": "currency",
+                "title": "Currency",
+              },
+              Object {
+                "dataIndex": "typeDescription",
+                "title": "Type",
+              },
+              Object {
+                "dataIndex": "useCount",
+                "title": "Use Count",
+              },
+              Object {
+                "dataIndex": "actions",
+                "render": [Function],
+                "title": "Actions",
+              },
+            ]
+          }
+          dataSource={
+            Array [
+              Object {
+                "code": "code of first price list",
+                "id": 1,
+                "name": "name of first price list",
+              },
+              Object {
+                "code": "code of second price list",
+                "id": 2,
+                "name": "name of second price list",
+              },
+            ]
+          }
+          indentSize={20}
+          loading={false}
+          locale={Object {}}
+          pagination={false}
+          prefixCls="ant-table"
+          rowKey="id"
+          rowSelection={null}
+          showHeader={true}
+          size="small"
+          useFixedHeader={false}
+        />
+      </Col>
+    </Row>
+  </Spin>
+</div>
+`;

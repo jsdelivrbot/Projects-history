@@ -1,0 +1,52 @@
+html {
+    width: 200px;
+    height: 350px;
+}
+
+.sb-button { font-size: 0.9rem;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             cursor: pointer;
+             text-align: center;
+             padding:0;
+             position: fixed;
+             bottom: 25px;
+             left:0;
+             right:0;
+             margin: 0 auto;
+             width: 70px;
+             height: 70px;
+             border: none;
+             background-color: #58a7d4;
+             color: white;
+             border-radius: 50px;
+             outline: none;}
+.sb-button:active, .sb-button:focus{outline: none;}
+.sb-button_on{background-color: #59d45d;}
+
+.auth {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.auth > div {
+    height: 100%;
+}
+
+.auth > div > h4{
+    color: #2bbbad;
+    text-align: center;
+}
+
+form > div > button.btn{
+    display: block;
+    margin: auto;
+}
+
+form > a {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}

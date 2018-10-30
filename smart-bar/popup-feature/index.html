@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup-feature</title>
+</head>
+<body >
+
+<div id="control-panel">
+    Edit mode <button id="edit-mode"  onclick="popup.onSave()" type="button">Edit</button>
+              <button id="ok-mode" style="display: none;" onclick="popup.onSave()" type="button">OK</button>
+</div>
+
+
+<div id="elementsContainer">
+
+    <button id="first-button"  type="button">Button #1</button>
+
+    <button id="second-button"  type="button">Button #2</button>
+
+    <input title="second-input" id="second-input"  value='first input'>
+
+    <button id="third-button"  type="button">Button #3</button>
+
+    <input title="first-input" id="first-input"  value='second input'>
+
+    <input title="third-input" id="third-input"  value='third input'>
+
+    <input title="third-input"  value='no id in input'>
+
+    <button  type="button">Button #3</button>
+    <button  type="button">Button #3</button>
+
+    <div id="divID">
+      <p>  AAAAAAAA</p>
+        <div>
+            AAAAAAA
+            AAAAAAA
+        </div>
+    </div>
+
+</div>
+
+<div id="Statistic">
+    <button id="statistic-button"  type="button">Show statistic in console</button>
+</div>
+
+<div class="popuptext" style="display:none;" id="myPopup">
+    <div>
+        <input title="text-input" id="popup-first-input" value="new button">
+    </div>
+    <div>
+        <input title="time-input" id="popup-second-input" value="0">
+    </div>
+    <div>
+        <button  onclick="popup.submitPopup()">Ok</button>
+        <button  onclick="popup.cancelPopup()">Cancel</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaxCodesTab capturing Snapshot of TaxCodesTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New Tax Code"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": false,
+          "header": "Tax Code Name",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Tax Code",
+          "name": "code",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "formatter": [Function],
+          "header": "Tax Amount",
+          "name": "rate",
+          "parser": [Function],
+          "type": "number",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "code": "",
+        "name": "",
+        "rate": 0,
+      }
+    }
+    loading={false}
+    title="New Tax Code"
+    visible={false}
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <Row>
+      <Col
+        lg={4}
+      >
+        <FroodSearchInput
+          onChange={[Function]}
+          placeholder="Type to search tax codes"
+        />
+      </Col>
+    </Row>
+    <Table
+      bordered={false}
+      className="table"
+      columns={
+        Array [
+          Object {
+            "dataIndex": "name",
+            "title": "Tax Name",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "code",
+            "title": "Tax Code",
+            "width": "20%",
+          },
+          Object {
+            "render": [Function],
+            "title": "Tax Rate",
+            "width": "20%",
+          },
+          Object {
+            "dataIndex": "isActive",
+            "render": [Function],
+            "title": "Status",
+            "width": "20%",
+          },
+          Object {
+            "render": [Function],
+            "title": "Action",
+            "width": "20%",
+          },
+        ]
+      }
+      dataSource={Array []}
+      indentSize={20}
+      loading={false}
+      locale={Object {}}
+      prefixCls="ant-table"
+      rowKey="id"
+      rowSelection={null}
+      showHeader={true}
+      size="small"
+      useFixedHeader={false}
+    />
+  </Spin>
+</div>
+`;

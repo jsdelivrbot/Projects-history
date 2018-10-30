@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationsTab capturing Snapshot of LocationsTab 1`] = `
+<div>
+  <ReduxForm
+    buttonText="New Location"
+    fields={
+      Array [
+        Object {
+          "editableForExistingItem": true,
+          "header": "Location Name",
+          "name": "name",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Location Prefix",
+          "name": "prefix",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "State",
+          "menuItems": Array [],
+          "name": "stateId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "City",
+          "menuItems": Array [],
+          "name": "cityId",
+          "type": "select",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Suburb",
+          "name": "suburb",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Postal Code",
+          "name": "postalCode",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 1",
+          "name": "address1",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": true,
+          "header": "Address Line 2",
+          "name": "address2",
+          "type": "text",
+        },
+        Object {
+          "editableForExistingItem": false,
+          "header": "Location Type",
+          "menuItems": Array [],
+          "name": "type",
+          "type": "select",
+        },
+      ]
+    }
+    handleSave={[Function]}
+    handleToggleModal={[Function]}
+    initialValues={
+      Object {
+        "address1": "",
+        "address2": "",
+        "cityId": "",
+        "name": "",
+        "postalCode": "",
+        "prefix": "",
+        "stateId": "",
+        "suburb": "",
+        "type": "",
+      }
+    }
+    loading={false}
+    title="New Location"
+    visible={false}
+  />
+  <Row>
+    <Col
+      lg={4}
+    >
+      <FroodSearchInput
+        onChange={[Function]}
+        placeholder="Type to search locations"
+      />
+    </Col>
+  </Row>
+  <GridTable
+    className="table"
+    columns={
+      Array [
+        Object {
+          "dataIndex": "name",
+          "title": "Name",
+        },
+        Object {
+          "dataIndex": "address",
+          "render": [Function],
+          "title": "Address",
+        },
+        Object {
+          "dataIndex": "isActive",
+          "title": "Active",
+          "type": "checkbox",
+        },
+        Object {
+          "dataIndex": "isDefault",
+          "title": "Default",
+          "type": "checkbox",
+        },
+        Object {
+          "dataIndex": "holdStock",
+          "title": "Holds Stock",
+          "type": "checkbox",
+        },
+        Object {
+          "dataIndex": "actions",
+          "text": "Edit",
+          "title": "Actions",
+          "type": "modalButton",
+        },
+      ]
+    }
+    dataSource={Array []}
+    disabled={false}
+    handleModalButtonClick={[Function]}
+    isExpandable={false}
+    loadingData={false}
+    rowKey="id"
+    updateTableData={[Function]}
+  />
+</div>
+`;

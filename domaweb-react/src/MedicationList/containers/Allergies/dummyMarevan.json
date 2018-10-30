@@ -1,0 +1,41 @@
+[
+  {
+    "date": "11.06.1989",
+    "notes": "His body can take it",
+    "actuary": "I don't know what this is",
+    "mon": "50",
+    "tue": "80",
+    "wed": "",
+    "thu": "1",
+    "fri": "100",
+    "sat": "2",
+    "sun": "20",
+    "result": "Brain hemorrage"
+  },
+  {
+    "date": "11.06.2001",
+    "notes": "Back in business after gaining back revoked medical licence",
+    "actuary": "I still don't know what this is, but his body can take it",
+    "mon": "50",
+    "tue": "80",
+    "wed": "",
+    "thu": "1",
+    "fri": "100",
+    "sat": "2",
+    "sun": "20",
+    "result": "Death"
+  },
+  {
+    "date": "11.06.2017",
+    "notes": "Back in business after jailtime",
+    "actuary": "I still don't know what this is, but his body can take it",
+    "mon": "50",
+    "tue": "80",
+    "wed": "",
+    "thu": "1",
+    "fri": "100",
+    "sat": "2",
+    "sun": "20",
+    "result": "Death"
+  }
+]

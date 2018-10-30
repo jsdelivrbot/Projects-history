@@ -1,0 +1,29 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/global.scss';
+
+.modalHeader {
+  background-color: $task-background-color;
+  color: white;
+}
+
+.controlBar {
+  background-color: $sidemenu-background-color;
+  margin-top: -17px;
+  padding: 10px;
+  text-align: center;
+  //margin-bottom: 0px;
+  height: 50px;
+}
+
+.separator {
+  //margin-top: 15px;
+  border: 1.5px;
+  border-style: dotted none none none;
+  border-color: $sidemenu-background-color;
+}
+
+.headerIcons {
+  float: right;
+  width: 20px;
+  size: 30px;
+}

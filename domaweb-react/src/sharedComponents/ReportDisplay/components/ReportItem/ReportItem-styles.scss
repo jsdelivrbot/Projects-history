@@ -1,0 +1,31 @@
+.ReportItem__Wrapper {
+  padding: 10px 0px;
+
+  @media print {
+    padding: 5px 0px;
+  }
+}
+
+.ReportItem__TitleRow {
+  margin-bottom: 5px;
+
+  &__ReportIcon {
+    display: inline-block;
+    width: 50px;
+  }
+
+  &__Title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12pt;
+    color: #4E4E4E;
+  }
+}
+
+.ReportItem__Content {
+  color: #696969;
+}
+
+.Highlight {
+  background-color: #F7CA18;
+}

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FroodInputNumber captures snapshot of FroodInputNumber 1`] = `
+<InputNumber
+  disabled={false}
+  max={8}
+  min={2}
+  onChange={[Function]}
+  prefixCls="ant-input-number"
+  step={1}
+/>
+`;

@@ -1,0 +1,24 @@
+@import './../../../../assets/styles/variables.scss';
+
+.ReportModal {
+}
+
+.ReportModal__Header {
+  background-color: $task-background-color;
+  color: white;
+  padding: 10px 10px 10px 15px;
+}
+
+.ReportModal__CloseButton {
+  background-color: #817F81;
+  color: #fff;
+  padding: 7px 24px;
+  font-size: 16px;
+}
+
+.ReportModal__Footer {
+  padding: 8px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+}

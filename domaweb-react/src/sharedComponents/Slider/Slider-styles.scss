@@ -1,0 +1,33 @@
+:global {
+	.input-range__label--min, .input-range__label--max {
+	    margin: 0px -11px 0px -8px;
+	    position: absolute;
+	}
+
+	.input-range__label--min, .input-range__label--max {
+	    bottom: 0px;
+	    font-size: 12px;
+	    color: #808080;
+	}
+
+	.input-range {
+	    background: #f1f1f1;
+			margin-top: 10px;
+	}
+
+	.input-range__track--active {
+	    background: #808080;
+	}
+
+	.input-range__slider {
+	    appearance: none;
+	    background: #808080;
+	    border: 1px solid #808080;
+	}
+
+	.input-range__track {
+	    background: #808080;
+	    border-radius: 0.2rem;
+	    height: 0.2rem;
+	}
+}

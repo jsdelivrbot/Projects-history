@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AssemblyForm capturing Snapshot of AssemblyForm 1`] = `
+<div>
+  <form
+    className="form"
+  >
+    <Row
+      bottom="xs"
+    >
+      <Col
+        lg={5}
+        xs={12}
+      >
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={5}
+          >
+            <label>
+              Max Bundle Quantity
+            </label>
+          </Col>
+          <Col
+            xs={7}
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              min={0}
+              name="maxBundleQty"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={5}
+          >
+            <label>
+              Assembled Bundle Quantity
+            </label>
+          </Col>
+          <Col
+            xs={7}
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              max={25}
+              min={0}
+              name="assembledQty"
+            />
+          </Col>
+        </Row>
+        <Row
+          center="xs"
+          middle="xs"
+        >
+          <Col
+            xs={5}
+          >
+            <label>
+              Disassembled Bundle Quantity
+            </label>
+          </Col>
+          <Col
+            xs={7}
+          >
+            <Field
+              component={[Function]}
+              max={10}
+              min={0}
+              name="disassembledQty"
+            />
+          </Col>
+        </Row>
+      </Col>
+      <Col
+        lg={2}
+      >
+        <Row>
+          <Col>
+            <Button
+              className="disassembledButton"
+              type="submit"
+            >
+              Disassemble
+            </Button>
+          </Col>
+        </Row>
+      </Col>
+    </Row>
+  </form>
+</div>
+`;

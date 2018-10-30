@@ -1,0 +1,43 @@
+@import '~styles/colors.scss';
+
+.button {
+  width: 5rem;
+  background: transparent;
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+.editBtn, .confirmButton, .saveBtn {
+  @extend .button;
+  border: 1px solid $main-green;
+  color: $main-green;
+  &:hover {
+    background: $main-green;
+    color: $main-white;
+  }
+}
+
+.deleteBtn, .confirmedButton {
+  @extend .button;
+  border: 1px solid $main-orange;
+  color: $main-orange;
+  &:hover {
+    background: $main-orange;
+    color: $main-white;
+  }
+}
+
+.activateBtn, .deactivateBtn {
+  @extend .deleteBtn;
+}
+
+.customBtn{
+  @extend .button;
+  border: 1px solid $main-blue;
+  color: $main-blue;
+  &:hover{
+    background: $main-blue;
+    color: $main-white;
+  }
+}

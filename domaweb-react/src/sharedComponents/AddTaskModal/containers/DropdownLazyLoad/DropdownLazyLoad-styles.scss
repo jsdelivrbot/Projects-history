@@ -1,0 +1,51 @@
+:global {
+  .Select-control {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f2f2f2;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+    height: 29px;
+  }
+  .Select-placeholder, .Select--single > .Select-control .Select-value {
+      bottom: 0;
+      color: #333;
+      left: 0;
+      line-height: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
+
+  .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f2f2f2;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+  }
+
+  .Select.is-focused:not(.is-open) > .Select-control {
+    border-color: red;
+    box-shadow: none;
+    background: #f2f2f2;
+  }
+}

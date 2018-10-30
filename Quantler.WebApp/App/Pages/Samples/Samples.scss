@@ -1,0 +1,243 @@
+@import "../../Components/Styles/QBootStrapVariables";
+
+/* ========================================================================
+   Page: Samples
+ ========================================================================== */
+
+.samples {
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(62, 62, 75, 0.1);
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  .margin-left-15 {
+    margin-left: 15px;
+  }
+
+  .symbol-selectlist {
+    $darken-primary: darken($brand-primary, 1);
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0;
+
+        $darken-primary-active: darken($brand-primary, 3);
+
+        &[aria-checked="true"] {
+          background: $darken-primary-active;
+
+          label:hover {
+            background: $darken-primary-active;
+          }
+        }
+
+        label {
+          width: 100%;
+          margin: 0;
+          padding: 5px 0 5px 15px;
+          cursor: pointer;
+
+          &:hover {
+            background: $darken-primary;
+          }
+        }
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+  }
+
+  ul.rw-list > li.rw-list-option:hover {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .rw-widget {
+    background-color: transparent;
+    border: none;
+  }
+
+}
+
+.samples header {
+  h4 {
+    font-weight: 400;
+  }
+
+  .title-np {
+    margin-top: 60px;
+    margin-left: 12px;
+  }
+
+  .container-btn-header {
+    button {
+      float: left;
+      margin-left: 12px;
+    }
+  }
+
+  .container-btn-header:before,
+  .container-btn-header:after {
+    content: " ";
+    display: table;
+  }
+
+  .container-search {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+      right: 3%;
+      z-index: 1;
+      margin-top: 14px;
+      color: #d3d3d3;
+    }
+
+    .search-sample {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .form-control {
+        border: 1px solid #e4e9f2;
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .search-sample {
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+
+  .container-search:before,
+  .container-search:after {
+    content: " ";
+    display: table;
+  }
+
+  .container-search:after {
+    clear: both;
+  }
+}
+
+.samples section {
+  .panel-container {
+    padding: 0;
+  }
+
+  .panel-default {
+    background-color: #eceff5;
+    color: #2b2c2c;
+    border: none;
+
+    .panel-body {
+      border: 1px solid #dbe1ec;
+      padding: 0;
+      font-size: 13px;
+
+      .table > thead > tr > th {
+        color: white;
+        background-color: #ee4415;
+      }
+
+      .table-bordered > thead > tr > td,
+      .table-bordered > tbody > tr > td,
+      .table-bordered > tfoot > tr > td,
+      .table-bordered > thead > tr > th,
+      .table-bordered > tbody > tr > th,
+      .table-bordered > tfoot > tr > th {
+        border: 1px solid rgba(62, 62, 75, 0.1);
+        text-align: center;
+      }
+
+      .table > tbody > tr:hover {
+        background-color: #dbe1ec;
+      }
+
+      a {
+        color: #e84e1b;
+      }
+    }
+
+    .panel-heading {
+      border-left: 4px solid #e84e1b;
+
+      h3 {
+        margin-top: 12px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.samples .graph-container {
+  background-color: #fff;
+  height: auto;
+  min-height: 200px;
+  margin-top: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.samples .propertie-container {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 13px;
+
+  .title {
+    margin-left: 12px;
+    color: #31323e;
+  }
+
+  .propertie-lane {
+    position: relative;
+    float: left;
+    width: 280px;
+    min-height: 1px;
+    padding-left: 15px;
+    margin-right: 35px;
+    height: auto;
+    padding: 10px;
+    display: block;
+
+    .propertie-box {
+      height: 36px;
+      width: 275px;
+      float: left;
+      margin-bottom: 7px;
+
+      .propertie-title {
+        width: 108px;
+        background-color: #3e3f4b;
+        color: white;
+        float: left;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .propertie-value {
+        background-color: #f5f7fa;
+        color: #31323e;
+        text-indent: 20px;
+      }
+    }
+  }
+}

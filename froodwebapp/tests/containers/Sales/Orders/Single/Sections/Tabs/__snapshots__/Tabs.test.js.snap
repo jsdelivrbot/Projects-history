@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderTabs capturing Snapshot of OrderTabs 1`] = `
+<Row>
+  <Col
+    xs={true}
+  >
+    <Tabs
+      animated={false}
+      defaultActiveKey="order"
+      hideAdd={false}
+      onTabClick={[Function]}
+      prefixCls="ant-tabs"
+    >
+      <TabPane
+        key="order"
+        placeholder={null}
+        tab="Order"
+      >
+        <Connect(OrderTab)
+          disabled={false}
+          handleSubmit={[Function]}
+          isNewOrder={false}
+        />
+      </TabPane>
+      <TabPane
+        key="allocations"
+        placeholder={null}
+        tab="Allocations"
+      >
+        <Connect(AllocationsTab) />
+      </TabPane>
+      <TabPane
+        key="pick"
+        placeholder={null}
+        tab="Pick"
+      >
+        <Connect(PickTab) />
+      </TabPane>
+      <TabPane
+        key="pack"
+        placeholder={null}
+        tab="Pack"
+      >
+        <Connect(PackTab) />
+      </TabPane>
+      <TabPane
+        key="ship"
+        placeholder={null}
+        tab="Ship"
+      >
+        <Connect(ShipTab) />
+      </TabPane>
+      <TabPane
+        key="invoice"
+        placeholder={null}
+        tab="Invoice"
+      >
+        <Connect(InvoiceTab) />
+      </TabPane>
+    </Tabs>
+  </Col>
+</Row>
+`;

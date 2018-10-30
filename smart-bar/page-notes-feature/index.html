@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="not-for-notes">
+        <button id="edit-mode" class="not-for-notes">Show and add notes</button>
+        <button id="ok-mode" class="not-for-notes">Hide notes</button>
+    </div>
+
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis <br>
+            corporis cumque earum explicabo fuga fugiat, ipsum maxime natus nesciunt odio officia <br>
+            porro quaerat quasi rem repellendus, similique vitae! Consectetur.
+        </p>
+        <button>Hello</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis
+            corporis cumque earum explicabo fuga fugiat, ipsum maxime natus nesciunt <br> odio officia
+            porro quaerat quasi rem repellendus, similique vitae! Consectetur.
+        </p>
+        <input type="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis
+            corporis cumque earum <br> explicabo fuga fugiat, ipsum maxime natus nesciunt odio officia
+            porro quaerat quasi rem repellendus, similique vitae! Consectetur.
+        </p>
+        <select name="sad" id="">
+            <option value="1">foo</option>
+            <option value="2">bar</option>
+        </select>
+    </div>
+
+    <div class="note not-for-notes" id="note-template">
+        <div class="note__close not-for-notes"></div>
+        <p class="note__text not-for-notes" contenteditable></p>
+        <span>Some notes...</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

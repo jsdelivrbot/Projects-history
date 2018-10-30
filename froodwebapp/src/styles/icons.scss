@@ -1,0 +1,14 @@
+@import 'colors';
+
+.icon {
+  cursor: pointer;
+  font-size: 1rem;
+  &:hover {
+    color: $main-blue;
+  }
+}
+
+.deleteTableRowIcon {
+  @extend .icon;
+  float: right;
+}

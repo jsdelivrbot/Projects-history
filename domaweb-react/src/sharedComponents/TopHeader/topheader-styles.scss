@@ -1,0 +1,54 @@
+@import '../../assets/styles/variables.scss';
+
+.top_header{
+  min-height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+
+  @media print {
+    display: none;
+  }
+}
+
+
+.tasks_background {
+  background-color: $task-background-color;
+}
+
+.booking_background {
+  background-color: $booking-background-color;
+}
+
+
+.customers_background {
+
+  background-color: $customers-background-color;
+}
+
+.wallet_background {
+  background-color: $wallet-background-color;
+}
+
+.calendar_background {
+  background-color: $calendar-background-color;
+}
+
+.messages_background {
+  background-color: $messages-background-color;
+}
+
+.settings_background {
+  background-color: $settings-background-color;
+}
+
+.language_switcher {
+  float: right;
+  font-size: 12px;
+}
+.language_switcher:hover {
+  color: #FFF;
+  font-weight: bold;
+}

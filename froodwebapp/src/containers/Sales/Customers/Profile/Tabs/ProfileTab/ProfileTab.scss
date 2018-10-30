@@ -1,0 +1,11 @@
+@import '~styles/common.scss';
+
+.card{
+	@extend .card;
+	height: calc(100% - 1rem);
+	border-radius: 5px;
+	div[class="ant-card-head"]{
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+}

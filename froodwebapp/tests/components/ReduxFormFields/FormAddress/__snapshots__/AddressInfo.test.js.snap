@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressInfo captures snapshot of AddressInfo 1`] = `
+<Button
+  className="addressInfo"
+  onClick={[Function]}
+>
+  <div
+    className="addressUserName"
+  >
+    <strong />
+  </div>
+  <div>
+    address1
+  </div>
+  <div>
+    address2
+  </div>
+  <div>
+    LA 
+  </div>
+  <div>
+    USA
+  </div>
+</Button>
+`;

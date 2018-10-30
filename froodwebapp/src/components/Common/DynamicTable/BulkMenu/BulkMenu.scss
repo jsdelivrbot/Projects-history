@@ -1,0 +1,57 @@
+@import '~styles/colors.scss';
+
+$header-padding: 0.5rem 0.75rem;
+$icon-padding: 0 0.5rem;
+$cursor: pointer;
+
+.bulkMenu {
+  position: absolute;
+  left: 2.5rem;
+  top: 1;
+  z-index: 10;
+}
+
+.bulkMenuToggleIcon {
+  font-size: 1rem;
+  margin-left: 1rem;
+  align-self: center;
+  cursor: $cursor;
+  padding: $icon-padding;
+  box-sizing: border-box;
+}
+
+.bulkMenuHeader {
+  border-radius: 3px;
+  background-color: $bulk-menu-header-color;
+  padding: $header-padding;
+  display: flex;
+}
+
+.bulkMenuBody {
+  border-radius: 3px;
+  background-color: $bulk-menu-body-color;
+  border: $secondary-border;
+  div {
+    padding: 0.5rem;
+  }
+}
+
+.bulkMenuBodyHeader {
+  font-size: 0.8rem;
+  border-bottom: $secondary-border;
+  color: $bulk-menu-body-header-color;
+}
+
+.bulkMenuBodyItem {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: $main-black;
+}
+
+.bulkMenuActionIcon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem
+}
